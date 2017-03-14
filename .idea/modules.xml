@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/shik.iml" filepath="$PROJECT_DIR$/.idea/shik.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-cloudclient/shik-cloudclient.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-cloudclient/shik-cloudclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-cloudserver/shik-cloudserver.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-cloudserver/shik-cloudserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-springcloud/shik-springcloud.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-springcloud/shik-springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud/spring-cloud.iml" filepath="$PROJECT_DIR$/spring-cloud/spring-cloud.iml" />
+    </modules>
+  </component>
+</project>
