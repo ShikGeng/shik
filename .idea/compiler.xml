@@ -24,8 +24,10 @@
         <processorPath useClasspath="true" />
         <module name="shik-cloudclient" />
         <module name="shik-cloudserver" />
+        <module name="shik-cloudzuul" />
         <module name="shik-console" />
         <module name="shik-console-service" />
+        <module name="shik-login" />
         <module name="shik-RA-server" />
         <module name="shik-springcloud" />
         <module name="shik-upms" />
@@ -35,8 +37,10 @@
     <bytecodeTargetLevel>
       <module name="shik-cloudclient" target="1.5" />
       <module name="shik-cloudserver" target="1.5" />
+      <module name="shik-cloudzuul" target="1.5" />
       <module name="shik-console" target="1.5" />
       <module name="shik-console-service" target="1.5" />
+      <module name="shik-login" target="1.5" />
       <module name="shik-RA-server" target="1.5" />
       <module name="shik-spring" target="1.5" />
       <module name="shik-springcloud" target="1.5" />

@@ -41,5 +41,6 @@
         <module>shik-springcloud</module>
         <module>shik-cloudserver</module>
         <module>shik-cloudclient</module>
+        <module>shik-cloudzuul</module>
     </modules>
 </project>

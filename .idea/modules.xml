@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-RA-server/shik-RA-server.iml" filepath="$PROJECT_DIR$/shik-spring/shik-RA-server/shik-RA-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-cloudclient/shik-cloudclient.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-cloudclient/shik-cloudclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-cloudserver/shik-cloudserver.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-cloudserver/shik-cloudserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-cloudzuul/shik-cloudzuul.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-cloudzuul/shik-cloudzuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-console/shik-console.iml" filepath="$PROJECT_DIR$/shik-spring/shik-console/shik-console.iml" />
       <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-console-service/shik-console-service.iml" filepath="$PROJECT_DIR$/shik-spring/shik-console-service/shik-console-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-login/shik-login.iml" filepath="$PROJECT_DIR$/shik-spring/shik-login/shik-login.iml" />
