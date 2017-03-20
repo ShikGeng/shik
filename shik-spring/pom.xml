@@ -43,5 +43,6 @@
         <module>shik-upms</module>
         <module>shik-console</module>
         <module>shik-console-service</module>
+        <module>shik-login</module>
     </modules>
 </project>
