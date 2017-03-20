@@ -24,13 +24,24 @@
         <processorPath useClasspath="true" />
         <module name="shik-cloudclient" />
         <module name="shik-cloudserver" />
+        <module name="shik-console" />
+        <module name="shik-console-service" />
+        <module name="shik-RA-server" />
         <module name="shik-springcloud" />
+        <module name="shik-upms" />
+        <module name="shik-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="shik-cloudclient" target="1.5" />
       <module name="shik-cloudserver" target="1.5" />
+      <module name="shik-console" target="1.5" />
+      <module name="shik-console-service" target="1.5" />
+      <module name="shik-RA-server" target="1.5" />
+      <module name="shik-spring" target="1.5" />
       <module name="shik-springcloud" target="1.5" />
+      <module name="shik-upms" target="1.5" />
+      <module name="shik-web" target="1.5" />
       <module name="spring-cloud" target="1.5" />
     </bytecodeTargetLevel>
   </component>

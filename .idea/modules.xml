@@ -3,9 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/shik.iml" filepath="$PROJECT_DIR$/.idea/shik.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-RA-server/shik-RA-server.iml" filepath="$PROJECT_DIR$/shik-spring/shik-RA-server/shik-RA-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-cloudclient/shik-cloudclient.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-cloudclient/shik-cloudclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-cloudserver/shik-cloudserver.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-cloudserver/shik-cloudserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-console/shik-console.iml" filepath="$PROJECT_DIR$/shik-spring/shik-console/shik-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-console-service/shik-console-service.iml" filepath="$PROJECT_DIR$/shik-spring/shik-console-service/shik-console-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-spring.iml" filepath="$PROJECT_DIR$/shik-spring/shik-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud/shik-springcloud/shik-springcloud.iml" filepath="$PROJECT_DIR$/spring-cloud/shik-springcloud/shik-springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-upms/shik-upms.iml" filepath="$PROJECT_DIR$/shik-spring/shik-upms/shik-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shik-spring/shik-web/shik-web.iml" filepath="$PROJECT_DIR$/shik-spring/shik-web/shik-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud/spring-cloud.iml" filepath="$PROJECT_DIR$/spring-cloud/spring-cloud.iml" />
     </modules>
   </component>
