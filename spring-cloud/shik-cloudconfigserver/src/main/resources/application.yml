@@ -1,16 +1,15 @@
-spring:
-  application:
-    name: config-server
 server:
   port: 7777
   
 # git管理配置
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
         git:
           uri: http://git.oschina.net/shik_geng/shik/
-          searchPaths: Chapter9-1-4/config-repo
+          searchPaths: spring-cloud/shik-common/config-repo
           username: username
           password: password

@@ -44,5 +44,6 @@
         <module>shik-cloudzuul</module>
         <module>shik-cloudclient-test</module>
         <module>shik-cloudconfigserver</module>
+        <module>shik-cloudconfig-test</module>
     </modules>
 </project>
