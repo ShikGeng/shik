@@ -11,6 +11,12 @@
     <name>spring-cloud</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -39,6 +45,7 @@
 
     <modules>
         <module>shik-springcloud</module>
+        <module>shik-cloudcommon</module>
         <module>shik-cloudserver</module>
         <module>shik-cloudclient</module>
         <module>shik-cloudzuul</module>

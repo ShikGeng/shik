@@ -19,31 +19,11 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.controller;
-
-import com.shik.client.ComputeClient;
-import com.shik.content.LoginConstants;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+package com.shik;
 
 /**
  * @author gengshikun
- * @date 2017/3/14
+ * @date 2017/3/24
  */
-@RestController
-public class ComputeController {
-
-    private final Logger logger = LoggerFactory.getLogger(ComputeController.class);
-
-    @Autowired
-    ComputeClient computeClient;
-
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add() {
-        return computeClient.add(10, 20);
-    }
+public class test {
 }
