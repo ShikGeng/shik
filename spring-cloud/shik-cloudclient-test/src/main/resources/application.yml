@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: feign-consumer-test
+server:
+  port: 4444
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/

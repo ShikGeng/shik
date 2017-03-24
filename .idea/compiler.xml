@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="shik-cloudclient" />
+        <module name="shik-cloudclient-test" />
         <module name="shik-cloudserver" />
         <module name="shik-cloudzuul" />
         <module name="shik-console" />
@@ -36,6 +37,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="shik-cloudclient" target="1.5" />
+      <module name="shik-cloudclient-test" target="1.5" />
       <module name="shik-cloudserver" target="1.5" />
       <module name="shik-cloudzuul" target="1.5" />
       <module name="shik-console" target="1.5" />
