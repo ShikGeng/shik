@@ -5,4 +5,6 @@ server:
   port: 1112
 eureka:
   client:
-    serviceUrl.defaultZone: http://localhost:1111/eureka/
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
