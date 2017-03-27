@@ -2,7 +2,7 @@ spring:
   application:
     name: spring-cloud
 server:
-  port: 1111
+  port: 1112
 eureka:
   client:
-    serviceUrl.defaultZone: http://localhost:1112/eureka/
+    serviceUrl.defaultZone: http://localhost:1111/eureka/

@@ -52,5 +52,7 @@
         <module>shik-cloudclient-test</module>
         <module>shik-cloudconfigserver</module>
         <module>shik-cloudconfig-test</module>
+        <module>shik-cloudserver-1</module>
+        <module>shik-springcloud-1</module>
     </modules>
 </project>

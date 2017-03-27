@@ -9,10 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shik-springcloud</artifactId>
+    <artifactId>shik-springcloud-1</artifactId>
     <packaging>jar</packaging>
 
-    <name>shik-springcloud</name>
+    <name>shik-springcloud-1</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
@@ -22,5 +22,4 @@
             <version>1.0.0</version>
         </dependency>
     </dependencies>
-
 </project>
