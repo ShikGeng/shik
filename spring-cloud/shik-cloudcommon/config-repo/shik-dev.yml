@@ -1,9 +1,1 @@
 from: git-dev-1.0.0
-
-spring:
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    addresses: 127.0.0.1:5672
-    username: root
-    password: 123!@#qwe
