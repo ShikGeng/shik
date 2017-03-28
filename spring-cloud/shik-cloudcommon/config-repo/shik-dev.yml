@@ -1,4 +1,4 @@
-from: git-dev-1.0
+from: git-dev-1.0.0
 
 spring:
   rabbitmq:
