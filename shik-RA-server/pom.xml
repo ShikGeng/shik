@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shik</groupId>
-    <artifactId>shik-spring</artifactId>
+    <artifactId>shik-RA-server</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
-    <name>shik-spring</name>
+    <name>shik-RA-server</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -44,10 +44,8 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-web</module>
-        <module>shik-upms</module>
-        <module>shik-console</module>
-        <module>shik-console-service</module>
-        <module>shik-login</module>
+        <module>shik-RA-server-1</module>
+        <module>shik-RA-server-2</module>
+        <module>shik-RA-server-3</module>
     </modules>
 </project>
