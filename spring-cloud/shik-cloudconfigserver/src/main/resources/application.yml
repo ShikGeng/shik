@@ -10,6 +10,6 @@ spring:
       server:
         git:
           uri: http://git.oschina.net/shik_geng/shik/
-          searchPaths: spring-cloud/shik-common/config-repo
+          searchPaths: spring-cloud/shik-cloudcommon/config-repo
           username: username
           password: password
