@@ -2,9 +2,9 @@ spring:
   application:
     name: ra-server
 server:
-  port: 11112
+  port: 1112
 eureka:
   client:
     register-with-eureka: true
     serviceUrl:
-      defaultZone: http://localhost:11113/eureka/, http://localhost:11111/eureka/
+      defaultZone: http://localhost:1113/eureka/,http://localhost:1111/eureka/
