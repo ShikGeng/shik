@@ -2,7 +2,7 @@ spring:
     application:
         name: zuul-gateway
 server:
-    port: 5555
+    port: 5553
 eureka:
     client:
         serviceUrl:
