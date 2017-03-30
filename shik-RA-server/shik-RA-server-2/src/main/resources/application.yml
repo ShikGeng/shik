@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ra-server
+    name: shik-ra-server
 server:
   port: 1112
 eureka:

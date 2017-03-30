@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shik</groupId>
-    <artifactId>shik-RA-server</artifactId>
+    <artifactId>shik-config</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
-    <name>shik-RA-server</name>
+    <name>shik-config</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -27,7 +27,11 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,8 +53,6 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-RA-server-1</module>
-        <module>shik-RA-server-2</module>
-        <module>shik-RA-server-3</module>
+        <module>shik-config-server</module>
     </modules>
 </project>

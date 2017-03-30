@@ -16,12 +16,4 @@
     <name>shik-RA-server-3</name>
     <url>http://maven.apache.org</url>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.shik</groupId>
-            <artifactId>shik-common</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
-
 </project>

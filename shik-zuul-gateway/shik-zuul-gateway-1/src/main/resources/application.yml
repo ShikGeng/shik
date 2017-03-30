@@ -1,6 +1,6 @@
 spring:
     application:
-        name: zuul-gateway
+        name: shik-zuul-gateway
 server:
     port: 5551
 eureka:
