@@ -19,24 +19,23 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package shik.controller;
+package com.shik;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.retry.annotation.EnableRetry;
 
 /**
  * @author gengshikun
  * @date 2017/3/24
  */
-@RestController
-public class TestController {
+@EnableRetry
+@EnableEurekaServer
+@SpringBootApplication
+public class ShikLoginServerApplication {
 
-    @Value("${from}")
-    private String from;
-
-    @RequestMapping("/test")
-    public String test(){
-        return this.from;
+    public static void main(String[] args) {
+        SpringApplication.run(ShikLoginServerApplication.class);
     }
 }

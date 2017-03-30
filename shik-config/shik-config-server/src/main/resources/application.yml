@@ -21,6 +21,11 @@ spring:
 server:
   port: 8881
 
+security:
+  user:
+    name: shik-config
+    password: shik-config-server
+
 eureka:
     client:
         serviceUrl:

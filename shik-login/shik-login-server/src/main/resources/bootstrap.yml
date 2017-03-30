@@ -9,5 +9,7 @@ spring:
   cloud:
     config:
       name: shik
-      discovery:
-        serviceId: shik-config-server
+      fail-fast: true
+      uri: http://shik-config:shik-config-server@localhost:8881/
+
+
