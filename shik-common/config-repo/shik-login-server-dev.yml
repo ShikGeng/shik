@@ -1,1 +1,6 @@
 from: login-dev-1.0
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/
