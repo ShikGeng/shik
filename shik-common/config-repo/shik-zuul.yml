@@ -1,5 +1,5 @@
 zuul:
   routes:
     api-a-url:
-      path: /api-a-url/**
-      url: http://localhost:3333/
+      path: /shik-config/**
+      url: http://localhost:8888/
