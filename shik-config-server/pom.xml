@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shik</groupId>
-    <artifactId>shik-config</artifactId>
+    <artifactId>shik-config-server</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
-    <name>shik-config</name>
+    <name>shik-config-server</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -20,19 +20,26 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.5.RELEASE</version>
+        <version>1.5.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -53,6 +60,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-config-server</module>
+        <module>shik-config-server-1</module>
+        <module>shik-config-server-2</module>
     </modules>
 </project>

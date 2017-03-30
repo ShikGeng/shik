@@ -8,4 +8,6 @@ spring:
     active: dev
   cloud:
     config:
-      uri: http://localhost:8888/
+      name: shik
+      discovery:
+        serviceId: shik-config-server

@@ -1,0 +1,13 @@
+server: 
+  port: 5553
+
+spring:
+  application:
+    name: shik-zuul-gateway
+  profiles:
+    active: dev,zuul
+  cloud:
+    config:
+      name: shik
+      uri: http://localhost:8888/
+

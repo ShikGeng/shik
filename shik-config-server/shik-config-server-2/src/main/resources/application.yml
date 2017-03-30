@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: shik-config-server
+  cloud:
+    config:
+      discovery:
+        service-id: shik-config-server
+        enabled: true
+      server:
+        git:
+          uri: http://git.oschina.net/shik_geng/shik/
+          searchPaths: shik-common/config-repo
+          username: username
+          password: password
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    addresses: 127.0.0.1:5672
+    username: root
+    password: 123!@#qwe
+
+server:
+  port: 8882
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/

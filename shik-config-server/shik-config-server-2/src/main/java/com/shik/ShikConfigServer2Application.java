@@ -19,22 +19,23 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package shik;
+package com.shik;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * @author gengshikun
- * @date 2017/3/24
+ * @date 2017/3/29
  */
-@EnableEurekaServer
+@EnableDiscoveryClient
+@EnableConfigServer
 @SpringBootApplication
-public class ShikLoginServerApplication {
+public class ShikConfigServer2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ShikLoginServerApplication.class);
+        SpringApplication.run(ShikConfigServer2Application.class, args);
     }
 }

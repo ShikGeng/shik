@@ -33,9 +33,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableDiscoveryClient
 @EnableConfigServer
 @SpringBootApplication
-public class ShikConfigServerApplication {
+public class ShikConfigServer1Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ShikConfigServerApplication.class, args);
+        SpringApplication.run(ShikConfigServer1Application.class, args);
     }
 }
