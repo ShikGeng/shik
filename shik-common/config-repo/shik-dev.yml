@@ -1,4 +1,4 @@
-from: git-dev-1.4
+from: git-dev-1.5
 
 eureka:
     client:
