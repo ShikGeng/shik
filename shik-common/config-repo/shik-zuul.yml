@@ -3,3 +3,7 @@ zuul:
     login:
       path: /login/**
       serviceId: shik-login-server
+    config:
+      path: /config/**
+      serviceId: shik-config-server
+      password: shik-config-server
