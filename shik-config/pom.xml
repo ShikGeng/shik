@@ -65,6 +65,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-config-server</module>
+        <module>shik-config-server-1</module>
+        <module>shik-config-server-2</module>
     </modules>
 </project>

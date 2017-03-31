@@ -19,26 +19,23 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.controller;
+package com.shik;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * @author gengshikun
- * @date 2017/3/24
+ * @date 2017/3/29
  */
-@RefreshScope
-@RestController
-public class TestController {
+@EnableDiscoveryClient
+@EnableConfigServer
+@SpringBootApplication
+public class ShikConfigServer2Application {
 
-    @Value("${from}")
-    private String from;
-
-    @RequestMapping("/test")
-    public String test(){
-        return this.from;
+    public static void main(String[] args) {
+        SpringApplication.run(ShikConfigServer2Application.class, args);
     }
 }

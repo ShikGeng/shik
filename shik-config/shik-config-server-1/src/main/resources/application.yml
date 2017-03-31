@@ -1,26 +1,30 @@
-server: 
-  port: 7771
-
 spring:
   application:
-    name: shik-login-server
-  profiles:
-    active: dev
+    name: shik-config-server
   cloud:
     config:
-      name: shik
-      fail-fast: true
+      server:
+        git:
+          uri: http://git.oschina.net/shik_geng/shik/
+          searchPaths: shik-common/config-repo
+          username: username
+          password: password
       discovery:
         enabled: true
-        service-id: shik-config-server
-      username: shik-config
-      password: shik-config-server
   rabbitmq:
     host: 127.0.0.1
     port: 5672
     addresses: 127.0.0.1:5672
     username: root
     password: 123!@#qwe
+
+server:
+  port: 8881
+
+security:
+  user:
+    name: shik-config
+    password: shik-config-server
 
 eureka:
     client:

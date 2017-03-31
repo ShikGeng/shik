@@ -3,14 +3,14 @@ spring:
     name: shik-config-server
   cloud:
     config:
-      discovery:
-        enabled: true
       server:
         git:
           uri: http://git.oschina.net/shik_geng/shik/
           searchPaths: shik-common/config-repo
           username: username
           password: password
+      discovery:
+        enabled: true
   rabbitmq:
     host: 127.0.0.1
     port: 5672
@@ -19,7 +19,7 @@ spring:
     password: 123!@#qwe
 
 server:
-  port: 8881
+  port: 8882
 
 security:
   user:
