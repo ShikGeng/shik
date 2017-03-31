@@ -12,9 +12,7 @@ spring:
       discovery:
         enabled: true
   rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    addresses: 127.0.0.1:5672
+    addresses: www.zkgengkun.com:5672
     username: root
     password: 123!@#qwe
 
@@ -23,10 +21,9 @@ server:
 
 security:
   user:
-    name: shik-config
     password: shik-config-server
 
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/
+            defaultZone: http://www.zkgengkun.com:1111/eureka/,http://www.zkgengkun.com:1112/eureka/,http://www.zkgengkun.com:1113/eureka/

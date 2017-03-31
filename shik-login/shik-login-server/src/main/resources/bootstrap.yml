@@ -5,7 +5,7 @@ spring:
   application:
     name: shik-login-server
   profiles:
-    active: dev
+    active: dev, rabbit
   cloud:
     config:
       name: shik
@@ -13,16 +13,9 @@ spring:
       discovery:
         enabled: true
         service-id: shik-config-server
-      username: shik-config
       password: shik-config-server
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    addresses: 127.0.0.1:5672
-    username: root
-    password: 123!@#qwe
 
 eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/
+  client:
+    serviceUrl:
+      defaultZone: http://www.zkgengkun.com:1111/eureka/,http://www.zkgengkun.com:1112/eureka/,http://www.zkgengkun.com:1113/eureka/

@@ -7,4 +7,4 @@ eureka:
   client:
     register-with-eureka: true
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
+      defaultZone: http://www.zkgengkun.com:1111/eureka/,http://www.zkgengkun.com:1112/eureka/

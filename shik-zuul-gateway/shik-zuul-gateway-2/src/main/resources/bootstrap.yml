@@ -5,9 +5,17 @@ spring:
   application:
     name: shik-zuul-gateway
   profiles:
-    active: dev, zuul
+    active: rabbit, zuul
   cloud:
     config:
       name: shik
-      uri: http://localhost:8888/
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: shik-config-server
+      password: shik-config-server
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://www.zkgengkun.com:1111/eureka/,http://www.zkgengkun.com:1112/eureka/,http://www.zkgengkun.com:1113/eureka/
