@@ -1,5 +1,5 @@
 zuul:
   routes:
-    api-a-url:
-      path: /shik-config/**
-      url: http://www.zkgengkun.com:8881/
+    login:
+      path: /login/**
+      serviceId: shik-login-server
