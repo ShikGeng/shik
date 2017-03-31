@@ -2,4 +2,4 @@ zuul:
   routes:
     api-a-url:
       path: /shik-config/**
-      url: http://localhost:8888/
+      url: http://www.zkgengkun.com:8888/
