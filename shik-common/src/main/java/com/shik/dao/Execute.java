@@ -19,21 +19,23 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik;
+package com.shik.dao;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import com.shik.support.generator.MybatisGeneratorXml;
 
 /**
  * @author gengshikun
- * @date 2017/3/24
+ * @date 2017/7/17
  */
-@EnableDiscoveryClient
-@SpringBootApplication
-public class ShikAdminWebApplication {
+public class Execute {
 
+    private static String GENERATOR_PATH = "/mybatis-generator/generatorConfig.xml";
+
+    /**
+     * 自动执行generator.xml
+     * @param args
+     */
     public static void main(String[] args) {
-        SpringApplication.run(ShikAdminWebApplication.class);
+        MybatisGeneratorXml.execute(GENERATOR_PATH);
     }
 }

@@ -22,7 +22,6 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>com.shik</groupId>
             <artifactId>shik-common</artifactId>

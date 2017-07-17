@@ -21,9 +21,19 @@
  */
 package com.shik;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 /**
  * @author gengshikun
  * @date 2017/3/24
  */
-public class test {
+@EnableDiscoveryClient
+@SpringBootApplication
+public class ShikAdminApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ShikAdminApplication.class);
+    }
 }

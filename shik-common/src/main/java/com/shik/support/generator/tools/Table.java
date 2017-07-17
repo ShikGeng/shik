@@ -19,30 +19,42 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.controller;
+package com.shik.support.generator.tools;
 
-import com.shik.client.ComputeClient;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author gengshikun
- * @date 2017/3/14
+ * @date 2017/7/5
  */
-@RestController
-public class ComputeController {
+public class Table {
 
-    private final Logger logger = LoggerFactory.getLogger(ComputeController.class);
+    private String tableName;
+    private String modelName;
 
-    @Autowired
-    ComputeClient computeClient;
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add() {
-        return computeClient.add(10, 20);
+    /**
+     * @param tableName
+     */
+    public Table(String tableName) {
+        super();
+        this.tableName = tableName;
+        this.modelName = StringUtils.capitalize(StringUtil.lineToHump(tableName)) + "PO";
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
     }
 }

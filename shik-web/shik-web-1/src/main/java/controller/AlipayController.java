@@ -19,30 +19,33 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.controller;
+package controller;
 
-import com.shik.client.ComputeClient;
+import client.ShikPayClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author gengshikun
- * @date 2017/3/14
+ * @date 2017/7/17
  */
-@RestController
-public class ComputeController {
+@Controller
+@RequestMapping(value = "alipay")
+public class AlipayController {
 
-    private final Logger logger = LoggerFactory.getLogger(ComputeController.class);
+    private final Logger logger = LoggerFactory.getLogger(AlipayController.class);
 
     @Autowired
-    ComputeClient computeClient;
+    private ShikPayClient shikPayClient;
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add() {
-        return computeClient.add(10, 20);
+    @RequestMapping(value = "pay")
+    @ResponseBody
+    public String pay() {
+        return shikPayClient.alipayPagePay("amamamam2", "iPhone7 Plus", "0.5");
+
     }
 }

@@ -19,30 +19,21 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.controller;
+package client;
 
-import com.shik.client.ComputeClient;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import client.hystrix.ShikPayClientHystrix;
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author gengshikun
- * @date 2017/3/14
+ * @date 2017/7/17
  */
-@RestController
-public class ComputeController {
+@FeignClient(value = "shik-pay-server", fallback = ShikPayClientHystrix.class)
+public interface ShikPayClient {
 
-    private final Logger logger = LoggerFactory.getLogger(ComputeController.class);
-
-    @Autowired
-    ComputeClient computeClient;
-
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add() {
-        return computeClient.add(10, 20);
-    }
+    @RequestMapping(method = RequestMethod.GET, value = "/alipay/page_pay")
+    String alipayPagePay(String outTradeNo, String subject, String totalAmount);
 }

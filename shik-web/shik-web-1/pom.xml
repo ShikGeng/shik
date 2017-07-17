@@ -3,26 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>shik-pay</artifactId>
+        <artifactId>shik-web</artifactId>
         <groupId>com.shik</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shik-pay-server</artifactId>
+    <artifactId>shik-web-1</artifactId>
     <packaging>jar</packaging>
 
-    <name>shik-pay-server</name>
+    <name>shik-web-1</name>
     <url>http://maven.apache.org</url>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.alipay</groupId>
-            <artifactId>sdk-java</artifactId>
-            <version>20170307171631</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/resources/lib/alipay-sdk-java20170307171631.jar</systemPath>
-        </dependency>
-    </dependencies>
 
 </project>

@@ -1,4 +1,4 @@
-package com.shik.content;
+package com.shik.constant;
 
 import java.util.HashMap;
 import java.util.Map;
