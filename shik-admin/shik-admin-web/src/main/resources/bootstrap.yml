@@ -1,0 +1,21 @@
+server: 
+  port: 8881
+
+spring:
+  application:
+    name: shik-admin-web
+  profiles:
+    active: dev, rabbit
+  cloud:
+    config:
+      name: shik
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: shik-config-server
+      password: shik-config-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://www.zkgengkun.com:1111/eureka/,http://www.zkgengkun.com:1112/eureka/,http://www.zkgengkun.com:1113/eureka/
