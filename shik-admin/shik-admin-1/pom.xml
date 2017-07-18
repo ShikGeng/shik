@@ -9,10 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shik-admin-web</artifactId>
+    <artifactId>shik-admin-1</artifactId>
     <packaging>jar</packaging>
 
-    <name>shik-admin-web</name>
+    <name>shik-admin-1</name>
     <url>http://maven.apache.org</url>
 
 
