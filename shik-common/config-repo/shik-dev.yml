@@ -1,16 +1,1 @@
 from: git-dev-2.7
-
-# primary
-datasource:
-  primary:
-    url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=yes&characterEncoding=UTF8
-    username: root
-    password: !QA1qa@WS
-    driver-class-name: com.mysql.jdbc.Driver
-# read
-datasource:
-  read:
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes&characterEncoding=UTF8
-    username: root
-    password: !QA1qa@WS
-    driver-class-name: com.mysql.jdbc.Driver
