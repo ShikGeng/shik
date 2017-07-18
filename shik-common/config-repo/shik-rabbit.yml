@@ -2,4 +2,4 @@ spring:
   rabbitmq:
     addresses: localhost:5672
     username: root
-    password: 123!@#qwe
+    password: qweASDzxc
