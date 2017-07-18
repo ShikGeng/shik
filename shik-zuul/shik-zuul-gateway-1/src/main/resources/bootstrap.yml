@@ -1,11 +1,11 @@
 server: 
-  port: 4441
+  port: 5551
 
 spring:
   application:
-    name: shik-admin-web
+    name: shik-zuul-gateway
   profiles:
-    active: dev, rabbit
+    active: zuul, rabbit
   cloud:
     config:
       name: shik
@@ -13,9 +13,11 @@ spring:
       discovery:
         enabled: true
         service-id: shik-config-server
+      username: shik
       password: shik-config-server
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/
+

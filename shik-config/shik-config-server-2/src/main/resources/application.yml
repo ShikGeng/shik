@@ -1,3 +1,6 @@
+server:
+  port: 8882
+
 spring:
   application:
     name: shik-config-server
@@ -5,25 +8,23 @@ spring:
     config:
       server:
         git:
-          uri: http://git.oschina.net/shik_geng/shik/
+          uri: https://github.com/zkgengkun/shik/
           searchPaths: shik-common/config-repo
           username: username
           password: password
       discovery:
         enabled: true
   rabbitmq:
-    addresses: www.zkgengkun.com:5672
+    addresses: localhost:5672
     username: root
-    password: 123!@#qwe
-
-server:
-  port: 8882
+    password: qweASDzxc
 
 security:
   user:
+    name: shik
     password: shik-config-server
 
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://www.zkgengkun.com:1111/eureka/,http://www.zkgengkun.com:1112/eureka/,http://www.zkgengkun.com:1113/eureka/
+            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/

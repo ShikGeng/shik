@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shik</groupId>
-    <artifactId>shik-config</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>shik-zuul</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-    <name>shik-config</name>
+    <name>shik-zuul</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -42,8 +43,9 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-config-server-1</module>
-        <module>shik-config-server-2</module>
-        <module>shik-config-common</module>
+        <module>shik-zuul-gateway-1</module>
+        <module>shik-zuul-gateway-2</module>
+        <module>shik-zuul-gateway-3</module>
+        <module>shik-zuul-common</module>
     </modules>
 </project>

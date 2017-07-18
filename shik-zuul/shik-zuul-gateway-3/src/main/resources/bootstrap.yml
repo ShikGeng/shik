@@ -1,11 +1,11 @@
 server: 
-  port: 4441
+  port: 5553
 
 spring:
   application:
-    name: shik-admin-web
+    name: shik-zuul-gateway
   profiles:
-    active: dev, rabbit
+    active: rabbit, zuul
   cloud:
     config:
       name: shik

@@ -15,5 +15,13 @@
     <name>shik-config-server-1</name>
     <url>http://maven.apache.org</url>
 
+    <dependencies>
 
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-config-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+    </dependencies>
 </project>

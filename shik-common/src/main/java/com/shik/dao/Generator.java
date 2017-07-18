@@ -12,10 +12,10 @@ public class Generator {
 
 	// 根据命名规范，只修改此常量值即可
 	private static String MODULE_PREFIX_NAME = "";
-	private static String JDBC_DRIVER = PropertiesFileUtil.getInstance("config/jdbc").get("primary.driver-class-name");
-	private static String JDBC_URL = PropertiesFileUtil.getInstance("config/jdbc").get("primary.url");
-	private static String JDBC_USERNAME = PropertiesFileUtil.getInstance("config/jdbc").get("primary.username");
-	private static String JDBC_PASSWORD = PropertiesFileUtil.getInstance("config/jdbc").get("primary.password");
+	private static String JDBC_DRIVER = PropertiesFileUtil.getInstance("config/jdbc").get("datasource.primary.driver-class-name");
+	private static String JDBC_URL = PropertiesFileUtil.getInstance("config/jdbc").get("datasource.primary.url");
+	private static String JDBC_USERNAME = PropertiesFileUtil.getInstance("config/jdbc").get("datasource.primary.username");
+	private static String JDBC_PASSWORD = PropertiesFileUtil.getInstance("config/jdbc").get("datasource.primary.password");
 
 	/**
 	 * 自动代码生成

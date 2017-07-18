@@ -8,4 +8,4 @@ spring:
     active: dev
   cloud:
     config:
-      uri: http://www.zkgengkun.com:7777/
+      uri: http://localhost:7777/
