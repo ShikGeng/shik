@@ -1,5 +1,5 @@
 spring:
   rabbitmq:
-    addresses: www.zkgengkun.com:5672
+    addresses: localhost:5672
     username: root
     password: 123!@#qwe
