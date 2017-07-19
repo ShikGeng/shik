@@ -21,20 +21,6 @@
         <spring.cloud.version>Camden.SR6</spring.cloud.version>
     </properties>
 
-    <dependencies>
-
-        <dependency>
-            <groupId>com.shik</groupId>
-            <artifactId>shik-common</artifactId>
-            <version>${shik.common.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zuul</artifactId>
-        </dependency>
-    </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -57,6 +43,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-admin-web</module>
+        <module>shik-admin-1</module>
+        <module>shik-admin-common</module>
     </modules>
 </project>

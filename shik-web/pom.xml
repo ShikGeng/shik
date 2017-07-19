@@ -43,7 +43,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-web-1</module>
         <module>shik-web-common</module>
+        <module>shik-web-1</module>
     </modules>
 </project>
