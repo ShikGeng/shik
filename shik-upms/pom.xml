@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shik</groupId>
-    <artifactId>shik-login</artifactId>
+    <artifactId>shik-upms</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <name>shik-login</name>
+    <name>shik-upms</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -43,7 +43,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-login-server</module>
-        <module>shik-login-common</module>
+        <module>shik-upms-common</module>
+        <module>shik-upms-1</module>
     </modules>
 </project>

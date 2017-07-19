@@ -10,10 +10,17 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>shik-RA-server-3</artifactId>
+    <artifactId>shik-RA-3</artifactId>
     <packaging>jar</packaging>
 
-    <name>shik-RA-server-3</name>
+    <name>shik-RA-3</name>
     <url>http://maven.apache.org</url>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-RA-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 </project>
