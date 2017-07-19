@@ -17,11 +17,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.alipay</groupId>
-            <artifactId>sdk-java</artifactId>
-            <version>20170307171631</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/resources/lib/alipay-sdk-java20170307171631.jar</systemPath>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-pay-common</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
