@@ -43,7 +43,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-pay-server</module>
+        <module>shik-pay-1</module>
         <module>shik-pay-common</module>
     </modules>
 </project>

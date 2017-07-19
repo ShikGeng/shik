@@ -9,10 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shik-pay-server</artifactId>
+    <artifactId>shik-pay-1</artifactId>
     <packaging>jar</packaging>
 
-    <name>shik-pay-server</name>
+    <name>shik-pay-1</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
