@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shik</groupId>
-    <artifactId>shik-common</artifactId>
+    <artifactId>shik-jdbc</artifactId>
     <version>1.0.0</version>
     <build>
         <plugins>
@@ -19,9 +19,14 @@
             </plugin>
         </plugins>
     </build>
-    <packaging>jar</packaging>
+    <modules>
+        <module>shik-jdbc-common</module>
+        <module>shik-jdbc-mybatis</module>
+        <module>shik-jdbc-jpa</module>
+    </modules>
+    <packaging>pom</packaging>
 
-    <name>shik-common</name>
+    <name>shik-jdbc</name>
     <url>http://maven.apache.org</url>
 
     <properties>
