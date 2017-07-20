@@ -1,13 +1,13 @@
 datasource:
-    primary:
-        url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=yes
-        username: root
-        password: QAZqazWSX
-        driver: com.mysql.jdbc.Driver
+  primary:
+    url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=yes
+    username: root
+    password: QAZqazWSX
+    driver: com.mysql.jdbc.Driver
 
 datasource:
-    read:
-        url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes
-        username: root
-        password: QAZqazWSX
-        driver: com.mysql.jdbc.Driver
+  read:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes
+    username: root
+    password: QAZqazWSX
+    driver: com.mysql.jdbc.Driver
