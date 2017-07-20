@@ -1,11 +1,10 @@
-# primary
 datasource:
     primary:
         url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=yes
         username: root
         password: !QA1qa@WS
         driver: com.mysql.jdbc.Driver
-# read
+
 datasource:
     read:
         url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes
