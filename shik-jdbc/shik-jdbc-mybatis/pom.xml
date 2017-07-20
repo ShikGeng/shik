@@ -11,5 +11,11 @@
 
     <artifactId>shik-jdbc-mybatis</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-jdbc-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 </project>
