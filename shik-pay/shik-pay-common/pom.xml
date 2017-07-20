@@ -13,6 +13,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-common</artifactId>
+            <version>${shik.common.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alipay</groupId>
             <artifactId>sdk-java</artifactId>
             <version>20170307171631</version>
