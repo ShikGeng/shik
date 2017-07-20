@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -26,8 +27,8 @@ import java.util.Map;
  */
 @Configuration
 //@ImportResource("classpath:spring/application-data.xml")
-@ConfigurationProperties(prefix = "datasource")
-@PropertySource("classpath:config/jdbc.properties")
+//@ConfigurationProperties(prefix = "datasource")
+//@PropertySource("classpath:config/jdbc.properties")
 public class DataSourceConfig {
     /**
      * Logger for this class
@@ -35,33 +36,34 @@ public class DataSourceConfig {
     private static final Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
 
     @Bean(name = "primaryDataSource")
-    @org.springframework.context.annotation.Primary
+    @Primary
+    @ConfigurationProperties(prefix = "datasource.primary")
     public DataSource primaryDataSource() {
         logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>primary datasource init..............");
-//        DataSource ds = DataSourceBuilder.create().build();
-        DriverManagerDataSource dd = new DriverManagerDataSource();
-        dd.setDriverClassName(primary.getDriver());
-        dd.setUrl(primary.getUrl());
-        dd.setUsername(primary.getUsername());
-        dd.setPassword(primary.getPassword());
-        return dd;
+        DataSource ds = DataSourceBuilder.create().build();
+//        DriverManagerDataSource dd = new DriverManagerDataSource();
+//        dd.setDriverClassName(primary.getDriver());
+//        dd.setUrl(primary.getUrl());
+//        dd.setUsername(primary.getUsername());
+//        dd.setPassword(primary.getPassword());
+        return ds;
     }
 
     /**
      * 只读库  生产环境可以使用dns在多个读库中负载均衡
      */
     @Bean(name = "readDataSource")
-//    @ConfigurationProperties(prefix = "datasource.read")
+    @ConfigurationProperties(prefix = "datasource.read")
     public DataSource readDataSource() {
         logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>read datasource init.............");
-//        return DataSourceBuilder.create().build();
+        return DataSourceBuilder.create().build();
 
-        DriverManagerDataSource dd = new DriverManagerDataSource();
-        dd.setDriverClassName(read.getDriver());
-        dd.setUrl(read.getUrl());
-        dd.setUsername(read.getUsername());
-        dd.setPassword(read.getPassword());
-        return dd;
+//        DriverManagerDataSource dd = new DriverManagerDataSource();
+//        dd.setDriverClassName(read.getDriver());
+//        dd.setUrl(read.getUrl());
+//        dd.setUsername(read.getUsername());
+//        dd.setPassword(read.getPassword());
+//        return dd;
     }
 
     @Bean(name = "dataSource")
@@ -91,7 +93,7 @@ public class DataSourceConfig {
                                                                        @Qualifier("jpaVendorAdapter") JpaVendorAdapter jpaVendorAdapter) {
 
         LocalContainerEntityManagerFactoryBean
-                localContainerEntityManagerFactoryBean = builder.dataSource(dataSource).packages("com.zkgengkun.domain").build();
+                localContainerEntityManagerFactoryBean = builder.dataSource(dataSource).packages("com.shik.jpa.domain").build();
         localContainerEntityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter);
         Map<String, Object> jpaPropertyMap = Maps.newHashMap();
         jpaPropertyMap.put("javax.persistence.schema-generation.database.action", "none");
@@ -109,102 +111,102 @@ public class DataSourceConfig {
         return new JdbcTemplate(dataSource);
     }
 
-    private Primary primary;
-    private Read read;
-
-    public Primary getPrimary() {
-        return primary;
-    }
-
-    public void setPrimary(Primary primary) {
-        this.primary = primary;
-    }
-
-    public Read getRead() {
-        return read;
-    }
-
-    public void setRead(Read read) {
-        this.read = read;
-    }
-
-    public static class Primary {
-
-        private String url;
-        private String username;
-        private String password;
-        private String driver;
-
-        public String getUrl() {
-            return url;
-        }
-
-        public void setUrl(String url) {
-            this.url = url;
-        }
-
-        public String getUsername() {
-            return username;
-        }
-
-        public void setUsername(String username) {
-            this.username = username;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
-
-        public String getDriver() {
-            return driver;
-        }
-
-        public void setDriver(String driver) {
-            this.driver = driver;
-        }
-    }
-    public static class Read {
-
-        private String url;
-        private String username;
-        private String password;
-        private String driver;
-
-        public String getUrl() {
-            return url;
-        }
-
-        public void setUrl(String url) {
-            this.url = url;
-        }
-
-        public String getUsername() {
-            return username;
-        }
-
-        public void setUsername(String username) {
-            this.username = username;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
-
-        public String getDriver() {
-            return driver;
-        }
-
-        public void setDriver(String driver) {
-            this.driver = driver;
-        }
-    }
+//    private Primary primary;
+//    private Read read;
+//
+//    public Primary getPrimary() {
+//        return primary;
+//    }
+//
+//    public void setPrimary(Primary primary) {
+//        this.primary = primary;
+//    }
+//
+//    public Read getRead() {
+//        return read;
+//    }
+//
+//    public void setRead(Read read) {
+//        this.read = read;
+//    }
+//
+//    public static class Primary {
+//
+//        private String url;
+//        private String username;
+//        private String password;
+//        private String driver;
+//
+//        public String getUrl() {
+//            return url;
+//        }
+//
+//        public void setUrl(String url) {
+//            this.url = url;
+//        }
+//
+//        public String getUsername() {
+//            return username;
+//        }
+//
+//        public void setUsername(String username) {
+//            this.username = username;
+//        }
+//
+//        public String getPassword() {
+//            return password;
+//        }
+//
+//        public void setPassword(String password) {
+//            this.password = password;
+//        }
+//
+//        public String getDriver() {
+//            return driver;
+//        }
+//
+//        public void setDriver(String driver) {
+//            this.driver = driver;
+//        }
+//    }
+//    public static class Read {
+//
+//        private String url;
+//        private String username;
+//        private String password;
+//        private String driver;
+//
+//        public String getUrl() {
+//            return url;
+//        }
+//
+//        public void setUrl(String url) {
+//            this.url = url;
+//        }
+//
+//        public String getUsername() {
+//            return username;
+//        }
+//
+//        public void setUsername(String username) {
+//            this.username = username;
+//        }
+//
+//        public String getPassword() {
+//            return password;
+//        }
+//
+//        public void setPassword(String password) {
+//            this.password = password;
+//        }
+//
+//        public String getDriver() {
+//            return driver;
+//        }
+//
+//        public void setDriver(String driver) {
+//            this.driver = driver;
+//        }
+//    }
 
 }

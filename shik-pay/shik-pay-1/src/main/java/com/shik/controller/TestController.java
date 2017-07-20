@@ -19,21 +19,35 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.client;
+package com.shik.controller;
 
-import com.shik.client.hystrix.ShikPayClientHystrix;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import com.shik.jpa.domain.User;
+import com.shik.jpa.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author gengshikun
- * @date 2017/7/17
+ * @date 2017/7/20
  */
-@FeignClient(value = "shik-zuul-gateway", fallback = ShikPayClientHystrix.class)
-public interface ShikPayClient {
+@Controller
+@RequestMapping(value = "test")
+public class TestController {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/shik-pay-server/alipay/page_pay")
-    String alipayPagePay(String outTradeNo, String subject, String totalAmount);
+    @Autowired
+    private UserRepository userRepository;
+
+
+    @RequestMapping(value = "user")
+    @ResponseBody
+    public String testUser(){
+        User user = new User();
+        user.setName("name");
+        user.setPassword("pwd");
+        this.userRepository.save(user);
+        return "success";
+    }
+
 }

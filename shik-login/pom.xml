@@ -43,7 +43,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-login-server</module>
+        <module>shik-login-1</module>
         <module>shik-login-common</module>
     </modules>
 </project>

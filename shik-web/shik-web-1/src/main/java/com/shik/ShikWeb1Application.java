@@ -19,21 +19,23 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.client;
+package com.shik;
 
-import com.shik.client.hystrix.ShikPayClientHystrix;
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /**
  * @author gengshikun
- * @date 2017/7/17
+ * @date 2017/3/24
  */
-@FeignClient(value = "shik-zuul-gateway", fallback = ShikPayClientHystrix.class)
-public interface ShikPayClient {
+@EnableFeignClients
+@EnableDiscoveryClient
+@SpringBootApplication
+public class ShikWeb1Application {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/shik-pay-server/alipay/page_pay")
-    String alipayPagePay(String outTradeNo, String subject, String totalAmount);
+    public static void main(String[] args) {
+        SpringApplication.run(ShikWeb1Application.class);
+    }
 }

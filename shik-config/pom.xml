@@ -42,8 +42,8 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-config-server-1</module>
-        <module>shik-config-server-2</module>
+        <module>shik-config-1</module>
+        <module>shik-config-2</module>
         <module>shik-config-common</module>
     </modules>
 </project>

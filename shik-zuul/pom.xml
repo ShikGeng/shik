@@ -43,9 +43,9 @@
     </dependencyManagement>
 
     <modules>
-        <module>shik-zuul-gateway-1</module>
-        <module>shik-zuul-gateway-2</module>
-        <module>shik-zuul-gateway-3</module>
+        <module>shik-zuul-1</module>
+        <module>shik-zuul-2</module>
+        <module>shik-zuul-3</module>
         <module>shik-zuul-common</module>
     </modules>
 </project>
