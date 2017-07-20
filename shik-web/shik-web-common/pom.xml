@@ -14,6 +14,12 @@
     <dependencies>
         <dependency>
             <groupId>com.shik</groupId>
+            <artifactId>shik-jdbc-jpa</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.shik</groupId>
             <artifactId>shik-common</artifactId>
             <version>${shik.common.version}</version>
         </dependency>

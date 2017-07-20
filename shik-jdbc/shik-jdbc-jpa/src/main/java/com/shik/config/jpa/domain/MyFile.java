@@ -19,51 +19,65 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.jpa.domain;
+package com.shik.config.jpa.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * 分组类型
- *
  * @author gengshikun
- * @date 2016/12/19
+ * @date 2017/3/3
  */
-@Table(name = "`group`")
-@Entity
-public class Group implements Serializable {
+@Entity(name = "`my_file`")
+public class MyFile implements Serializable {
+
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String groupId;
+    private String fileId;
 
+    /**
+     * 文件类型  SysConstents FILE_TYPE
+     */
+    @Column(length = 32)
+    private String type;
+
+    /**
+     * 文件名
+     */
     @Column(length = 32)
     private String name;
 
-    @Column(length = 3)
-    private String type;
-
+    /**
+     * 文件大小
+     */
     @Column
-    private Integer position;
+    private Long size;
 
-    public String getGroupId() {
-        return groupId;
+    /**
+     * 在服务器路径
+     */
+    @Column
+    private String path;
+
+    /**
+     * 是否删除
+     */
+    @Column
+    private Boolean deleteBoolean;
+
+    public String getFileId() {
+        return fileId;
     }
 
-    public void setGroupId(String groupId) {
-        this.groupId = groupId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setFileId(String fileId) {
+        this.fileId = fileId;
     }
 
     public String getType() {
@@ -74,11 +88,35 @@ public class Group implements Serializable {
         this.type = type;
     }
 
-    public Integer getPosition() {
-        return position;
+    public String getName() {
+        return name;
     }
 
-    public void setPosition(Integer position) {
-        this.position = position;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getSize() {
+        return size;
+    }
+
+    public void setSize(Long size) {
+        this.size = size;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public Boolean getDeleteBoolean() {
+        return deleteBoolean;
+    }
+
+    public void setDeleteBoolean(Boolean deleteBoolean) {
+        this.deleteBoolean = deleteBoolean;
     }
 }

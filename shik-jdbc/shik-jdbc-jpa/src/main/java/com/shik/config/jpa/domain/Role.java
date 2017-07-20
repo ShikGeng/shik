@@ -19,7 +19,7 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.jpa.domain;
+package com.shik.config.jpa.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 

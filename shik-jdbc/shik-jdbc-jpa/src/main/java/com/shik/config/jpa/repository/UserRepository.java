@@ -1,6 +1,6 @@
-package com.shik.jpa.repository;
+package com.shik.config.jpa.repository;
 
-import com.shik.jpa.domain.User;
+import com.shik.config.jpa.domain.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
