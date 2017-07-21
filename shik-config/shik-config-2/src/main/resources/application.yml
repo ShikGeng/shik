@@ -15,7 +15,7 @@ spring:
       discovery:
         enabled: true
   rabbitmq:
-    addresses: localhost:5672
+    addresses: 127.0.0.1:5672
     username: root
     password: qweASDzxc
 
