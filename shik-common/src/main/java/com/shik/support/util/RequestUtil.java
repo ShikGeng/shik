@@ -21,11 +21,11 @@
  */
 package com.shik.support.util;
 
-import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -41,7 +41,7 @@ public class RequestUtil {
      * @return
      */
     public static Map<String, Object> paramsToMap(HttpServletRequest request) {
-        Map<String, Object> param = Maps.newHashMap();
+        Map<String, Object> param = new HashMap<String, Object>();
 
         Enumeration keys = request.getParameterNames();
         while (keys.hasMoreElements()) {
@@ -60,7 +60,7 @@ public class RequestUtil {
      * @return
      */
     public static Map<String, String> params2Map(HttpServletRequest request) {
-        Map<String, String> param = Maps.newHashMap();
+        Map<String, String> param = new HashMap<String, String>();
 
         Enumeration keys = request.getParameterNames();
         while (keys.hasMoreElements()) {

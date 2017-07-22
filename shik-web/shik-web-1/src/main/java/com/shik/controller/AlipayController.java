@@ -40,7 +40,7 @@ public class AlipayController {
 
     private final Logger logger = LoggerFactory.getLogger(AlipayController.class);
 
-//    @Qualifier("shik-zuul-gateway")
+
     @Autowired
     private ShikPayClient shikPayClient;
 

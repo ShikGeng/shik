@@ -21,8 +21,6 @@
  */
 package com.shik.support.generator;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.shik.support.generator.tools.FreemarkerUtils;
 import com.shik.support.generator.tools.JdbcUtil;
 import com.shik.support.generator.tools.StringUtil;
@@ -32,6 +30,8 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -64,7 +64,7 @@ public class MybatisGeneratorXml {
         String sql = "SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" + DATABASE_NAME + "';";
         System.out.println("========== 开始生成generatorConfig.xml文件 ==========");
         try {
-            List<Map<String, Object>> tables = Lists.newArrayList();
+            List<Map<String, Object>> tables = new ArrayList<Map<String, Object>>();
             Map<String, Object> table = null;
 
             // 查询定制前缀项目的所有表
@@ -72,14 +72,14 @@ public class MybatisGeneratorXml {
             List<Map> result = jdbcUtil.selectByParams(sql, null);
             for (Map map : result) {
                 System.out.println(map.get("TABLE_NAME"));
-                table = Maps.newHashMap();
+                table = new HashMap<String, Object>();
                 table.put("table_name", map.get("TABLE_NAME"));
                 table.put("model_name", StringUtil.lineToHump(map.get("TABLE_NAME").toString()));
                 tables.add(table);
             }
             jdbcUtil.release();
 
-            Map<String, Object> context = Maps.newHashMap();
+            Map<String, Object> context = new HashMap<String, Object>();
 //			String targetProject = PROJECT_NAME + module_prefix_name.replaceAll("\\.", "-") + "-dao";
             context.put("jdbc_driver", jdbc_driver);
             context.put("jdbc_url", jdbc_url);
@@ -109,7 +109,7 @@ public class MybatisGeneratorXml {
     public static void execute(String generatorPath){
         System.out.println("========== 开始运行MybatisGenerator ==========");
         try {
-            List<String> warnings = Lists.newArrayList();
+            List<String> warnings = new ArrayList<String>();
             File configFile = new File(MybatisGeneratorXml.class.getResource(generatorPath).getPath().replace("/target/classes/", "/src/main/resources/"));
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);
