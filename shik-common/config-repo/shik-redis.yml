@@ -1,0 +1,14 @@
+# REDIS (RedisProperties)
+spring:
+  redis:
+    host: 127.0.0.1
+    password: ASDasdQAZ
+    port: 6379
+    pool.max_idle: 8
+    pool.min_idle: 0
+    pool.max_active: 8
+    pool.max_wait: -1
+    timeout: 0
+    #database:  # database name
+    #sentinel.master:  # name of Redis server
+    #sentinel.nodes:  # comma-separated list of host:port pairs
