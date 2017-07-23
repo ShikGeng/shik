@@ -1,4 +1,4 @@
-package com.shik.config.jpa.domain;
+package com.shik.jpa.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 

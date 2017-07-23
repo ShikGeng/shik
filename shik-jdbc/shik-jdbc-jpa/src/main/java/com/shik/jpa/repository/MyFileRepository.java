@@ -19,15 +19,15 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.config.jpa.repository;
+package com.shik.jpa.repository;
 
-import com.shik.config.jpa.domain.Role;
+import com.shik.jpa.domain.MyFile;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  * @author gengshikun
- * @date 2017/7/3
+ * @date 2017/3/3
  */
-public interface RoleRepository extends PagingAndSortingRepository<Role, String>, JpaRepository<Role, String> {
+public interface MyFileRepository extends PagingAndSortingRepository<MyFile, String>, JpaRepository<MyFile, String> {
 }

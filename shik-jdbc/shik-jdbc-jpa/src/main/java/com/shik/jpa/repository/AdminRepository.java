@@ -19,10 +19,10 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.config.jpa.repository;
+package com.shik.jpa.repository;
 
-import com.shik.config.jpa.domain.Admin;
-import com.shik.config.jpa.domain.Role;
+import com.shik.jpa.domain.Admin;
+import com.shik.jpa.domain.Role;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.data.jpa.repository.JpaRepository;

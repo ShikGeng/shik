@@ -1,6 +1,6 @@
-package com.shik.config.jpa.repository;
+package com.shik.jpa.repository;
 
-import com.shik.config.jpa.domain.Blog;
+import com.shik.jpa.domain.Blog;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;

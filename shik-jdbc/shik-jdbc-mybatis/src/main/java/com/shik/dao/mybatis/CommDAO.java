@@ -31,12 +31,12 @@ import org.springframework.stereotype.Component;
 public class CommDAO {
 
     public SqlMapper init(String sqlId) {
-        String namespace = "com.zkgengkun.dao.mapper.TestMapper."; //方便测试 写死
+        String namespace = "com.shik.dao.mapper.UserMapper."; //方便测试 写死
         return new SqlMapper(namespace);
     }
 
     public TableMapper init(Class<?> cls) {
-        String namespace = "com.zkgengkun.dao.mapper.TestMapper."; //方便测试 写死
+        String namespace = "com.shik.dao.mapper.UserMapper."; //方便测试 写死
         return new TableMapper(namespace);
     }
 }

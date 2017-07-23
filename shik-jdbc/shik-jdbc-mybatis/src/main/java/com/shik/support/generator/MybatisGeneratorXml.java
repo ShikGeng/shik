@@ -96,7 +96,7 @@ public class MybatisGeneratorXml {
             FreemarkerUtils.generateToFile(VM_PATH, "generatorConfig.ftl", module_path, context, "UTF-8");
             // 删除旧代码
             deleteDir(new File(module_prefix_name + "/src/main/java/com/shik/dao/model"));
-            deleteDir(new File(module_prefix_name + "src/main/java/com/shik/dao/mapper"));
+            deleteDir(new File(module_prefix_name + "/src/main/java/com/shik/dao/mapper"));
         } catch (Exception e) {
             e.printStackTrace();
         }

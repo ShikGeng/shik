@@ -21,17 +21,17 @@
         <#--<plugin type="com.zkgengkun.plugin.PaginationPlugin"></plugin>-->
 
         <!-- 生成在XML中的<cache>元素 -->
-        <plugin type="org.mybatis.generator.plugins.CachePlugin">
-            <!-- 使用ehcache -->
+        <#--<plugin type="org.mybatis.generator.plugins.CachePlugin">
+            <!-- 使用ehcache &ndash;&gt;
             <property name="cache_type" value="org.mybatis.caches.ehcache.LoggingEhcache" />
-            <!-- 内置cache配置 -->
+            <!-- 内置cache配置 &ndash;&gt;
             <!--
             <property name="cache_eviction" value="LRU" />
             <property name="cache_flushInterval" value="60000" />
             <property name="cache_readOnly" value="true" />
             <property name="cache_size" value="1024" />
-            -->
-        </plugin>
+            &ndash;&gt;
+        </plugin>-->
 
         <!-- Java模型生成equals和hashcode方法 -->
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
