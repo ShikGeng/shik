@@ -193,5 +193,4 @@
       type = #{type,jdbcType=VARCHAR}
     where groupId = #{groupid,jdbcType=VARCHAR}
   </update>
-  <cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
 </mapper>

@@ -107,76 +107,6 @@ public class AdminToRoleExample implements Serializable {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andAdminIdIsNull() {
-            addCriterion("admin_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdIsNotNull() {
-            addCriterion("admin_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdEqualTo(String value) {
-            addCriterion("admin_id =", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdNotEqualTo(String value) {
-            addCriterion("admin_id <>", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdGreaterThan(String value) {
-            addCriterion("admin_id >", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdGreaterThanOrEqualTo(String value) {
-            addCriterion("admin_id >=", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdLessThan(String value) {
-            addCriterion("admin_id <", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdLessThanOrEqualTo(String value) {
-            addCriterion("admin_id <=", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdLike(String value) {
-            addCriterion("admin_id like", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdNotLike(String value) {
-            addCriterion("admin_id not like", value, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdIn(List<String> values) {
-            addCriterion("admin_id in", values, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdNotIn(List<String> values) {
-            addCriterion("admin_id not in", values, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdBetween(String value1, String value2) {
-            addCriterion("admin_id between", value1, value2, "adminId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAdminIdNotBetween(String value1, String value2) {
-            addCriterion("admin_id not between", value1, value2, "adminId");
-            return (Criteria) this;
-        }
-
         public Criteria andRoleIdIsNull() {
             addCriterion("role_id is null");
             return (Criteria) this;
@@ -244,6 +174,76 @@ public class AdminToRoleExample implements Serializable {
 
         public Criteria andRoleIdNotBetween(String value1, String value2) {
             addCriterion("role_id not between", value1, value2, "roleId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdIsNull() {
+            addCriterion("admin_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdIsNotNull() {
+            addCriterion("admin_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdEqualTo(String value) {
+            addCriterion("admin_id =", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdNotEqualTo(String value) {
+            addCriterion("admin_id <>", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdGreaterThan(String value) {
+            addCriterion("admin_id >", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdGreaterThanOrEqualTo(String value) {
+            addCriterion("admin_id >=", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdLessThan(String value) {
+            addCriterion("admin_id <", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdLessThanOrEqualTo(String value) {
+            addCriterion("admin_id <=", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdLike(String value) {
+            addCriterion("admin_id like", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdNotLike(String value) {
+            addCriterion("admin_id not like", value, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdIn(List<String> values) {
+            addCriterion("admin_id in", values, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdNotIn(List<String> values) {
+            addCriterion("admin_id not in", values, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdBetween(String value1, String value2) {
+            addCriterion("admin_id between", value1, value2, "adminId");
+            return (Criteria) this;
+        }
+
+        public Criteria andAdminIdNotBetween(String value1, String value2) {
+            addCriterion("admin_id not between", value1, value2, "adminId");
             return (Criteria) this;
         }
     }

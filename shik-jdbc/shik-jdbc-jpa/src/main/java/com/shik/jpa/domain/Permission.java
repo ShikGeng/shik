@@ -19,7 +19,7 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.config.jpa.domain;
+package com.shik.jpa.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -71,7 +71,7 @@ public class Permission implements Serializable {
     private Boolean deleteBoolean;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "role_to_permission", joinColumns = { @JoinColumn(name = "permission_id") }, inverseJoinColumns = { @JoinColumn(name = "role_id") })
+    @JoinTable(name = "role_to_permission", joinColumns = {@JoinColumn(name = "permission_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private List<Role> roleList;  // 一个用户具有多个角色
 
     public String getId() {

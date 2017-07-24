@@ -7,17 +7,15 @@ public class User implements Serializable {
 
     private Integer age;
 
-    private String name;
-
     private Long createtime;
 
     private Boolean deleteboolean;
 
-    private String password;
-
-    private String username;
-
     private String email;
+
+    private String name;
+
+    private String password;
 
     private Long registertime;
 
@@ -41,14 +39,6 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
     public Long getCreatetime() {
         return createtime;
     }
@@ -65,28 +55,28 @@ public class User implements Serializable {
         this.deleteboolean = deleteboolean;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email == null ? null : email.trim();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 
     public Long getRegistertime() {
@@ -113,12 +103,11 @@ public class User implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", userid=").append(userid);
         sb.append(", age=").append(age);
-        sb.append(", name=").append(name);
         sb.append(", createtime=").append(createtime);
         sb.append(", deleteboolean=").append(deleteboolean);
-        sb.append(", password=").append(password);
-        sb.append(", username=").append(username);
         sb.append(", email=").append(email);
+        sb.append(", name=").append(name);
+        sb.append(", password=").append(password);
         sb.append(", registertime=").append(registertime);
         sb.append(", validate=").append(validate);
         sb.append("]");
@@ -139,12 +128,11 @@ public class User implements Serializable {
         User other = (User) that;
         return (this.getUserid() == null ? other.getUserid() == null : this.getUserid().equals(other.getUserid()))
             && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()))
-            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
             && (this.getCreatetime() == null ? other.getCreatetime() == null : this.getCreatetime().equals(other.getCreatetime()))
             && (this.getDeleteboolean() == null ? other.getDeleteboolean() == null : this.getDeleteboolean().equals(other.getDeleteboolean()))
-            && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
-            && (this.getUsername() == null ? other.getUsername() == null : this.getUsername().equals(other.getUsername()))
             && (this.getEmail() == null ? other.getEmail() == null : this.getEmail().equals(other.getEmail()))
+            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
+            && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
             && (this.getRegistertime() == null ? other.getRegistertime() == null : this.getRegistertime().equals(other.getRegistertime()))
             && (this.getValidate() == null ? other.getValidate() == null : this.getValidate().equals(other.getValidate()));
     }
@@ -155,12 +143,11 @@ public class User implements Serializable {
         int result = 1;
         result = prime * result + ((getUserid() == null) ? 0 : getUserid().hashCode());
         result = prime * result + ((getAge() == null) ? 0 : getAge().hashCode());
-        result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         result = prime * result + ((getCreatetime() == null) ? 0 : getCreatetime().hashCode());
         result = prime * result + ((getDeleteboolean() == null) ? 0 : getDeleteboolean().hashCode());
-        result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
-        result = prime * result + ((getUsername() == null) ? 0 : getUsername().hashCode());
         result = prime * result + ((getEmail() == null) ? 0 : getEmail().hashCode());
+        result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
+        result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
         result = prime * result + ((getRegistertime() == null) ? 0 : getRegistertime().hashCode());
         result = prime * result + ((getValidate() == null) ? 0 : getValidate().hashCode());
         return result;

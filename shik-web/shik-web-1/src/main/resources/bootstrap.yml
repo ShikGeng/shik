@@ -5,14 +5,14 @@ spring:
   application:
     name: shik-web
   profiles:
-    active: dev, rabbit, jdbc
+    active: dev, rabbit, redis, jdbc
   cloud:
     config:
       name: shik
       fail-fast: true
       discovery:
         enabled: true
-        service-id: shik-config-server
+        service-id: shik-config
       username: shik
       password: shik-config-server
 

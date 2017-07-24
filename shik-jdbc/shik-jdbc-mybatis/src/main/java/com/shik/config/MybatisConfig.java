@@ -54,7 +54,7 @@ public class MybatisConfig implements TransactionManagementConfigurer {
     public SqlSessionFactory sqlSessionFactory(){
 
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
-        bean.setTypeAliasesPackage("com.shik.**.model");
+        bean.setTypeAliasesPackage("com.shik.dao.model");
         bean.setDataSource(dataSource);  // 动态数据源
 
         // mybatis.xml
@@ -88,6 +88,20 @@ public class MybatisConfig implements TransactionManagementConfigurer {
         }
 
         return null;
+    }
+
+    public static void main(String[] args) {
+        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        try {
+            org.springframework.core.io.Resource[] metaInfResources = resolver.getResources("classpath*:com/**/*Mapper.xml");
+
+            for(org.springframework.core.io.Resource r : metaInfResources){
+                System.out.println("URL:" + r.getURL());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Bean

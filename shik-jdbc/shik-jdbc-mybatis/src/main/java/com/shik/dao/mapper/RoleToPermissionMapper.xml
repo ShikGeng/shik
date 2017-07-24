@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shik.dao.mapper.RoleToPermissionMapper">
   <resultMap id="BaseResultMap" type="com.shik.dao.model.RoleToPermission">
-    <result column="permission_id" jdbcType="VARCHAR" property="permissionId" />
     <result column="role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="permission_id" jdbcType="VARCHAR" property="permissionId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    permission_id, role_id
+    role_id, permission_id
   </sql>
   <select id="selectByExample" parameterType="com.shik.dao.model.RoleToPermissionExample" resultMap="BaseResultMap">
     select
@@ -87,25 +87,25 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.shik.dao.model.RoleToPermission">
-    insert into role_to_permission (permission_id, role_id)
-    values (#{permissionId,jdbcType=VARCHAR}, #{roleId,jdbcType=VARCHAR})
+    insert into role_to_permission (role_id, permission_id)
+    values (#{roleId,jdbcType=VARCHAR}, #{permissionId,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.shik.dao.model.RoleToPermission">
     insert into role_to_permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="permissionId != null">
-        permission_id,
-      </if>
       <if test="roleId != null">
         role_id,
       </if>
+      <if test="permissionId != null">
+        permission_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="permissionId != null">
-        #{permissionId,jdbcType=VARCHAR},
-      </if>
       <if test="roleId != null">
         #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="permissionId != null">
+        #{permissionId,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -118,11 +118,11 @@
   <update id="updateByExampleSelective" parameterType="map">
     update role_to_permission
     <set>
-      <if test="record.permissionId != null">
-        permission_id = #{record.permissionId,jdbcType=VARCHAR},
-      </if>
       <if test="record.roleId != null">
         role_id = #{record.roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.permissionId != null">
+        permission_id = #{record.permissionId,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -131,11 +131,10 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update role_to_permission
-    set permission_id = #{record.permissionId,jdbcType=VARCHAR},
-      role_id = #{record.roleId,jdbcType=VARCHAR}
+    set role_id = #{record.roleId,jdbcType=VARCHAR},
+      permission_id = #{record.permissionId,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
 </mapper>

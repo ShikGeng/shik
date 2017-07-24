@@ -21,7 +21,7 @@
  */
 package com.shik.constant;
 
-import com.google.common.collect.Maps;
+import org.apache.commons.collections.MapUtils;
 
 import java.util.Map;
 
@@ -34,35 +34,35 @@ public class MapConstants {
     /**
      * url_pass.properties
      */
-    public static Map<String, String> URL_PASS_MAP = Maps.newHashMap();
+    public static Map<String, String> URL_PASS_MAP = MapUtils.EMPTY_MAP;
 
     /**
      * 浏览器特殊请求
      */
-    public static Map<String, String> URL_SPECIAL_MAP = Maps.newHashMap();
+    public static Map<String, String> URL_SPECIAL_MAP = MapUtils.EMPTY_MAP;
 
     /**
      * freemarker.properties
      */
-    public static Map<String, String> FREE_MARKER_MAP = Maps.newHashMap();
+    public static Map<String, String> FREE_MARKER_MAP = MapUtils.EMPTY_MAP;
 
     /**
      * jsoup.properties
      */
-    public static Map<String, String> JSOUP_MAP = Maps.newHashMap();
+    public static Map<String, String> JSOUP_MAP = MapUtils.EMPTY_MAP;
 
     /**
      * book.properties
      */
-    public static Map<String, String> BOOK_MAP = Maps.newHashMap();
+    public static Map<String, String> BOOK_MAP = MapUtils.EMPTY_MAP;
 
     /**
      * 搜索book_url
      */
-    public static Map<String, String> SEARCH_BOOK_MAP = Maps.newHashMap();
+    public static Map<String, String> SEARCH_BOOK_MAP = MapUtils.EMPTY_MAP;
 
     /**
      * alipay.properties
      */
-    public static Map<String, String> ALIPAY_MAP = Maps.newHashMap();
+    public static Map<String, String> ALIPAY_MAP = MapUtils.EMPTY_MAP;
 }

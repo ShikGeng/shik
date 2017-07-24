@@ -1,6 +1,8 @@
 # Shik
 
 Shik包含的所有module(非util)都支持分布式管理
+
+启动顺序：RA -> config -> other
 ### shik-RA
 - 注册中心
 

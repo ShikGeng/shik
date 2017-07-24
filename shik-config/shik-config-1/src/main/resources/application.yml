@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: shik-config-server
+    name: shik-config
   cloud:
     config:
       server:

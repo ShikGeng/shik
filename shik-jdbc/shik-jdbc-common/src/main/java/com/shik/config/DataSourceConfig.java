@@ -1,6 +1,6 @@
 package com.shik.config;
 
-import com.google.common.collect.Maps;
+//import com.google.common.collect.Maps;
 import com.shik.support.component.DynamicDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -49,7 +50,7 @@ public class DataSourceConfig {
                                         @Qualifier("readDataSource") DataSource readDataSource) {
         DynamicDataSource dataSource = new DynamicDataSource();
         dataSource.setDefaultTargetDataSource(primaryDataSource);
-        Map<Object, Object> targetDataSources = Maps.newHashMap();
+        Map<Object, Object> targetDataSources = new HashMap<Object, Object>();
         targetDataSources.put("primaryDataSource", primaryDataSource);
         targetDataSources.put("readDataSource", readDataSource);
         dataSource.setTargetDataSources(targetDataSources);

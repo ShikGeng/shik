@@ -267,5 +267,4 @@
       title = #{title,jdbcType=VARCHAR}
     where blogId = #{blogid,jdbcType=VARCHAR}
   </update>
-  <cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
 </mapper>

@@ -21,7 +21,6 @@
  */
 package com.shik.config;
 
-import com.google.common.collect.Maps;
 import com.shik.support.component.DynamicDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
@@ -31,6 +30,7 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -56,7 +56,7 @@ public class JpaConfig {
 
         LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean = builder.dataSource(dataSource).packages("com.shik.**.domain").build();
         localContainerEntityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter);
-        Map<String, Object> jpaPropertyMap = Maps.newHashMap();
+        Map<String, Object> jpaPropertyMap = new HashMap<String, Object>();
         jpaPropertyMap.put("javax.persistence.schema-generation.database.action", "none");
         localContainerEntityManagerFactoryBean.setJpaPropertyMap(jpaPropertyMap);
         return localContainerEntityManagerFactoryBean;

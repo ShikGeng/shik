@@ -223,5 +223,4 @@
       type = #{type,jdbcType=VARCHAR}
     where fileId = #{fileid,jdbcType=VARCHAR}
   </update>
-  <cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
 </mapper>

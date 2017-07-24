@@ -19,10 +19,9 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.config.jpa.domain;
+package com.shik.jpa.domain;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -32,8 +31,8 @@ import java.util.List;
  * @author gengshikun
  * @date 2017/6/30
  */
-@Entity(name = "admin")
-public class Admin implements Serializable {
+@Entity(name = "role")
+public class Role implements Serializable {
 
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
@@ -41,17 +40,16 @@ public class Admin implements Serializable {
     @Column(length = 32)
     private String id;
 
-    @NotEmpty(message = "用户名不能为空")
     @Column(length = 32)
-    private String username;
-
-    @NotEmpty(message = "密码不能为空")
-    @Column(length = 32)
-    private String password;
+    private String rolename;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "admin_to_role", joinColumns = { @JoinColumn(name = "admin_id") }, inverseJoinColumns = { @JoinColumn(name = "role_id") })
-    private List<Role> roleList;  // 一个用户具有多个角色
+    @JoinTable(name = "role_to_permission", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "permission_id")})
+    private List<Permission> permissionList;  // 一个角色对应多个权限
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "admin_to_role", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "admin_id")})
+    private List<Admin> adminList;  // 一个角色对应多个用户
 
     public String getId() {
         return id;
@@ -61,27 +59,27 @@ public class Admin implements Serializable {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getRolename() {
+        return rolename;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setRolename(String rolename) {
+        this.rolename = rolename;
     }
 
-    public String getPassword() {
-        return password;
+    public List<Permission> getPermissionList() {
+        return permissionList;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPermissionList(List<Permission> permissionList) {
+        this.permissionList = permissionList;
     }
 
-    public List<Role> getRoleList() {
-        return roleList;
+    public List<Admin> getAdminList() {
+        return adminList;
     }
 
-    public void setRoleList(List<Role> roleList) {
-        this.roleList = roleList;
+    public void setAdminList(List<Admin> adminList) {
+        this.adminList = adminList;
     }
 }
