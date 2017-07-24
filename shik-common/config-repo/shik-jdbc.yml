@@ -3,9 +3,9 @@ datasource:
     url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=yes
     username: shik
     password: QAZqazWSX
-    driver: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
   read:
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes
     username: shik
     password: QAZqazWSX
-    driver: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
