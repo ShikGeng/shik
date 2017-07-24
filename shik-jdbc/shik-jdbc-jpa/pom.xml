@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>shik-jdbc-jpa</artifactId>
+    <packaging>jar</packaging>
+
+    <name>shik-jdbc-jpa</name>
+    <url>http://maven.apache.org</url>
 
     <dependencies>
         <!-- jpa -->

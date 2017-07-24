@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/zkgengkun/shik/
+          uri: https://github.com/ShikGeng/shik/
           searchPaths: shik-common/config-repo
           username: username
           password: password
