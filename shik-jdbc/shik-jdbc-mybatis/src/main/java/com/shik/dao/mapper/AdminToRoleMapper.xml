@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shik.dao.mapper.AdminToRoleMapper">
   <resultMap id="BaseResultMap" type="com.shik.dao.model.AdminToRole">
-    <result column="role_id" jdbcType="VARCHAR" property="roleId" />
     <result column="admin_id" jdbcType="VARCHAR" property="adminId" />
+    <result column="role_id" jdbcType="VARCHAR" property="roleId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    role_id, admin_id
+    admin_id, role_id
   </sql>
   <select id="selectByExample" parameterType="com.shik.dao.model.AdminToRoleExample" resultMap="BaseResultMap">
     select
@@ -79,6 +79,14 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
   </select>
   <delete id="deleteByExample" parameterType="com.shik.dao.model.AdminToRoleExample">
     delete from admin_to_role
@@ -87,25 +95,25 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.shik.dao.model.AdminToRole">
-    insert into admin_to_role (role_id, admin_id)
-    values (#{roleId,jdbcType=VARCHAR}, #{adminId,jdbcType=VARCHAR})
+    insert into admin_to_role (admin_id, role_id)
+    values (#{adminId,jdbcType=VARCHAR}, #{roleId,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.shik.dao.model.AdminToRole">
     insert into admin_to_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        role_id,
-      </if>
       <if test="adminId != null">
         admin_id,
       </if>
+      <if test="roleId != null">
+        role_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        #{roleId,jdbcType=VARCHAR},
-      </if>
       <if test="adminId != null">
         #{adminId,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null">
+        #{roleId,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -118,11 +126,11 @@
   <update id="updateByExampleSelective" parameterType="map">
     update admin_to_role
     <set>
-      <if test="record.roleId != null">
-        role_id = #{record.roleId,jdbcType=VARCHAR},
-      </if>
       <if test="record.adminId != null">
         admin_id = #{record.adminId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleId != null">
+        role_id = #{record.roleId,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -131,10 +139,11 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update admin_to_role
-    set role_id = #{record.roleId,jdbcType=VARCHAR},
-      admin_id = #{record.adminId,jdbcType=VARCHAR}
+    set admin_id = #{record.adminId,jdbcType=VARCHAR},
+      role_id = #{record.roleId,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+  <cache eviction="LRU" flushInterval="60000" readOnly="true" size="1024" />
 </mapper>

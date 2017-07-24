@@ -18,20 +18,18 @@
         </plugin>
 
         <!-- 生成一个新的selectByExample方法，这个方法可以接收offset和limit参数，主要用来实现分页 -->
-        <#--<plugin type="com.zkgengkun.plugin.PaginationPlugin"></plugin>-->
+        <plugin type="com.shik.plugin.PaginationPlugin"></plugin>
 
         <!-- 生成在XML中的<cache>元素 -->
-        <#--<plugin type="org.mybatis.generator.plugins.CachePlugin">
-            <!-- 使用ehcache &ndash;&gt;
-            <property name="cache_type" value="org.mybatis.caches.ehcache.LoggingEhcache" />
-            <!-- 内置cache配置 &ndash;&gt;
-            <!--
+        <plugin type="org.mybatis.generator.plugins.CachePlugin">
+            <!-- 使用ehcache -->
+            <#--<property name="cache_type" value="org.mybatis.caches.ehcache.LoggingEhcache" />-->
+            <!-- 内置cache配置 -->
             <property name="cache_eviction" value="LRU" />
             <property name="cache_flushInterval" value="60000" />
             <property name="cache_readOnly" value="true" />
             <property name="cache_size" value="1024" />
-            &ndash;&gt;
-        </plugin>-->
+        </plugin>
 
         <!-- Java模型生成equals和hashcode方法 -->
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
