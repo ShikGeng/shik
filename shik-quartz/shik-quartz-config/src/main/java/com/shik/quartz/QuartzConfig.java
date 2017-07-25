@@ -36,7 +36,7 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
  * @author gengshikun
  * @date 2017/6/22
  */
-@Configuration
+//@Configuration
 public class QuartzConfig {
 
     @Bean(name = "testJob")
@@ -80,7 +80,7 @@ public class QuartzConfig {
                                             @Qualifier("testJob_cronTrigger11") Trigger testJob_cronTrigger11) {
         SchedulerFactoryBean startQuertz = new SchedulerFactoryBean();
 
-//        startQuertz.setTriggers(testJob_cronTrigger, testJob_cronTrigger11);
+        startQuertz.setTriggers(testJob_cronTrigger, testJob_cronTrigger11);
 
         return startQuertz;
     }
