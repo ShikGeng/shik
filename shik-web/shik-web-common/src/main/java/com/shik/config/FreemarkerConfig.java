@@ -46,7 +46,7 @@ public class FreemarkerConfig {
         configurer.setTemplateLoaderPath("classpath:/templates/freemarker/");
         configurer.setDefaultEncoding("UTF-8");
 
-        // 自定义
+        // 自定义标签
         Map<String, Object> map = Maps.newHashMap();
         PropertiesReader.cacheFreemarkerProperties();  // 缓存freemarker
         for (Map.Entry<String, String> entry : MapConstants.FREE_MARKER_MAP.entrySet()) {

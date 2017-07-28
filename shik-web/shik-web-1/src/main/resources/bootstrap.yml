@@ -5,7 +5,7 @@ spring:
   application:
     name: shik-web
   profiles:
-    active: dev, rabbit, redis, jdbc
+    active: dev, rabbit
   cloud:
     config:
       name: shik
