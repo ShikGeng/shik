@@ -1,9 +1,9 @@
 server: 
-  port: 3331
+  port: 4441
 
 spring:
   application:
-    name: shik-web
+    name: shik-dao-web
   profiles:
     active: dev, rabbit, redis, jdbc
   cloud:
