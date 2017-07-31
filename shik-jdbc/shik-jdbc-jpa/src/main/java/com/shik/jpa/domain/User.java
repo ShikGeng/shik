@@ -13,7 +13,7 @@ public class User implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String userId;
+    private String id;
 
     @Column(length = 32)
     private String email;
@@ -39,12 +39,12 @@ public class User implements Serializable {
     @Column
     private Long registerTime;
 
-    public String getUserId() {
-        return userId;
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getEmail() {

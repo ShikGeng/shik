@@ -10,6 +10,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>shik-dao-upms</artifactId>
+    <packaging>jar</packaging>
 
+    <name>shik-dao-upms</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-jdbc-jpa</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-redis-jedis</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-dao-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

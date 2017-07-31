@@ -38,12 +38,12 @@ public class Role implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String roleId;
+    private String id;
 
     @Column(length = 32)
     private String rolename;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "role_to_permission", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "permission_id")})
     private List<Permission> permissionList;  // 一个角色对应多个权限
 
@@ -51,12 +51,12 @@ public class Role implements Serializable {
     @JoinTable(name = "admin_to_role", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "admin_id")})
     private List<Admin> adminList;  // 一个角色对应多个用户
 
-    public String getRoleId() {
-        return roleId;
+    public String getId() {
+        return id;
     }
 
-    public void setRoleId(String roleId) {
-        this.roleId = roleId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getRolename() {

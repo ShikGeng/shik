@@ -40,7 +40,7 @@ public class MyFile implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String fileId;
+    private String id;
 
     /**
      * 文件类型  SysConstents FILE_TYPE
@@ -72,12 +72,12 @@ public class MyFile implements Serializable {
     @Column
     private Boolean deleteBoolean;
 
-    public String getFileId() {
-        return fileId;
+    public String getId() {
+        return id;
     }
 
-    public void setFileId(String fileId) {
-        this.fileId = fileId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getType() {

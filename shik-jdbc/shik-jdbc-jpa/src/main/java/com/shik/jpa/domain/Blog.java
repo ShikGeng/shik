@@ -36,7 +36,7 @@ public class Blog implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String blogId;
+    private String id;
 
     @Column(nullable = false, length = 32)
     private String title;
@@ -54,12 +54,12 @@ public class Blog implements Serializable {
     @Column
     private Boolean deleteBoolean;
 
-    public String getBlogId() {
-        return blogId;
+    public String getId() {
+        return id;
     }
 
-    public void setBlogId(String blogId) {
-        this.blogId = blogId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTitle() {

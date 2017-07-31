@@ -31,9 +31,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ShikDaoWeb1Application {
+public class ShikDaoWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ShikDaoWeb1Application.class);
+        SpringApplication.run(ShikDaoWebApplication.class);
     }
 }

@@ -1,9 +1,9 @@
 server: 
-  port: 4442
+  port: 4441
 
 spring:
   application:
-    name: shik-dao-web
+    name: shik-dao-upms
   profiles:
     active: dev, rabbit, redis, jdbc
   cloud:

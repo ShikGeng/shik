@@ -39,7 +39,7 @@ public class Group implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String groupId;
+    private String id;
 
     @Column(length = 32)
     private String name;
@@ -50,12 +50,12 @@ public class Group implements Serializable {
     @Column
     private Integer position;
 
-    public String getGroupId() {
-        return groupId;
+    public String getId() {
+        return id;
     }
 
-    public void setGroupId(String groupId) {
-        this.groupId = groupId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

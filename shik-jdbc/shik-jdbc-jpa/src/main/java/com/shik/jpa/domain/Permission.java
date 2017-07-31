@@ -38,13 +38,16 @@ public class Permission implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String permissionId;
+    private String id;
 
     @Column(length = 32)
     private String pid;
 
     @Column(length = 32)
     private String name;
+
+    @Column(length = 64)
+    private String value;
 
     /**
      * 权限分类  A01:系统 A02:菜单 A03:按钮
@@ -70,16 +73,12 @@ public class Permission implements Serializable {
     @Column
     private Boolean deleteBoolean;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "role_to_permission", joinColumns = {@JoinColumn(name = "permission_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
-    private List<Role> roleList;  // 一个用户具有多个角色
-
-    public String getPermissionId() {
-        return permissionId;
+    public String getId() {
+        return id;
     }
 
-    public void setPermissionId(String permissionId) {
-        this.permissionId = permissionId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getPid() {
@@ -96,6 +95,14 @@ public class Permission implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public String getType() {
@@ -146,11 +153,4 @@ public class Permission implements Serializable {
         this.deleteBoolean = deleteBoolean;
     }
 
-    public List<Role> getRoleList() {
-        return roleList;
-    }
-
-    public void setRoleList(List<Role> roleList) {
-        this.roleList = roleList;
-    }
 }
