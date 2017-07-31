@@ -39,7 +39,7 @@ public class Admin implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String id;
+    private String adminId;
 
     @NotEmpty(message = "用户名不能为空")
     @Column(length = 32)
@@ -53,12 +53,12 @@ public class Admin implements Serializable {
     @JoinTable(name = "admin_to_role", joinColumns = {@JoinColumn(name = "admin_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private List<Role> roleList;  // 一个用户具有多个角色
 
-    public String getId() {
-        return id;
+    public String getAdminId() {
+        return adminId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAdminId(String adminId) {
+        this.adminId = adminId;
     }
 
     public String getUsername() {

@@ -1,6 +1,6 @@
 datasource:
   primary:
-    url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=yes
+    url: jdbc:mysql://127.0.0.1:3306/shik?useUnicode=yes
     username: shik
     password: QAZqazWSX
     driver-class-name: com.mysql.jdbc.Driver

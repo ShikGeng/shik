@@ -38,7 +38,7 @@ public class Permission implements Serializable {
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
     @Column(length = 32)
-    private String id;
+    private String permissionId;
 
     @Column(length = 32)
     private String pid;
@@ -74,12 +74,12 @@ public class Permission implements Serializable {
     @JoinTable(name = "role_to_permission", joinColumns = {@JoinColumn(name = "permission_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private List<Role> roleList;  // 一个用户具有多个角色
 
-    public String getId() {
-        return id;
+    public String getPermissionId() {
+        return permissionId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPermissionId(String permissionId) {
+        this.permissionId = permissionId;
     }
 
     public String getPid() {
