@@ -43,7 +43,6 @@
 
     <modules>
         <module>shik-config-1</module>
-        <module>shik-config-2</module>
         <module>shik-config-common</module>
     </modules>
 </project>

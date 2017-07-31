@@ -26,14 +26,14 @@
     <dependencies>
         <dependency>
             <groupId>com.shik</groupId>
-            <artifactId>shik-common</artifactId>
+            <artifactId>shik-freemarker-config</artifactId>
             <version>1.0.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-freemarker -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-common</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
         <dependency>

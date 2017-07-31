@@ -21,10 +21,10 @@
  */
 package com.shik.config;
 
-import com.google.common.collect.Maps;
 import com.shik.constant.MapConstants;
 import com.shik.support.component.SpringContextUtil;
 import com.shik.support.reader.PropertiesReader;
+import org.apache.commons.collections.MapUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
@@ -47,7 +47,7 @@ public class FreemarkerConfig {
         configurer.setDefaultEncoding("UTF-8");
 
         // 自定义标签
-        Map<String, Object> map = Maps.newHashMap();
+        Map<String, Object> map = MapUtils.EMPTY_MAP;
         PropertiesReader.cacheFreemarkerProperties();  // 缓存freemarker
         for (Map.Entry<String, String> entry : MapConstants.FREE_MARKER_MAP.entrySet()) {
             map.put(entry.getKey(), SpringContextUtil.getBean(entry.getValue()));
