@@ -27,4 +27,4 @@ security:
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/
+            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/

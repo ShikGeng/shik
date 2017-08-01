@@ -45,7 +45,6 @@
     <modules>
         <module>shik-RA-1</module>
         <module>shik-RA-2</module>
-        <module>shik-RA-3</module>
         <module>shik-RA-common</module>
     </modules>
 </project>
