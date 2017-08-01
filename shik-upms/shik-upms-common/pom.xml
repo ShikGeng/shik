@@ -22,6 +22,12 @@
             <version>${shik.common.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-freemarker-config</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

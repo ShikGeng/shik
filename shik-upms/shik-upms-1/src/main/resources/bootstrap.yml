@@ -1,0 +1,22 @@
+server: 
+  port: 3331
+
+spring:
+  application:
+    name: shik-upms
+  profiles:
+    active: dev, rabbit, redis, jdbc
+  cloud:
+    config:
+      name: shik
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: shik-config
+      username: shik
+      password: shik-config-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
