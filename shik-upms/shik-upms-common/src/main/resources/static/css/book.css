@@ -1,0 +1,48 @@
+body {
+    background-color: #C8EDCC;
+}
+
+dd {
+    margin-left: 0
+}
+
+.shadow-box .book_index {
+    top: 235px;
+    text-align: center;
+}
+
+.book_content {
+    padding: 0 20px 40px 20px
+}
+
+.book_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+}
+
+.book_bottom {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+}
+
+.book_page {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 86%;
+}
+
+.book_page .up {
+    float: left;
+    margin-left: 20px;
+}
+
+.book_page .down {
+    float: right;
+}

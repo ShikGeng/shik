@@ -1,0 +1,130 @@
+.header {
+    background-color: #fff;
+    font-size: 14px;
+    height: 60px;
+    border-bottom: 1px solid #EBEDED;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.header .user {
+    float: right;
+    margin: 0 40px 0 0;
+    color: #d0d9e6;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 60px;
+}
+
+.header .user .common {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #829195;
+    cursor: pointer;
+    position: relative;
+}
+
+.header .user .common.msg {
+}
+
+.header .user .common.msg .msg-info {
+    position: absolute;
+    width: 250px;
+    height: 120px;
+    left: -200px;
+    line-height: 0;
+}
+
+.header .user .common.info {
+    margin-left: 20px;
+}
+
+.header .user .common.info .user-operation {
+    position: absolute;
+    width: 70px;
+    line-height: 0;
+    left: -13px;
+    text-align: center;
+}
+
+.header .user .common.info .user-operation > a {
+    position: relative;
+    font-size: 14px;
+    color: #829195;
+    line-height: 14px;
+}
+
+.header .user .common .msg-list {
+    position: relative;
+    line-height: 40px;
+    padding: 0 20px;
+    width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #EBEDED;
+}
+
+.header .user .common .msg-more {
+    text-align: center;
+}
+
+.header .user .common .user-list {
+    position: relative;
+    line-height: 40px;
+    width: 70px;
+    border-bottom: 1px solid #EBEDED;
+}
+
+.shadow-box {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    overflow: auto;
+}
+
+.shadow-box::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.shadow-box .disabled {
+    cursor: not-allowed !important;
+    background-color: rgba(62, 156, 252, .48);
+}
+
+a {
+    cursor: pointer;
+    color: #A2CFFE
+}
+
+a:hover {
+    cursor: pointer;
+    color: #777
+}
+
+.hide {
+    display: none;
+}
+
+/******************** color ****************************/
+.bg-blue {
+    background-color: #3E9CFC;
+}
+
+.bg-blue:hover {
+    background-color: #3A91EB;
+}
+
+.gray {
+    color: #829195
+}
+
+.blue {
+    color: #3E9CFC
+}
+
+/******************** color ****************************/

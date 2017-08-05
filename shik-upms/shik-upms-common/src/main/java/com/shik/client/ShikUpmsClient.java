@@ -19,31 +19,24 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.controller;
+package com.shik.client;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
+import com.shik.client.hystrix.ShikUpmsClientImpl;
+import com.shik.jpa.domain.Admin;
+import com.shik.jpa.domain.User;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author gengshikun
- * @date 2017/8/1
+ * @date 2017/7/17
  */
-@Controller
-@RequestMapping
-public class ShikUpmaIndexController {
+@FeignClient(value = "shik-zuul", fallback = ShikUpmsClientImpl.class)
+public interface ShikUpmsClient {
 
-    private static final Logger logger = LoggerFactory.getLogger(ShikUpmaIndexController.class);
-
-    /**
-     * upms-index
-     * @return
-     */
-    @RequestMapping(value = {"", "/index"}, method = RequestMethod.GET)
-    public String index() {
-        return "index";
-    }
-
+    @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/save")
+    String save(@RequestParam(value = "admin") Admin admin);
 }

@@ -19,31 +19,20 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.controller;
+package com.shik.client.hystrix;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import com.shik.client.ShikUpmsClient;
+import com.shik.jpa.domain.Admin;
+import com.shik.jpa.domain.User;
+import org.springframework.stereotype.Component;
 
 /**
  * @author gengshikun
- * @date 2017/8/1
+ * @date 2017/7/17
  */
-@Controller
-@RequestMapping
-public class ShikUpmaIndexController {
-
-    private static final Logger logger = LoggerFactory.getLogger(ShikUpmaIndexController.class);
-
-    /**
-     * upms-index
-     * @return
-     */
-    @RequestMapping(value = {"", "/index"}, method = RequestMethod.GET)
-    public String index() {
-        return "index";
+@Component
+public class ShikUpmsClientImpl implements ShikUpmsClient {
+    public String save(Admin admin) {
+        return null;
     }
-
 }

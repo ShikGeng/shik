@@ -21,29 +21,29 @@
  */
 package com.shik.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.shik.jpa.domain.Admin;
+import com.shik.jpa.domain.User;
+import com.shik.jpa.repository.AdminRepository;
+import com.shik.jpa.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * @author gengshikun
- * @date 2017/8/1
+ * @date 2017/8/5
  */
 @Controller
-@RequestMapping
-public class ShikUpmaIndexController {
+@RequestMapping(value = "admin")
+public class ShikUpmsAdminController {
 
-    private static final Logger logger = LoggerFactory.getLogger(ShikUpmaIndexController.class);
+    @Autowired
+    private AdminRepository adminRepository;
 
-    /**
-     * upms-index
-     * @return
-     */
-    @RequestMapping(value = {"", "/index"}, method = RequestMethod.GET)
-    public String index() {
-        return "index";
+    @RequestMapping(value = "save", method = RequestMethod.POST)
+    public String save(Admin admin) {
+        this.adminRepository.save(admin);
+        return "success";
     }
-
 }
