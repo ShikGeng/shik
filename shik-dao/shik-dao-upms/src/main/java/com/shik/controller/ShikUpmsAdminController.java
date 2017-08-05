@@ -26,9 +26,12 @@ import com.shik.jpa.domain.User;
 import com.shik.jpa.repository.AdminRepository;
 import com.shik.jpa.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author gengshikun
@@ -39,10 +42,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ShikUpmsAdminController {
 
     @Autowired
+    private DiscoveryClient client;
+
+    @Autowired
     private AdminRepository adminRepository;
 
     @RequestMapping(value = "save", method = RequestMethod.POST)
-    public String save(Admin admin) {
+    @ResponseBody
+    public String save(@RequestBody Admin admin) {
         this.adminRepository.save(admin);
         return "success";
     }

@@ -57,7 +57,8 @@ public class ShikUpmsAdminController {
 
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public String save(Admin admin) {
-        this.shikUpmsClient.save(admin);
+        String result = this.shikUpmsClient.save(admin);
+        logger.info(">>>>>>>>>>>>>>>>> result : {} >>>>>>>>>>>>>>>>>", result);
         return "redirect:list";
     }
 

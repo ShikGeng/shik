@@ -25,6 +25,9 @@ security:
     password: shik-config-server
 
 eureka:
+    instance:
+        prefer-ip-address: true
+        ip-address: 120.76.147.141
     client:
         serviceUrl:
-            defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
+            defaultZone: http://127.0.0.1:1111/eureka/,http://127.0.0.1:1112/eureka/

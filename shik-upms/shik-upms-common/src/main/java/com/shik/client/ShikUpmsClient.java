@@ -38,5 +38,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ShikUpmsClient {
 
     @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/save")
-    String save(@RequestParam(value = "admin") Admin admin);
+    String save(Admin admin);
 }
