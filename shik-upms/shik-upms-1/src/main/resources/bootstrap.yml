@@ -15,6 +15,8 @@ spring:
         service-id: shik-config
       username: shik
       password: shik-config-server
+  session:
+    store-type: redis
 
 eureka:
   client:
@@ -22,4 +24,4 @@ eureka:
       defaultZone: http://120.76.147.141:1111/eureka/,http://120.76.147.141:1112/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 127.0.0.1
+    ip-address: upms.shik.com

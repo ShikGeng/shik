@@ -5,7 +5,7 @@ spring:
   application:
     name: shik-zuul
   profiles:
-    active: rabbit, zuul
+    active: rabbit, zuul, redis
   cloud:
     config:
       name: shik
@@ -19,8 +19,8 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:1111/eureka/,http://127.0.0.1:1112/eureka/
+      defaultZone: http://120.76.147.141:1111/eureka/,http://120.76.147.141:1112/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 120.76.147.141
+    ip-address: zuul.shik.com
 
