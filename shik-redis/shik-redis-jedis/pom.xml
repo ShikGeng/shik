@@ -17,5 +17,13 @@
             <artifactId>shik-redis-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session</artifactId>
+            <version>1.3.1.RELEASE</version>
+        </dependency>
+
     </dependencies>
 </project>

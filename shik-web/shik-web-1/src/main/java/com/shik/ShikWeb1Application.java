@@ -25,11 +25,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
  * @author gengshikun
  * @date 2017/3/24
  */
+@EnableRedisHttpSession
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
