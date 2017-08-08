@@ -1,5 +1,5 @@
 spring:
   rabbitmq:
-    addresses: 127.0.0.1:5672
+    addresses: 120.76.147.141:5672
     username: root
     password: qweASDzxc
