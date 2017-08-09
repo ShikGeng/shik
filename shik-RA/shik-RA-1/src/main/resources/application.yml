@@ -10,3 +10,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:1112/eureka/
+  server:
+    eviction-interval-timer-in-ms: 60000

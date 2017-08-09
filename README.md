@@ -2,7 +2,7 @@
 
 Shik包含的所有module(非util)都支持分布式管理
 
-启动顺序：RA -> config -> other (其中我把 RA config zuul 放在了服务器上)
+启动顺序：RA -> config -> other (其中我把 RA config 放在了服务器上)
 
 ## 项目结构
 ``` lua
