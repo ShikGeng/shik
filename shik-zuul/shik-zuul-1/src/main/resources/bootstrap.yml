@@ -22,5 +22,5 @@ eureka:
       defaultZone: http://120.76.147.141:1111/eureka/,http://120.76.147.141:1112/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 120.76.147.141
+    ip-address: zuul.shik.com
 
