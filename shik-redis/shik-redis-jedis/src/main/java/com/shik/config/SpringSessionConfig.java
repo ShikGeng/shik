@@ -25,6 +25,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration;
 import org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration;
 import org.springframework.session.web.http.DefaultCookieSerializer;
 
@@ -32,7 +33,7 @@ import org.springframework.session.web.http.DefaultCookieSerializer;
  * @author gengshikun
  * @date 2017/8/8
  */
-//@Configuration
+@Configuration
 @AutoConfigureAfter(JedisConfig.class)
 public class SpringSessionConfig {
 

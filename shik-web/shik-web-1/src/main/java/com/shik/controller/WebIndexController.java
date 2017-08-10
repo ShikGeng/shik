@@ -31,6 +31,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 /**
  * @author gengshikun
@@ -48,8 +50,11 @@ public class WebIndexController {
 
     @RequestMapping(value = "test/session")
     public String testSession(HttpServletRequest request, HttpServletResponse response) {
-        request.getSession().setAttribute("shik", "best");
-        CookieUtils.addCookie(response, "shik", "good", 0);
+        CookieUtils.addCookie(response, "shik", "cookie", 0);
+        HttpSession session = request.getSession();
+        session.setAttribute("shik", "kakak");
+        session.setAttribute("zkgengkun", "kukuk");
+
         return "index";
     }
 }

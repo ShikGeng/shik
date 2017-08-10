@@ -1,8 +1,5 @@
 server: 
   port: 3331
-  session:
-    cookie:
-      domain: shik.com
 
 spring:
   application:

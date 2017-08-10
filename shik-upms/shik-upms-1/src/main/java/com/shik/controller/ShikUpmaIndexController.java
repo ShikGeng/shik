@@ -28,7 +28,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author gengshikun
@@ -51,10 +53,13 @@ public class ShikUpmaIndexController {
 
     @RequestMapping(value = "test/session")
     public String testSession(HttpServletRequest request) {
-        Object shik = request.getSession().getAttribute("shik");
-        System.out.println(shik.toString());
-        String shik_cookie = CookieUtils.getCookieByName(request, "shik").getValue();
-        System.out.println(shik_cookie);
+        HttpSession session = request.getSession();
+        System.out.println(session.getAttribute("shik"));
+        System.out.println(session.getAttribute("zkgengkun"));
+
+        Object cookie = CookieUtils.getCookieByName(request, "shik");
+        System.out.println(cookie);
+
         return "index";
     }
 
