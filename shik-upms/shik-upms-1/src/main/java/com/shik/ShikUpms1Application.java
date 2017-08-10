@@ -31,7 +31,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
  * @author gengshikun
  * @date 2017/3/24
  */
-//@EnableRedisHttpSession
+@EnableRedisHttpSession
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication

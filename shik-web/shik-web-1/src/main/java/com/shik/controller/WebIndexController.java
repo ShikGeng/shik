@@ -50,7 +50,7 @@ public class WebIndexController {
 
     @RequestMapping(value = "test/session")
     public String testSession(HttpServletRequest request, HttpServletResponse response) {
-        CookieUtils.addCookie(response, "shik", "cookie", 0);
+        CookieUtils.addCookie(response, "shik", "cookie", 3600);
         HttpSession session = request.getSession();
         session.setAttribute("shik", "kakak");
         session.setAttribute("zkgengkun", "kukuk");

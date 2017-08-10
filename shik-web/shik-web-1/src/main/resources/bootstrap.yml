@@ -15,8 +15,6 @@ spring:
         service-id: shik-config
       username: shik
       password: shik-config-server
-  session:
-    store-type: redis
 
 eureka:
   client:
