@@ -65,10 +65,10 @@ public class ShikUpmaIndexController {
         Object cookie = CookieUtils.getCookieByName(request, "shik");
         System.out.println(cookie);
 
-        String sessionId = session.getId();
+        /*String sessionId = session.getId();
 
         String shik = this.shikUpmsClient.testSession(sessionId);
-        System.out.println(shik);
+        System.out.println(shik);*/
 
         return "index";
     }

@@ -28,6 +28,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration;
 import org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration;
 import org.springframework.session.web.http.DefaultCookieSerializer;
+import org.springframework.session.web.http.HeaderHttpSessionStrategy;
+import org.springframework.session.web.http.HttpSessionStrategy;
 
 import javax.servlet.*;
 import javax.servlet.descriptor.JspConfigDescriptor;
@@ -57,10 +59,20 @@ public class SpringSessionConfig {
         return defaultCookieSerializer;
     }
 
+//    @Bean
+    public HeaderHttpSessionStrategy headerHttpSessionStrategy () {
+        HeaderHttpSessionStrategy httpSessionStrategy = new HeaderHttpSessionStrategy();
+        httpSessionStrategy.setHeaderName("shik_session");
+        return httpSessionStrategy;
+    }
+
     @Bean
     public RedisHttpSessionConfiguration redisHttpSessionConfiguration (@Qualifier("defaultCookieSerializer") DefaultCookieSerializer defaultCookieSerializer) {
         RedisHttpSessionConfiguration redisHttpSessionConfiguration = new RedisHttpSessionConfiguration();
         redisHttpSessionConfiguration.setCookieSerializer(defaultCookieSerializer);
+
+//        redisHttpSessionConfiguration.setHttpSessionStrategy(headerHttpSessionStrategy);
+
         return redisHttpSessionConfiguration;
     }
 }

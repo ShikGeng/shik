@@ -47,11 +47,7 @@ public class SessionFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        /*
-        String sessionId = request.getSession().getId();
-        if (StringUtils.isNotBlank(sessionId)) {
-            CookieUtils.addCookie(response, "SESSION", sessionId, 1800);
-        }*/
+        System.out.println("sessionFilter");
 
         chain.doFilter(request, response);
     }
