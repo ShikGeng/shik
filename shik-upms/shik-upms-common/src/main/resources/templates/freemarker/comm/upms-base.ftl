@@ -1,4 +1,4 @@
-<#if !BASE_PATH??><#assign BASE_PATH=request.contextPath ></#if>
+<#if !BASE_PATH??><#assign BASE_PATH='/shik-upms' + request.contextPath ></#if>
 <#--meta_base-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="description" content="blank page"/>

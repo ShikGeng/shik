@@ -59,7 +59,7 @@ public class ShikUpmsAdminController {
     public String save(Admin admin) {
         String result = this.shikUpmsClient.save(admin);
         logger.info(">>>>>>>>>>>>>>>>> result : {} >>>>>>>>>>>>>>>>>", result);
-        return "redirect:list";
+        return "redirect:http://zuul.shik.com:5551/shik-upms/admin/list";
     }
 
     @RequestMapping(value = "view/{id}", method = RequestMethod.GET)
@@ -69,7 +69,7 @@ public class ShikUpmsAdminController {
 
     @RequestMapping(value = "update/{id}", method = RequestMethod.PUT)
     public String update(@PathVariable String id) {
-        return "redirect:list";
+        return "redirect:http://zuul.shik.com:5551/shik-upms/admin/list";
     }
 
 }

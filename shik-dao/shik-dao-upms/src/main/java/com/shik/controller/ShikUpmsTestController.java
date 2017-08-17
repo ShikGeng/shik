@@ -19,23 +19,31 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik;
+package com.shik.controller;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.session.SessionRepository;
+import org.springframework.session.data.redis.RedisOperationsSessionRepository;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author gengshikun
- * @date 2017/3/24
+ * @date 2017/8/11
  */
-@EnableRedisHttpSession
-@EnableDiscoveryClient
-@SpringBootApplication
-public class ShikDaoUpmsApplication {
+@Controller
+@RequestMapping(value = "test")
+public class ShikUpmsTestController {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ShikDaoUpmsApplication.class);
+    @Autowired
+    private RedisOperationsSessionRepository repository;
+
+    @RequestMapping(value = "session")
+    @ResponseBody
+    public String testSession(@RequestBody String sessionId) {
+        repository.getSession(sessionId);
+        return "session";
     }
 }

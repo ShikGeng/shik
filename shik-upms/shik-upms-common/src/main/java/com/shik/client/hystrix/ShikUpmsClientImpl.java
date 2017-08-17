@@ -34,4 +34,8 @@ public class ShikUpmsClientImpl implements ShikUpmsClient {
     public String save(Admin admin) {
         return null;
     }
+
+    public String testSession(String sessionId) {
+        return "123";
+    }
 }

@@ -36,4 +36,7 @@ public interface ShikUpmsClient {
 
     @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/save")
     String save(Admin admin);
+
+    @RequestMapping(value = "/shik-dao-upms/test/session")
+    String testSession(String sessionId);
 }
