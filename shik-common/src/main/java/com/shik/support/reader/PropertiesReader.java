@@ -117,4 +117,20 @@ public class PropertiesReader {
         }
         MapConstants.ALIPAY_MAP = (Map) properties;
     }
+
+    /**
+     * 缓存shiro.properties
+     *
+     * @throws Exception
+     */
+    public static void cacheShiroProperties() {
+        ClassPathResource cp = new ClassPathResource("config/shiro.properties");
+        Properties properties = new Properties();
+        try {
+            properties.load(cp.getInputStream());
+        } catch (IOException e) {
+            logger.error(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 【can not load shiro.properties !】>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        }
+        MapConstants.SHIRO_MAP = (Map) properties;
+    }
 }

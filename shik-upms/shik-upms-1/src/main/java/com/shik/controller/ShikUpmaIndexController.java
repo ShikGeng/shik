@@ -56,6 +56,15 @@ public class ShikUpmaIndexController {
         return "index";
     }
 
+    /**
+     * upms-login
+     * @return
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login";
+    }
+
     @RequestMapping(value = "test/session")
     public String testSession(HttpServletRequest request) {
         HttpSession session = request.getSession();

@@ -65,4 +65,9 @@ public class MapConstants {
      * alipay.properties
      */
     public static Map<String, String> ALIPAY_MAP = MapUtils.EMPTY_MAP;
+
+    /**
+     * shiro.properties
+     */
+    public static Map<String, String> SHIRO_MAP = MapUtils.EMPTY_MAP;
 }
