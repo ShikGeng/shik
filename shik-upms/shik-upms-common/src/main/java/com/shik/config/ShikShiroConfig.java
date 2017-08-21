@@ -21,9 +21,8 @@
  */
 package com.shik.config;
 
-import com.google.common.collect.Maps;
 import com.shik.constant.MapConstants;
-import com.shik.realms.ShiroRealm;
+import com.shik.realms.ShikShiroRealm;
 import com.shik.support.reader.PropertiesReader;
 import org.apache.shiro.authc.Authenticator;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
@@ -42,14 +41,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
-import java.util.Map;
-
 /**
  * @author gengshikun
  * @date 2017/8/19
  */
 @Configuration
-public class ShiroConfig {
+public class ShikShiroConfig {
 
 
     /**
@@ -62,7 +59,7 @@ public class ShiroConfig {
     @Bean("securityManager")
     public SecurityManager securityManager(@Qualifier("ehcacheManager") CacheManager ehcacheManager,
                                            @Qualifier("authenticator") Authenticator authenticator,
-                                           @Qualifier("shiroRealm") ShiroRealm shiroRealm) {
+                                           @Qualifier("shiroRealm") ShikShiroRealm shiroRealm) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
 
         securityManager.setCacheManager(ehcacheManager);
@@ -96,12 +93,12 @@ public class ShiroConfig {
      * @return
      */
     @Bean("shiroRealm")
-    public ShiroRealm shiroRealm() {
+    public ShikShiroRealm shiroRealm() {
         HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
         hashedCredentialsMatcher.setHashAlgorithmName("MD5");
         hashedCredentialsMatcher.setHashIterations(500);
 
-        ShiroRealm shiroRealm = new ShiroRealm();
+        ShikShiroRealm shiroRealm = new ShikShiroRealm();
         shiroRealm.setCredentialsMatcher(hashedCredentialsMatcher);
         return shiroRealm;
     }

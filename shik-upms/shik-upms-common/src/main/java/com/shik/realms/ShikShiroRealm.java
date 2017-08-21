@@ -41,12 +41,10 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.stereotype.Component;
 
 /**
- * 3. 配置 Realm
- *
  * @author gengshikun
  * @date 2017/8/21
  */
-public class ShiroRealm extends AuthorizingRealm {
+public class ShikShiroRealm extends AuthorizingRealm {
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(
