@@ -30,6 +30,7 @@ import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -104,10 +105,10 @@ public class ShikUpmaIndexController {
         Object cookie = CookieUtils.getCookieByName(request, "shik");
         System.out.println(cookie);
 
-        /*String sessionId = session.getId();
+        String sessionId = session.getId();
 
         String shik = this.shikUpmsClient.testSession(sessionId);
-        System.out.println(shik);*/
+        System.out.println(shik);
 
         return "index";
     }
