@@ -22,7 +22,7 @@
 package com.shik.config;
 
 import com.shik.constant.MapConstants;
-import com.shik.realms.ShikShiroRealm;
+import com.shik.shiro.realms.ShikShiroRealm;
 import com.shik.support.reader.PropertiesReader;
 import org.apache.shiro.authc.Authenticator;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;

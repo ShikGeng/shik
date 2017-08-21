@@ -19,9 +19,8 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.realms;
+package com.shik.shiro.realms;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import com.google.common.collect.Sets;
@@ -38,7 +37,6 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
-import org.springframework.stereotype.Component;
 
 /**
  * @author gengshikun
@@ -77,9 +75,9 @@ public class ShikShiroRealm extends AuthorizingRealm {
         //2). credentials: 密码.
         Object credentials = null; //"fc1709d0a95a6be30bc5926fdb7f22f4";
         if("admin".equals(username)){
-            credentials = "038bdaf98f2037b31f1e75b5b4c9b26e";
+            credentials = "ae59392d87df09a6d4520a9ac14b8d7e";
         }else if("user".equals(username)){
-            credentials = "098d2c478e9c11555ce2823231e02ec1";
+            credentials = "1e86dbfb8d177780b6ab29fe4e8583fe";
         }
 
         //3). realmName: 当前 realm 对象的 name. 调用父类的 getName() 方法即可
@@ -95,8 +93,8 @@ public class ShikShiroRealm extends AuthorizingRealm {
     public static void main(String[] args) {
         String hashAlgorithmName = "MD5";
         Object credentials = "123456";
-        Object salt = ByteSource.Util.bytes("user");;
-        int hashIterations = 1024;
+        Object salt = ByteSource.Util.bytes("user");
+        int hashIterations = 500;
 
         Object result = new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations);
         System.out.println(result);
