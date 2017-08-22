@@ -22,8 +22,11 @@
 package com.shik.controller;
 
 import com.shik.client.ShikUpmsClient;
+import com.shik.constant.ShiroConstants;
 import com.shik.jpa.domain.Admin;
 import com.shik.jpa.domain.User;
+import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,9 +61,12 @@ public class ShikUpmsAdminController {
 
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public String save(Admin admin) {
+        Object hashPassword = new SimpleHash(ShiroConstants.HASH_ALGORITHM_NAME, admin.getPassword(),
+                ByteSource.Util.bytes(admin.getUsername()), ShiroConstants.HASH_ITERATIONS);
+        admin.setPassword(hashPassword.toString());
         String result = this.shikUpmsClient.save(admin);
         logger.info(">>>>>>>>>>>>>>>>> result : {} >>>>>>>>>>>>>>>>>", result);
-        return "redirect:http://zuul.shik.com:5551/shik-upms/admin/list";
+        return "redirect:admin/list";
     }
 
     @RequestMapping(value = "view/{id}", method = RequestMethod.GET)

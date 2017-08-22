@@ -25,9 +25,7 @@ import java.util.Set;
 
 import com.google.common.collect.Sets;
 import com.shik.client.ShikUpmsClient;
-import com.shik.constant.ShiroConstants;
 import com.shik.jpa.domain.Admin;
-import com.shik.jpa.domain.User;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -66,7 +64,7 @@ public class ShikShiroRealm extends AuthorizingRealm {
         String username = upToken.getUsername();
 
         //3. 调用数据库的方法, 从数据库中查询 username 对应的用户记录
-        Admin admin = this.shikUpmsClient.findOne(username);
+        Admin admin = this.shikUpmsClient.findOneByUsername(username);
         System.out.println("从数据库中获取 username: " + admin.getUsername() + " 所对应的用户信息.");
 
         //4. 若用户不存在, 则可以抛出 UnknownAccountException 异常

@@ -32,12 +32,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author gengshikun
  * @date 2017/7/17
  */
-@FeignClient(name = "shikUpmsClient", value = "shik-zuul", fallback = ShikUpmsClientImpl.class)
+@FeignClient(value = "shik-zuul", fallback = ShikUpmsClientImpl.class)
 public interface ShikUpmsClient {
 
     @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/save")
     String save(Admin admin);
 
     @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/find_one_by_username")
-    Admin findOne(String username);
+    Admin findOneByUsername(String username);
 }

@@ -24,7 +24,6 @@ package com.shik.config;
 import com.shik.constant.MapConstants;
 import com.shik.constant.ShiroConstants;
 import com.shik.shiro.realms.ShikShiroRealm;
-import com.shik.support.component.SpringContextUtil;
 import com.shik.support.reader.PropertiesReader;
 import org.apache.shiro.authc.Authenticator;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
@@ -32,11 +31,14 @@ import org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy;
 import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
+import org.apache.shiro.codec.Base64;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.apache.shiro.web.servlet.SimpleCookie;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -159,6 +161,20 @@ public class ShikShiroConfig {
         shiroFilterFactoryBean.setFilterChainDefinitionMap(MapConstants.SHIRO_MAP);
 
         return shiroFilterFactoryBean;
+    }
+
+    @Bean
+    public CookieRememberMeManager cookieRememberMeManager() {
+        SimpleCookie simpleCookie = new SimpleCookie();
+        simpleCookie.setDomain("shik.com");
+        simpleCookie.setName("rememberMe");
+        simpleCookie.setHttpOnly(Boolean.TRUE);
+        simpleCookie.setMaxAge(2592000); // 30 天
+
+        CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
+        cookieRememberMeManager.setCipherKey(Base64.decode("4AvVhmFLUs0KTA3Kprsdag=="));
+        cookieRememberMeManager.setCookie(simpleCookie);
+        return cookieRememberMeManager;
     }
 
 }

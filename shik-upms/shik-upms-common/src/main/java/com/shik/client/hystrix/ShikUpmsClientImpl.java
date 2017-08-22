@@ -36,7 +36,7 @@ public class ShikUpmsClientImpl implements ShikUpmsClient {
         return null;
     }
 
-    public Admin findOne(String username) {
+    public Admin findOneByUsername(String username) {
         return null;
     }
 }
