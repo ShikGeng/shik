@@ -93,24 +93,7 @@ public class ShikUpmaIndexController {
             }
         }
 
-        return "redirect:/index";
-    }
-
-    @RequestMapping(value = "test/session")
-    public String testSession(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        System.out.println(session.getAttribute("shik"));
-        System.out.println(session.getAttribute("zkgengkun"));
-
-        Object cookie = CookieUtils.getCookieByName(request, "shik");
-        System.out.println(cookie);
-
-        String sessionId = session.getId();
-
-        String shik = this.shikUpmsClient.testSession(sessionId);
-        System.out.println(shik);
-
-        return "index";
+        return "redirect:/admin/list";
     }
 
 }

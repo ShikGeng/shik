@@ -36,10 +36,6 @@ public class ShikUpmsClientImpl implements ShikUpmsClient {
         return null;
     }
 
-    public String testSession(String sessionId) {
-        return "123";
-    }
-
     public Admin findOne(String username) {
         return null;
     }
