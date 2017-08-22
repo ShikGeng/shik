@@ -19,28 +19,20 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.client;
+package com.shik.constant;
 
-import com.shik.client.hystrix.ShikUpmsClientImpl;
-import com.shik.jpa.domain.Admin;
-import com.shik.jpa.domain.User;
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.apache.shiro.util.ByteSource;
 
 /**
  * @author gengshikun
- * @date 2017/7/17
+ * @date 2017/8/22
  */
-@FeignClient(value = "shik-zuul", fallback = ShikUpmsClientImpl.class)
-public interface ShikUpmsClient {
+public class ShiroConstants {
 
-    @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/save")
-    String save(Admin admin);
+    public static final String HASH_ALGORITHM_NAME = "MD5";
 
-    @RequestMapping(value = "/shik-dao-upms/test/session")
-    String testSession(String sessionId);
+    public static final int HASH_ITERATIONS = 500;
 
-    @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/find_one_by_username")
-    Admin findOne(String username);
+    public static final ByteSource SALT = ByteSource.Util.bytes("Shik");
+
 }

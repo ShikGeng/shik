@@ -19,28 +19,39 @@
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  */
-package com.shik.client.hystrix;
+package com.shik.filter;
 
-import com.shik.client.ShikUpmsClient;
-import com.shik.jpa.domain.Admin;
-import com.shik.jpa.domain.User;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @author gengshikun
- * @date 2017/7/17
+ * @date 2017/8/21
  */
+@Order(0)
+@WebFilter(urlPatterns = "/*")
 @Component
-public class ShikUpmsClientImpl implements ShikUpmsClient {
-    public String save(Admin admin) {
-        return null;
+public class ShikJwtFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
     }
 
-    public String testSession(String sessionId) {
-        return "123";
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
     }
 
-    public Admin findOne(String username) {
-        return null;
+    @Override
+    public void destroy() {
+
     }
 }

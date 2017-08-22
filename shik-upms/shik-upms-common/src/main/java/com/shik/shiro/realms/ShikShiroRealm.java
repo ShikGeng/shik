@@ -24,6 +24,10 @@ package com.shik.shiro.realms;
 import java.util.Set;
 
 import com.google.common.collect.Sets;
+import com.shik.client.ShikUpmsClient;
+import com.shik.constant.ShiroConstants;
+import com.shik.jpa.domain.Admin;
+import com.shik.jpa.domain.User;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -37,12 +41,18 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * @author gengshikun
  * @date 2017/8/21
  */
+@Component
 public class ShikShiroRealm extends AuthorizingRealm {
+
+    @Autowired
+    private ShikUpmsClient shikUpmsClient;
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(
@@ -56,10 +66,11 @@ public class ShikShiroRealm extends AuthorizingRealm {
         String username = upToken.getUsername();
 
         //3. 调用数据库的方法, 从数据库中查询 username 对应的用户记录
-        System.out.println("从数据库中获取 username: " + username + " 所对应的用户信息.");
+        Admin admin = this.shikUpmsClient.findOne(username);
+        System.out.println("从数据库中获取 username: " + admin.getUsername() + " 所对应的用户信息.");
 
         //4. 若用户不存在, 则可以抛出 UnknownAccountException 异常
-        if("unknown".equals(username)){
+        if(null == admin){
             throw new UnknownAccountException("用户不存在!");
         }
 
@@ -73,13 +84,7 @@ public class ShikShiroRealm extends AuthorizingRealm {
         //1). principal: 认证的实体信息. 可以是 username, 也可以是数据表对应的用户的实体类对象.
         Object principal = username;
         //2). credentials: 密码.
-        Object credentials = null; //"fc1709d0a95a6be30bc5926fdb7f22f4";
-        if("admin".equals(username)){
-            credentials = "ae59392d87df09a6d4520a9ac14b8d7e";
-        }else if("user".equals(username)){
-            credentials = "1e86dbfb8d177780b6ab29fe4e8583fe";
-        }
-
+        Object credentials = admin.getPassword(); //"fc1709d0a95a6be30bc5926fdb7f22f4";
         //3). realmName: 当前 realm 对象的 name. 调用父类的 getName() 方法即可
         String realmName = getName();
         //4). 盐值.
@@ -93,7 +98,7 @@ public class ShikShiroRealm extends AuthorizingRealm {
     public static void main(String[] args) {
         String hashAlgorithmName = "MD5";
         Object credentials = "123456";
-        Object salt = ByteSource.Util.bytes("user");
+        Object salt = ByteSource.Util.bytes("shik");
         int hashIterations = 500;
 
         Object result = new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations);

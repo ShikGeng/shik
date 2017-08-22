@@ -53,4 +53,10 @@ public class ShikUpmsAdminController {
         this.adminRepository.save(admin);
         return "success";
     }
+
+    @RequestMapping(value = "find_one_by_username", method = RequestMethod.POST)
+    @ResponseBody
+    public Admin findOne(@RequestBody String username) {
+        return this.adminRepository.findOneByUsername(username);
+    }
 }

@@ -41,4 +41,6 @@ public interface AdminRepository extends PagingAndSortingRepository<Admin, Strin
     @Select("select * from admin where id = #{id}")
     Admin getOne(@Param("id") String id);
 
+    Admin findOneByUsername(String username);
+
 }

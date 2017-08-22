@@ -22,7 +22,9 @@
 package com.shik.config;
 
 import com.shik.constant.MapConstants;
+import com.shik.constant.ShiroConstants;
 import com.shik.shiro.realms.ShikShiroRealm;
+import com.shik.support.component.SpringContextUtil;
 import com.shik.support.reader.PropertiesReader;
 import org.apache.shiro.authc.Authenticator;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
@@ -95,8 +97,8 @@ public class ShikShiroConfig {
     @Bean("shiroRealm")
     public ShikShiroRealm shiroRealm() {
         HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
-        hashedCredentialsMatcher.setHashAlgorithmName("MD5");
-        hashedCredentialsMatcher.setHashIterations(500);
+        hashedCredentialsMatcher.setHashAlgorithmName(ShiroConstants.HASH_ALGORITHM_NAME);
+        hashedCredentialsMatcher.setHashIterations(ShiroConstants.HASH_ITERATIONS);
 
         ShikShiroRealm shiroRealm = new ShikShiroRealm();
         shiroRealm.setCredentialsMatcher(hashedCredentialsMatcher);
