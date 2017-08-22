@@ -47,6 +47,7 @@ public class ShikUpmsAdminController {
 
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public String list() {
+
         return "admin/list";
     }
 

@@ -42,9 +42,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ShikUpmsAdminController {
 
     @Autowired
-    private DiscoveryClient client;
-
-    @Autowired
     private AdminRepository adminRepository;
 
     @RequestMapping(value = "save", method = RequestMethod.POST)
