@@ -44,7 +44,7 @@
 
         <dependency>
             <groupId>com.shik</groupId>
-            <artifactId>shik-jdbc-jpa</artifactId>
+            <artifactId>shik-jdbc-entity</artifactId>
             <version>1.0.0</version>
         </dependency>
 
