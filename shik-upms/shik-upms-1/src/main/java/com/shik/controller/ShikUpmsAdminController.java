@@ -66,7 +66,7 @@ public class ShikUpmsAdminController {
         admin.setPassword(hashPassword.toString());
         String result = this.shikUpmsClient.save(admin);
         logger.info(">>>>>>>>>>>>>>>>> result : {} >>>>>>>>>>>>>>>>>", result);
-        return "redirect:admin/list";
+        return "redirect:list";
     }
 
     @RequestMapping(value = "view/{id}", method = RequestMethod.GET)
@@ -76,7 +76,7 @@ public class ShikUpmsAdminController {
 
     @RequestMapping(value = "update/{id}", method = RequestMethod.PUT)
     public String update(@PathVariable String id) {
-        return "redirect:http://zuul.shik.com:5551/shik-upms/admin/list";
+        return "redirect:list";
     }
 
 }

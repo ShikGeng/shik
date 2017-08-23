@@ -12,6 +12,11 @@
     <artifactId>shik-zuul-common</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.shik</groupId>
+            <artifactId>shik-common</artifactId>
+            <version>${shik.common.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>

@@ -25,6 +25,7 @@ import com.shik.jpa.domain.Admin;
 import com.shik.jpa.domain.User;
 import com.shik.jpa.repository.AdminRepository;
 import com.shik.jpa.repository.UserRepository;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Controller;
@@ -33,27 +34,74 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
  * @author gengshikun
  * @date 2017/8/5
  */
 @Controller
-@RequestMapping(value = "admin")
+@RequestMapping(value = "administrators")
 public class ShikUpmsAdminController {
 
     @Autowired
     private AdminRepository adminRepository;
 
-    @RequestMapping(value = "save", method = RequestMethod.POST)
+    /**
+     * 列表
+     * @return
+     */
+    @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
-    public String save(@RequestBody Admin admin) {
-        this.adminRepository.save(admin);
-        return "success";
+    public Object administrators(@RequestBody String username) {
+        if(StringUtils.isNotBlank(username)){
+            // 根据username获得资源
+            return this.adminRepository.findOneByUsername(username);
+        }
+        return null;
     }
 
-    @RequestMapping(value = "find_one_by_username", method = RequestMethod.POST)
+    /**
+     * 新增
+     * @param admin
+     * @return
+     */
+    @RequestMapping(value = "", method = RequestMethod.POST)
     @ResponseBody
-    public Admin findOne(@RequestBody String username) {
-        return this.adminRepository.findOneByUsername(username);
+    public Admin administratorsId(@RequestBody Admin admin) {
+        return this.adminRepository.save(admin);
+    }
+
+    /**
+     * 获得
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Admin administratorsId(@RequestBody String id) {
+        return this.adminRepository.findOne(id);
+    }
+
+    /**
+     * 更新
+     * @param admin
+     * @return
+     */
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    public Admin update(@RequestBody Admin admin) {
+        return this.adminRepository.save(admin);
+    }
+
+    /**
+     * 删除
+     * @param id
+     */
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public void delete(@RequestBody String id) {
+        Admin admin = new Admin();
+        admin.setId(id);
+        admin.setDeleteBoolean(Boolean.TRUE);
+        this.adminRepository.save(admin);
     }
 }

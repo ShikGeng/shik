@@ -49,6 +49,9 @@ public class Admin implements Serializable {
     @Column(length = 32)
     private String password;
 
+    @Column
+    private Boolean deleteBoolean;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "admin_to_role", joinColumns = {@JoinColumn(name = "admin_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private List<Role> roleList;  // 一个用户具有多个角色
@@ -81,11 +84,27 @@ public class Admin implements Serializable {
         this.password = password;
     }
 
+    public Boolean getDeleteBoolean() {
+        return deleteBoolean;
+    }
+
+    public void setDeleteBoolean(Boolean deleteBoolean) {
+        this.deleteBoolean = deleteBoolean;
+    }
+
     public List<Role> getRoleList() {
         return roleList;
     }
 
     public void setRoleList(List<Role> roleList) {
         this.roleList = roleList;
+    }
+
+    public List<Permission> getPermissionList() {
+        return permissionList;
+    }
+
+    public void setPermissionList(List<Permission> permissionList) {
+        this.permissionList = permissionList;
     }
 }
