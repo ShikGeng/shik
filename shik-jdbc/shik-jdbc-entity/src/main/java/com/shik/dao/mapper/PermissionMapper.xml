@@ -3,9 +3,9 @@
 <mapper namespace="com.shik.dao.mapper.PermissionMapper">
   <resultMap id="BaseResultMap" type="com.shik.dao.model.Permission">
     <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="adminId" jdbcType="VARCHAR" property="adminid" />
-    <result column="createTime" jdbcType="BIGINT" property="createtime" />
-    <result column="deleteBoolean" jdbcType="BIT" property="deleteboolean" />
+    <result column="admin_id" jdbcType="VARCHAR" property="adminId" />
+    <result column="create_time" jdbcType="BIGINT" property="createTime" />
+    <result column="delete_boolean" jdbcType="BIT" property="deleteBoolean" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="orders" jdbcType="BIGINT" property="orders" />
     <result column="pid" jdbcType="VARCHAR" property="pid" />
@@ -72,7 +72,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, adminId, createTime, deleteBoolean, name, orders, pid, type, url, value
+    id, admin_id, create_time, delete_boolean, name, orders, pid, type, url, value
   </sql>
   <select id="selectByExample" parameterType="com.shik.dao.model.PermissionExample" resultMap="BaseResultMap">
     select
@@ -113,12 +113,12 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.shik.dao.model.Permission">
-    insert into permission (id, adminId, createTime, 
-      deleteBoolean, name, orders, 
+    insert into permission (id, admin_id, create_time, 
+      delete_boolean, name, orders, 
       pid, type, url, value
       )
-    values (#{id,jdbcType=VARCHAR}, #{adminid,jdbcType=VARCHAR}, #{createtime,jdbcType=BIGINT}, 
-      #{deleteboolean,jdbcType=BIT}, #{name,jdbcType=VARCHAR}, #{orders,jdbcType=BIGINT}, 
+    values (#{id,jdbcType=VARCHAR}, #{adminId,jdbcType=VARCHAR}, #{createTime,jdbcType=BIGINT}, 
+      #{deleteBoolean,jdbcType=BIT}, #{name,jdbcType=VARCHAR}, #{orders,jdbcType=BIGINT}, 
       #{pid,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}
       )
   </insert>
@@ -128,14 +128,14 @@
       <if test="id != null">
         id,
       </if>
-      <if test="adminid != null">
-        adminId,
+      <if test="adminId != null">
+        admin_id,
       </if>
-      <if test="createtime != null">
-        createTime,
+      <if test="createTime != null">
+        create_time,
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean,
+      <if test="deleteBoolean != null">
+        delete_boolean,
       </if>
       <if test="name != null">
         name,
@@ -160,14 +160,14 @@
       <if test="id != null">
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="adminid != null">
-        #{adminid,jdbcType=VARCHAR},
+      <if test="adminId != null">
+        #{adminId,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null">
-        #{createtime,jdbcType=BIGINT},
+      <if test="createTime != null">
+        #{createTime,jdbcType=BIGINT},
       </if>
-      <if test="deleteboolean != null">
-        #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
@@ -201,14 +201,14 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=VARCHAR},
       </if>
-      <if test="record.adminid != null">
-        adminId = #{record.adminid,jdbcType=VARCHAR},
+      <if test="record.adminId != null">
+        admin_id = #{record.adminId,jdbcType=VARCHAR},
       </if>
-      <if test="record.createtime != null">
-        createTime = #{record.createtime,jdbcType=BIGINT},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=BIGINT},
       </if>
-      <if test="record.deleteboolean != null">
-        deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      <if test="record.deleteBoolean != null">
+        delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       </if>
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
@@ -236,9 +236,9 @@
   <update id="updateByExample" parameterType="map">
     update permission
     set id = #{record.id,jdbcType=VARCHAR},
-      adminId = #{record.adminid,jdbcType=VARCHAR},
-      createTime = #{record.createtime,jdbcType=BIGINT},
-      deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      admin_id = #{record.adminId,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=BIGINT},
+      delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       name = #{record.name,jdbcType=VARCHAR},
       orders = #{record.orders,jdbcType=BIGINT},
       pid = #{record.pid,jdbcType=VARCHAR},
@@ -252,14 +252,14 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.shik.dao.model.Permission">
     update permission
     <set>
-      <if test="adminid != null">
-        adminId = #{adminid,jdbcType=VARCHAR},
+      <if test="adminId != null">
+        admin_id = #{adminId,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null">
-        createTime = #{createtime,jdbcType=BIGINT},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=BIGINT},
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean = #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        delete_boolean = #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
@@ -284,9 +284,9 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.shik.dao.model.Permission">
     update permission
-    set adminId = #{adminid,jdbcType=VARCHAR},
-      createTime = #{createtime,jdbcType=BIGINT},
-      deleteBoolean = #{deleteboolean,jdbcType=BIT},
+    set admin_id = #{adminId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=BIGINT},
+      delete_boolean = #{deleteBoolean,jdbcType=BIT},
       name = #{name,jdbcType=VARCHAR},
       orders = #{orders,jdbcType=BIGINT},
       pid = #{pid,jdbcType=VARCHAR},

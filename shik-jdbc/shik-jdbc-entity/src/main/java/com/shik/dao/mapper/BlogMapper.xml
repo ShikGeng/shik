@@ -3,9 +3,9 @@
 <mapper namespace="com.shik.dao.mapper.BlogMapper">
   <resultMap id="BaseResultMap" type="com.shik.dao.model.Blog">
     <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="createTime" jdbcType="BIGINT" property="createtime" />
-    <result column="deleteBoolean" jdbcType="BIT" property="deleteboolean" />
-    <result column="groupId" jdbcType="VARCHAR" property="groupid" />
+    <result column="create_time" jdbcType="BIGINT" property="createTime" />
+    <result column="delete_boolean" jdbcType="BIT" property="deleteBoolean" />
+    <result column="group_id" jdbcType="VARCHAR" property="groupId" />
     <result column="title" jdbcType="VARCHAR" property="title" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.shik.dao.model.Blog">
@@ -70,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, createTime, deleteBoolean, groupId, title
+    id, create_time, delete_boolean, group_id, title
   </sql>
   <sql id="Blob_Column_List">
     content
@@ -132,11 +132,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.shik.dao.model.Blog">
-    insert into blog (id, createTime, deleteBoolean, 
-      groupId, title, content
+    insert into blog (id, create_time, delete_boolean, 
+      group_id, title, content
       )
-    values (#{id,jdbcType=VARCHAR}, #{createtime,jdbcType=BIGINT}, #{deleteboolean,jdbcType=BIT}, 
-      #{groupid,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}
+    values (#{id,jdbcType=VARCHAR}, #{createTime,jdbcType=BIGINT}, #{deleteBoolean,jdbcType=BIT}, 
+      #{groupId,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.shik.dao.model.Blog">
@@ -145,14 +145,14 @@
       <if test="id != null">
         id,
       </if>
-      <if test="createtime != null">
-        createTime,
+      <if test="createTime != null">
+        create_time,
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean,
+      <if test="deleteBoolean != null">
+        delete_boolean,
       </if>
-      <if test="groupid != null">
-        groupId,
+      <if test="groupId != null">
+        group_id,
       </if>
       <if test="title != null">
         title,
@@ -165,14 +165,14 @@
       <if test="id != null">
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null">
-        #{createtime,jdbcType=BIGINT},
+      <if test="createTime != null">
+        #{createTime,jdbcType=BIGINT},
       </if>
-      <if test="deleteboolean != null">
-        #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        #{deleteBoolean,jdbcType=BIT},
       </if>
-      <if test="groupid != null">
-        #{groupid,jdbcType=VARCHAR},
+      <if test="groupId != null">
+        #{groupId,jdbcType=VARCHAR},
       </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
@@ -194,14 +194,14 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=VARCHAR},
       </if>
-      <if test="record.createtime != null">
-        createTime = #{record.createtime,jdbcType=BIGINT},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=BIGINT},
       </if>
-      <if test="record.deleteboolean != null">
-        deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      <if test="record.deleteBoolean != null">
+        delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       </if>
-      <if test="record.groupid != null">
-        groupId = #{record.groupid,jdbcType=VARCHAR},
+      <if test="record.groupId != null">
+        group_id = #{record.groupId,jdbcType=VARCHAR},
       </if>
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
@@ -217,9 +217,9 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update blog
     set id = #{record.id,jdbcType=VARCHAR},
-      createTime = #{record.createtime,jdbcType=BIGINT},
-      deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
-      groupId = #{record.groupid,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=BIGINT},
+      delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
+      group_id = #{record.groupId,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
       content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
@@ -229,9 +229,9 @@
   <update id="updateByExample" parameterType="map">
     update blog
     set id = #{record.id,jdbcType=VARCHAR},
-      createTime = #{record.createtime,jdbcType=BIGINT},
-      deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
-      groupId = #{record.groupid,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=BIGINT},
+      delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
+      group_id = #{record.groupId,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -240,14 +240,14 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.shik.dao.model.Blog">
     update blog
     <set>
-      <if test="createtime != null">
-        createTime = #{createtime,jdbcType=BIGINT},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=BIGINT},
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean = #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        delete_boolean = #{deleteBoolean,jdbcType=BIT},
       </if>
-      <if test="groupid != null">
-        groupId = #{groupid,jdbcType=VARCHAR},
+      <if test="groupId != null">
+        group_id = #{groupId,jdbcType=VARCHAR},
       </if>
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
@@ -260,18 +260,18 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.shik.dao.model.Blog">
     update blog
-    set createTime = #{createtime,jdbcType=BIGINT},
-      deleteBoolean = #{deleteboolean,jdbcType=BIT},
-      groupId = #{groupid,jdbcType=VARCHAR},
+    set create_time = #{createTime,jdbcType=BIGINT},
+      delete_boolean = #{deleteBoolean,jdbcType=BIT},
+      group_id = #{groupId,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.shik.dao.model.Blog">
     update blog
-    set createTime = #{createtime,jdbcType=BIGINT},
-      deleteBoolean = #{deleteboolean,jdbcType=BIT},
-      groupId = #{groupid,jdbcType=VARCHAR},
+    set create_time = #{createTime,jdbcType=BIGINT},
+      delete_boolean = #{deleteBoolean,jdbcType=BIT},
+      group_id = #{groupId,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>

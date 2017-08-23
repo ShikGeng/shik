@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class Admin implements Serializable {
     private String id;
 
-    private String username;
+    private Boolean deleteBoolean;
 
     private String password;
 
-    private Boolean deleteboolean;
+    private String username;
 
     private static final long serialVersionUID = 1L;
 
@@ -21,12 +21,12 @@ public class Admin implements Serializable {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getUsername() {
-        return username;
+    public Boolean getDeleteBoolean() {
+        return deleteBoolean;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+    public void setDeleteBoolean(Boolean deleteBoolean) {
+        this.deleteBoolean = deleteBoolean;
     }
 
     public String getPassword() {
@@ -37,12 +37,12 @@ public class Admin implements Serializable {
         this.password = password == null ? null : password.trim();
     }
 
-    public Boolean getDeleteboolean() {
-        return deleteboolean;
+    public String getUsername() {
+        return username;
     }
 
-    public void setDeleteboolean(Boolean deleteboolean) {
-        this.deleteboolean = deleteboolean;
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
     @Override
@@ -52,9 +52,9 @@ public class Admin implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", username=").append(username);
+        sb.append(", deleteBoolean=").append(deleteBoolean);
         sb.append(", password=").append(password);
-        sb.append(", deleteboolean=").append(deleteboolean);
+        sb.append(", username=").append(username);
         sb.append("]");
         return sb.toString();
     }
@@ -72,9 +72,9 @@ public class Admin implements Serializable {
         }
         Admin other = (Admin) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getUsername() == null ? other.getUsername() == null : this.getUsername().equals(other.getUsername()))
+            && (this.getDeleteBoolean() == null ? other.getDeleteBoolean() == null : this.getDeleteBoolean().equals(other.getDeleteBoolean()))
             && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
-            && (this.getDeleteboolean() == null ? other.getDeleteboolean() == null : this.getDeleteboolean().equals(other.getDeleteboolean()));
+            && (this.getUsername() == null ? other.getUsername() == null : this.getUsername().equals(other.getUsername()));
     }
 
     @Override
@@ -82,9 +82,9 @@ public class Admin implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getUsername() == null) ? 0 : getUsername().hashCode());
+        result = prime * result + ((getDeleteBoolean() == null) ? 0 : getDeleteBoolean().hashCode());
         result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
-        result = prime * result + ((getDeleteboolean() == null) ? 0 : getDeleteboolean().hashCode());
+        result = prime * result + ((getUsername() == null) ? 0 : getUsername().hashCode());
         return result;
     }
 }

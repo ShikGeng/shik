@@ -35,6 +35,8 @@ import java.util.List;
 @Entity(name = "admin")
 public class Admin implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
@@ -49,7 +51,7 @@ public class Admin implements Serializable {
     @Column(length = 32)
     private String password;
 
-    @Column
+    @Column(name = "delete_boolean")
     private Boolean deleteBoolean;
 
     @ManyToMany(fetch = FetchType.LAZY)

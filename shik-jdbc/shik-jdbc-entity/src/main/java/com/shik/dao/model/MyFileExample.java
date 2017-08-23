@@ -197,63 +197,63 @@ public class MyFileExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIsNull() {
-            addCriterion("deleteBoolean is null");
+        public Criteria andDeleteBooleanIsNull() {
+            addCriterion("delete_boolean is null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIsNotNull() {
-            addCriterion("deleteBoolean is not null");
+        public Criteria andDeleteBooleanIsNotNull() {
+            addCriterion("delete_boolean is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanEqualTo(Boolean value) {
-            addCriterion("deleteBoolean =", value, "deleteboolean");
+        public Criteria andDeleteBooleanEqualTo(Boolean value) {
+            addCriterion("delete_boolean =", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotEqualTo(Boolean value) {
-            addCriterion("deleteBoolean <>", value, "deleteboolean");
+        public Criteria andDeleteBooleanNotEqualTo(Boolean value) {
+            addCriterion("delete_boolean <>", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanGreaterThan(Boolean value) {
-            addCriterion("deleteBoolean >", value, "deleteboolean");
+        public Criteria andDeleteBooleanGreaterThan(Boolean value) {
+            addCriterion("delete_boolean >", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("deleteBoolean >=", value, "deleteboolean");
+        public Criteria andDeleteBooleanGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("delete_boolean >=", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanLessThan(Boolean value) {
-            addCriterion("deleteBoolean <", value, "deleteboolean");
+        public Criteria andDeleteBooleanLessThan(Boolean value) {
+            addCriterion("delete_boolean <", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanLessThanOrEqualTo(Boolean value) {
-            addCriterion("deleteBoolean <=", value, "deleteboolean");
+        public Criteria andDeleteBooleanLessThanOrEqualTo(Boolean value) {
+            addCriterion("delete_boolean <=", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIn(List<Boolean> values) {
-            addCriterion("deleteBoolean in", values, "deleteboolean");
+        public Criteria andDeleteBooleanIn(List<Boolean> values) {
+            addCriterion("delete_boolean in", values, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotIn(List<Boolean> values) {
-            addCriterion("deleteBoolean not in", values, "deleteboolean");
+        public Criteria andDeleteBooleanNotIn(List<Boolean> values) {
+            addCriterion("delete_boolean not in", values, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteBoolean between", value1, value2, "deleteboolean");
+        public Criteria andDeleteBooleanBetween(Boolean value1, Boolean value2) {
+            addCriterion("delete_boolean between", value1, value2, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteBoolean not between", value1, value2, "deleteboolean");
+        public Criteria andDeleteBooleanNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("delete_boolean not between", value1, value2, "deleteBoolean");
             return (Criteria) this;
         }
 

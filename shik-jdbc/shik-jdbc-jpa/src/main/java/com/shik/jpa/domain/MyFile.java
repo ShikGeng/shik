@@ -36,6 +36,8 @@ import java.io.Serializable;
 @Entity(name = "`my_file`")
 public class MyFile implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
@@ -69,7 +71,7 @@ public class MyFile implements Serializable {
     /**
      * 是否删除
      */
-    @Column
+    @Column(name = "delete_boolean")
     private Boolean deleteBoolean;
 
     public String getId() {

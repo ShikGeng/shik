@@ -7,9 +7,9 @@ public class User implements Serializable {
 
     private Integer age;
 
-    private Long createtime;
+    private Long createTime;
 
-    private Boolean deleteboolean;
+    private Boolean deleteBoolean;
 
     private String email;
 
@@ -17,7 +17,7 @@ public class User implements Serializable {
 
     private String password;
 
-    private Long registertime;
+    private Long registerTime;
 
     private Boolean validate;
 
@@ -39,20 +39,20 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    public Long getCreatetime() {
-        return createtime;
+    public Long getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatetime(Long createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
-    public Boolean getDeleteboolean() {
-        return deleteboolean;
+    public Boolean getDeleteBoolean() {
+        return deleteBoolean;
     }
 
-    public void setDeleteboolean(Boolean deleteboolean) {
-        this.deleteboolean = deleteboolean;
+    public void setDeleteBoolean(Boolean deleteBoolean) {
+        this.deleteBoolean = deleteBoolean;
     }
 
     public String getEmail() {
@@ -79,12 +79,12 @@ public class User implements Serializable {
         this.password = password == null ? null : password.trim();
     }
 
-    public Long getRegistertime() {
-        return registertime;
+    public Long getRegisterTime() {
+        return registerTime;
     }
 
-    public void setRegistertime(Long registertime) {
-        this.registertime = registertime;
+    public void setRegisterTime(Long registerTime) {
+        this.registerTime = registerTime;
     }
 
     public Boolean getValidate() {
@@ -103,12 +103,12 @@ public class User implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", age=").append(age);
-        sb.append(", createtime=").append(createtime);
-        sb.append(", deleteboolean=").append(deleteboolean);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", deleteBoolean=").append(deleteBoolean);
         sb.append(", email=").append(email);
         sb.append(", name=").append(name);
         sb.append(", password=").append(password);
-        sb.append(", registertime=").append(registertime);
+        sb.append(", registerTime=").append(registerTime);
         sb.append(", validate=").append(validate);
         sb.append("]");
         return sb.toString();
@@ -128,12 +128,12 @@ public class User implements Serializable {
         User other = (User) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()))
-            && (this.getCreatetime() == null ? other.getCreatetime() == null : this.getCreatetime().equals(other.getCreatetime()))
-            && (this.getDeleteboolean() == null ? other.getDeleteboolean() == null : this.getDeleteboolean().equals(other.getDeleteboolean()))
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getDeleteBoolean() == null ? other.getDeleteBoolean() == null : this.getDeleteBoolean().equals(other.getDeleteBoolean()))
             && (this.getEmail() == null ? other.getEmail() == null : this.getEmail().equals(other.getEmail()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
             && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
-            && (this.getRegistertime() == null ? other.getRegistertime() == null : this.getRegistertime().equals(other.getRegistertime()))
+            && (this.getRegisterTime() == null ? other.getRegisterTime() == null : this.getRegisterTime().equals(other.getRegisterTime()))
             && (this.getValidate() == null ? other.getValidate() == null : this.getValidate().equals(other.getValidate()));
     }
 
@@ -143,12 +143,12 @@ public class User implements Serializable {
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getAge() == null) ? 0 : getAge().hashCode());
-        result = prime * result + ((getCreatetime() == null) ? 0 : getCreatetime().hashCode());
-        result = prime * result + ((getDeleteboolean() == null) ? 0 : getDeleteboolean().hashCode());
+        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getDeleteBoolean() == null) ? 0 : getDeleteBoolean().hashCode());
         result = prime * result + ((getEmail() == null) ? 0 : getEmail().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
-        result = prime * result + ((getRegistertime() == null) ? 0 : getRegistertime().hashCode());
+        result = prime * result + ((getRegisterTime() == null) ? 0 : getRegisterTime().hashCode());
         result = prime * result + ((getValidate() == null) ? 0 : getValidate().hashCode());
         return result;
     }

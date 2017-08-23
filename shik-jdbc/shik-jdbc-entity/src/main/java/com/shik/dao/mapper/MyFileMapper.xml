@@ -3,7 +3,7 @@
 <mapper namespace="com.shik.dao.mapper.MyFileMapper">
   <resultMap id="BaseResultMap" type="com.shik.dao.model.MyFile">
     <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="deleteBoolean" jdbcType="BIT" property="deleteboolean" />
+    <result column="delete_boolean" jdbcType="BIT" property="deleteBoolean" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="path" jdbcType="VARCHAR" property="path" />
     <result column="size" jdbcType="BIGINT" property="size" />
@@ -68,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, deleteBoolean, name, path, size, type
+    id, delete_boolean, name, path, size, type
   </sql>
   <select id="selectByExample" parameterType="com.shik.dao.model.MyFileExample" resultMap="BaseResultMap">
     select
@@ -109,9 +109,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.shik.dao.model.MyFile">
-    insert into my_file (id, deleteBoolean, name, 
+    insert into my_file (id, delete_boolean, name, 
       path, size, type)
-    values (#{id,jdbcType=VARCHAR}, #{deleteboolean,jdbcType=BIT}, #{name,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=VARCHAR}, #{deleteBoolean,jdbcType=BIT}, #{name,jdbcType=VARCHAR}, 
       #{path,jdbcType=VARCHAR}, #{size,jdbcType=BIGINT}, #{type,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.shik.dao.model.MyFile">
@@ -120,8 +120,8 @@
       <if test="id != null">
         id,
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean,
+      <if test="deleteBoolean != null">
+        delete_boolean,
       </if>
       <if test="name != null">
         name,
@@ -140,8 +140,8 @@
       <if test="id != null">
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="deleteboolean != null">
-        #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
@@ -169,8 +169,8 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=VARCHAR},
       </if>
-      <if test="record.deleteboolean != null">
-        deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      <if test="record.deleteBoolean != null">
+        delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       </if>
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
@@ -192,7 +192,7 @@
   <update id="updateByExample" parameterType="map">
     update my_file
     set id = #{record.id,jdbcType=VARCHAR},
-      deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       name = #{record.name,jdbcType=VARCHAR},
       path = #{record.path,jdbcType=VARCHAR},
       size = #{record.size,jdbcType=BIGINT},
@@ -204,8 +204,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.shik.dao.model.MyFile">
     update my_file
     <set>
-      <if test="deleteboolean != null">
-        deleteBoolean = #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        delete_boolean = #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
@@ -224,7 +224,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.shik.dao.model.MyFile">
     update my_file
-    set deleteBoolean = #{deleteboolean,jdbcType=BIT},
+    set delete_boolean = #{deleteBoolean,jdbcType=BIT},
       name = #{name,jdbcType=VARCHAR},
       path = #{path,jdbcType=VARCHAR},
       size = #{size,jdbcType=BIGINT},

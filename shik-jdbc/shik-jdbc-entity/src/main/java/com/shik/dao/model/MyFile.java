@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class MyFile implements Serializable {
     private String id;
 
-    private Boolean deleteboolean;
+    private Boolean deleteBoolean;
 
     private String name;
 
@@ -25,12 +25,12 @@ public class MyFile implements Serializable {
         this.id = id == null ? null : id.trim();
     }
 
-    public Boolean getDeleteboolean() {
-        return deleteboolean;
+    public Boolean getDeleteBoolean() {
+        return deleteBoolean;
     }
 
-    public void setDeleteboolean(Boolean deleteboolean) {
-        this.deleteboolean = deleteboolean;
+    public void setDeleteBoolean(Boolean deleteBoolean) {
+        this.deleteBoolean = deleteBoolean;
     }
 
     public String getName() {
@@ -72,7 +72,7 @@ public class MyFile implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", deleteboolean=").append(deleteboolean);
+        sb.append(", deleteBoolean=").append(deleteBoolean);
         sb.append(", name=").append(name);
         sb.append(", path=").append(path);
         sb.append(", size=").append(size);
@@ -94,7 +94,7 @@ public class MyFile implements Serializable {
         }
         MyFile other = (MyFile) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getDeleteboolean() == null ? other.getDeleteboolean() == null : this.getDeleteboolean().equals(other.getDeleteboolean()))
+            && (this.getDeleteBoolean() == null ? other.getDeleteBoolean() == null : this.getDeleteBoolean().equals(other.getDeleteBoolean()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
             && (this.getPath() == null ? other.getPath() == null : this.getPath().equals(other.getPath()))
             && (this.getSize() == null ? other.getSize() == null : this.getSize().equals(other.getSize()))
@@ -106,7 +106,7 @@ public class MyFile implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getDeleteboolean() == null) ? 0 : getDeleteboolean().hashCode());
+        result = prime * result + ((getDeleteBoolean() == null) ? 0 : getDeleteBoolean().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         result = prime * result + ((getPath() == null) ? 0 : getPath().hashCode());
         result = prime * result + ((getSize() == null) ? 0 : getSize().hashCode());

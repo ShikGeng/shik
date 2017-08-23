@@ -4,12 +4,12 @@
   <resultMap id="BaseResultMap" type="com.shik.dao.model.User">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="age" jdbcType="INTEGER" property="age" />
-    <result column="createTime" jdbcType="BIGINT" property="createtime" />
-    <result column="deleteBoolean" jdbcType="BIT" property="deleteboolean" />
+    <result column="create_time" jdbcType="BIGINT" property="createTime" />
+    <result column="delete_boolean" jdbcType="BIT" property="deleteBoolean" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="registerTime" jdbcType="BIGINT" property="registertime" />
+    <result column="register_time" jdbcType="BIGINT" property="registerTime" />
     <result column="validate" jdbcType="BIT" property="validate" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -71,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, age, createTime, deleteBoolean, email, name, password, registerTime, validate
+    id, age, create_time, delete_boolean, email, name, password, register_time, validate
   </sql>
   <select id="selectByExample" parameterType="com.shik.dao.model.UserExample" resultMap="BaseResultMap">
     select
@@ -112,13 +112,13 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.shik.dao.model.User">
-    insert into user (id, age, createTime, 
-      deleteBoolean, email, name, 
-      password, registerTime, validate
+    insert into user (id, age, create_time, 
+      delete_boolean, email, name, 
+      password, register_time, validate
       )
-    values (#{id,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{createtime,jdbcType=BIGINT}, 
-      #{deleteboolean,jdbcType=BIT}, #{email,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
-      #{password,jdbcType=VARCHAR}, #{registertime,jdbcType=BIGINT}, #{validate,jdbcType=BIT}
+    values (#{id,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{createTime,jdbcType=BIGINT}, 
+      #{deleteBoolean,jdbcType=BIT}, #{email,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{registerTime,jdbcType=BIGINT}, #{validate,jdbcType=BIT}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.shik.dao.model.User">
@@ -130,11 +130,11 @@
       <if test="age != null">
         age,
       </if>
-      <if test="createtime != null">
-        createTime,
+      <if test="createTime != null">
+        create_time,
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean,
+      <if test="deleteBoolean != null">
+        delete_boolean,
       </if>
       <if test="email != null">
         email,
@@ -145,8 +145,8 @@
       <if test="password != null">
         password,
       </if>
-      <if test="registertime != null">
-        registerTime,
+      <if test="registerTime != null">
+        register_time,
       </if>
       <if test="validate != null">
         validate,
@@ -159,11 +159,11 @@
       <if test="age != null">
         #{age,jdbcType=INTEGER},
       </if>
-      <if test="createtime != null">
-        #{createtime,jdbcType=BIGINT},
+      <if test="createTime != null">
+        #{createTime,jdbcType=BIGINT},
       </if>
-      <if test="deleteboolean != null">
-        #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="email != null">
         #{email,jdbcType=VARCHAR},
@@ -174,8 +174,8 @@
       <if test="password != null">
         #{password,jdbcType=VARCHAR},
       </if>
-      <if test="registertime != null">
-        #{registertime,jdbcType=BIGINT},
+      <if test="registerTime != null">
+        #{registerTime,jdbcType=BIGINT},
       </if>
       <if test="validate != null">
         #{validate,jdbcType=BIT},
@@ -197,11 +197,11 @@
       <if test="record.age != null">
         age = #{record.age,jdbcType=INTEGER},
       </if>
-      <if test="record.createtime != null">
-        createTime = #{record.createtime,jdbcType=BIGINT},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=BIGINT},
       </if>
-      <if test="record.deleteboolean != null">
-        deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      <if test="record.deleteBoolean != null">
+        delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       </if>
       <if test="record.email != null">
         email = #{record.email,jdbcType=VARCHAR},
@@ -212,8 +212,8 @@
       <if test="record.password != null">
         password = #{record.password,jdbcType=VARCHAR},
       </if>
-      <if test="record.registertime != null">
-        registerTime = #{record.registertime,jdbcType=BIGINT},
+      <if test="record.registerTime != null">
+        register_time = #{record.registerTime,jdbcType=BIGINT},
       </if>
       <if test="record.validate != null">
         validate = #{record.validate,jdbcType=BIT},
@@ -227,12 +227,12 @@
     update user
     set id = #{record.id,jdbcType=VARCHAR},
       age = #{record.age,jdbcType=INTEGER},
-      createTime = #{record.createtime,jdbcType=BIGINT},
-      deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      create_time = #{record.createTime,jdbcType=BIGINT},
+      delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       email = #{record.email,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
-      registerTime = #{record.registertime,jdbcType=BIGINT},
+      register_time = #{record.registerTime,jdbcType=BIGINT},
       validate = #{record.validate,jdbcType=BIT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -244,11 +244,11 @@
       <if test="age != null">
         age = #{age,jdbcType=INTEGER},
       </if>
-      <if test="createtime != null">
-        createTime = #{createtime,jdbcType=BIGINT},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=BIGINT},
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean = #{deleteboolean,jdbcType=BIT},
+      <if test="deleteBoolean != null">
+        delete_boolean = #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="email != null">
         email = #{email,jdbcType=VARCHAR},
@@ -259,8 +259,8 @@
       <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
-      <if test="registertime != null">
-        registerTime = #{registertime,jdbcType=BIGINT},
+      <if test="registerTime != null">
+        register_time = #{registerTime,jdbcType=BIGINT},
       </if>
       <if test="validate != null">
         validate = #{validate,jdbcType=BIT},
@@ -271,12 +271,12 @@
   <update id="updateByPrimaryKey" parameterType="com.shik.dao.model.User">
     update user
     set age = #{age,jdbcType=INTEGER},
-      createTime = #{createtime,jdbcType=BIGINT},
-      deleteBoolean = #{deleteboolean,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=BIGINT},
+      delete_boolean = #{deleteBoolean,jdbcType=BIT},
       email = #{email,jdbcType=VARCHAR},
       name = #{name,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
-      registerTime = #{registertime,jdbcType=BIGINT},
+      register_time = #{registerTime,jdbcType=BIGINT},
       validate = #{validate,jdbcType=BIT}
     where id = #{id,jdbcType=VARCHAR}
   </update>

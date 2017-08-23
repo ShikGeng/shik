@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class Blog implements Serializable {
     private String id;
 
-    private Long createtime;
+    private Long createTime;
 
-    private Boolean deleteboolean;
+    private Boolean deleteBoolean;
 
-    private String groupid;
+    private String groupId;
 
     private String title;
 
@@ -25,28 +25,28 @@ public class Blog implements Serializable {
         this.id = id == null ? null : id.trim();
     }
 
-    public Long getCreatetime() {
-        return createtime;
+    public Long getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatetime(Long createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
-    public Boolean getDeleteboolean() {
-        return deleteboolean;
+    public Boolean getDeleteBoolean() {
+        return deleteBoolean;
     }
 
-    public void setDeleteboolean(Boolean deleteboolean) {
-        this.deleteboolean = deleteboolean;
+    public void setDeleteBoolean(Boolean deleteBoolean) {
+        this.deleteBoolean = deleteBoolean;
     }
 
-    public String getGroupid() {
-        return groupid;
+    public String getGroupId() {
+        return groupId;
     }
 
-    public void setGroupid(String groupid) {
-        this.groupid = groupid == null ? null : groupid.trim();
+    public void setGroupId(String groupId) {
+        this.groupId = groupId == null ? null : groupId.trim();
     }
 
     public String getTitle() {
@@ -72,9 +72,9 @@ public class Blog implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", createtime=").append(createtime);
-        sb.append(", deleteboolean=").append(deleteboolean);
-        sb.append(", groupid=").append(groupid);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", deleteBoolean=").append(deleteBoolean);
+        sb.append(", groupId=").append(groupId);
         sb.append(", title=").append(title);
         sb.append(", content=").append(content);
         sb.append("]");
@@ -94,9 +94,9 @@ public class Blog implements Serializable {
         }
         Blog other = (Blog) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getCreatetime() == null ? other.getCreatetime() == null : this.getCreatetime().equals(other.getCreatetime()))
-            && (this.getDeleteboolean() == null ? other.getDeleteboolean() == null : this.getDeleteboolean().equals(other.getDeleteboolean()))
-            && (this.getGroupid() == null ? other.getGroupid() == null : this.getGroupid().equals(other.getGroupid()))
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getDeleteBoolean() == null ? other.getDeleteBoolean() == null : this.getDeleteBoolean().equals(other.getDeleteBoolean()))
+            && (this.getGroupId() == null ? other.getGroupId() == null : this.getGroupId().equals(other.getGroupId()))
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()));
     }
@@ -106,9 +106,9 @@ public class Blog implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getCreatetime() == null) ? 0 : getCreatetime().hashCode());
-        result = prime * result + ((getDeleteboolean() == null) ? 0 : getDeleteboolean().hashCode());
-        result = prime * result + ((getGroupid() == null) ? 0 : getGroupid().hashCode());
+        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getDeleteBoolean() == null) ? 0 : getDeleteBoolean().hashCode());
+        result = prime * result + ((getGroupId() == null) ? 0 : getGroupId().hashCode());
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
         return result;

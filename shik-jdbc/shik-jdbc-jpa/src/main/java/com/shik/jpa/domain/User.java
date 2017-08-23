@@ -9,6 +9,8 @@ import java.io.Serializable;
 @Entity
 public class User implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
@@ -27,16 +29,16 @@ public class User implements Serializable {
     @Column
     private Integer age;
 
-    @Column
+    @Column(name = "create_time")
     private Long createTime;
 
-    @Column
+    @Column(name = "delete_boolean")
     private Boolean deleteBoolean;
 
     @Column
     private Boolean validate;
 
-    @Column
+    @Column(name = "register_time")
     private Long registerTime;
 
     public String getId() {

@@ -3,9 +3,9 @@
 <mapper namespace="com.shik.dao.mapper.AdminMapper">
   <resultMap id="BaseResultMap" type="com.shik.dao.model.Admin">
     <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="delete_boolean" jdbcType="BIT" property="deleteBoolean" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="deleteBoolean" jdbcType="BIT" property="deleteboolean" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, username, password, deleteBoolean
+    id, delete_boolean, password, username
   </sql>
   <select id="selectByExample" parameterType="com.shik.dao.model.AdminExample" resultMap="BaseResultMap">
     select
@@ -107,10 +107,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.shik.dao.model.Admin">
-    insert into admin (id, username, password, 
-      deleteBoolean)
-    values (#{id,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{deleteboolean,jdbcType=BIT})
+    insert into admin (id, delete_boolean, password, 
+      username)
+    values (#{id,jdbcType=VARCHAR}, #{deleteBoolean,jdbcType=BIT}, #{password,jdbcType=VARCHAR}, 
+      #{username,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.shik.dao.model.Admin">
     insert into admin
@@ -118,28 +118,28 @@
       <if test="id != null">
         id,
       </if>
-      <if test="username != null">
-        username,
+      <if test="deleteBoolean != null">
+        delete_boolean,
       </if>
       <if test="password != null">
         password,
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean,
+      <if test="username != null">
+        username,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="username != null">
-        #{username,jdbcType=VARCHAR},
+      <if test="deleteBoolean != null">
+        #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="password != null">
         #{password,jdbcType=VARCHAR},
       </if>
-      <if test="deleteboolean != null">
-        #{deleteboolean,jdbcType=BIT},
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -155,14 +155,14 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=VARCHAR},
       </if>
-      <if test="record.username != null">
-        username = #{record.username,jdbcType=VARCHAR},
+      <if test="record.deleteBoolean != null">
+        delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       </if>
       <if test="record.password != null">
         password = #{record.password,jdbcType=VARCHAR},
       </if>
-      <if test="record.deleteboolean != null">
-        deleteBoolean = #{record.deleteboolean,jdbcType=BIT},
+      <if test="record.username != null">
+        username = #{record.username,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -172,9 +172,9 @@
   <update id="updateByExample" parameterType="map">
     update admin
     set id = #{record.id,jdbcType=VARCHAR},
-      username = #{record.username,jdbcType=VARCHAR},
+      delete_boolean = #{record.deleteBoolean,jdbcType=BIT},
       password = #{record.password,jdbcType=VARCHAR},
-      deleteBoolean = #{record.deleteboolean,jdbcType=BIT}
+      username = #{record.username,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -182,23 +182,23 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.shik.dao.model.Admin">
     update admin
     <set>
-      <if test="username != null">
-        username = #{username,jdbcType=VARCHAR},
+      <if test="deleteBoolean != null">
+        delete_boolean = #{deleteBoolean,jdbcType=BIT},
       </if>
       <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
-      <if test="deleteboolean != null">
-        deleteBoolean = #{deleteboolean,jdbcType=BIT},
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.shik.dao.model.Admin">
     update admin
-    set username = #{username,jdbcType=VARCHAR},
+    set delete_boolean = #{deleteBoolean,jdbcType=BIT},
       password = #{password,jdbcType=VARCHAR},
-      deleteBoolean = #{deleteboolean,jdbcType=BIT}
+      username = #{username,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
   <cache eviction="LRU" flushInterval="60000" readOnly="true" size="1024" />

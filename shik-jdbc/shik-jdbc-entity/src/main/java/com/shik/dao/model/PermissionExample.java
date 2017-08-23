@@ -197,193 +197,193 @@ public class PermissionExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andAdminidIsNull() {
-            addCriterion("adminId is null");
+        public Criteria andAdminIdIsNull() {
+            addCriterion("admin_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidIsNotNull() {
-            addCriterion("adminId is not null");
+        public Criteria andAdminIdIsNotNull() {
+            addCriterion("admin_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidEqualTo(String value) {
-            addCriterion("adminId =", value, "adminid");
+        public Criteria andAdminIdEqualTo(String value) {
+            addCriterion("admin_id =", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidNotEqualTo(String value) {
-            addCriterion("adminId <>", value, "adminid");
+        public Criteria andAdminIdNotEqualTo(String value) {
+            addCriterion("admin_id <>", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidGreaterThan(String value) {
-            addCriterion("adminId >", value, "adminid");
+        public Criteria andAdminIdGreaterThan(String value) {
+            addCriterion("admin_id >", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidGreaterThanOrEqualTo(String value) {
-            addCriterion("adminId >=", value, "adminid");
+        public Criteria andAdminIdGreaterThanOrEqualTo(String value) {
+            addCriterion("admin_id >=", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidLessThan(String value) {
-            addCriterion("adminId <", value, "adminid");
+        public Criteria andAdminIdLessThan(String value) {
+            addCriterion("admin_id <", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidLessThanOrEqualTo(String value) {
-            addCriterion("adminId <=", value, "adminid");
+        public Criteria andAdminIdLessThanOrEqualTo(String value) {
+            addCriterion("admin_id <=", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidLike(String value) {
-            addCriterion("adminId like", value, "adminid");
+        public Criteria andAdminIdLike(String value) {
+            addCriterion("admin_id like", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidNotLike(String value) {
-            addCriterion("adminId not like", value, "adminid");
+        public Criteria andAdminIdNotLike(String value) {
+            addCriterion("admin_id not like", value, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidIn(List<String> values) {
-            addCriterion("adminId in", values, "adminid");
+        public Criteria andAdminIdIn(List<String> values) {
+            addCriterion("admin_id in", values, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidNotIn(List<String> values) {
-            addCriterion("adminId not in", values, "adminid");
+        public Criteria andAdminIdNotIn(List<String> values) {
+            addCriterion("admin_id not in", values, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidBetween(String value1, String value2) {
-            addCriterion("adminId between", value1, value2, "adminid");
+        public Criteria andAdminIdBetween(String value1, String value2) {
+            addCriterion("admin_id between", value1, value2, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andAdminidNotBetween(String value1, String value2) {
-            addCriterion("adminId not between", value1, value2, "adminid");
+        public Criteria andAdminIdNotBetween(String value1, String value2) {
+            addCriterion("admin_id not between", value1, value2, "adminId");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeIsNull() {
-            addCriterion("createTime is null");
+        public Criteria andCreateTimeIsNull() {
+            addCriterion("create_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeIsNotNull() {
-            addCriterion("createTime is not null");
+        public Criteria andCreateTimeIsNotNull() {
+            addCriterion("create_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeEqualTo(Long value) {
-            addCriterion("createTime =", value, "createtime");
+        public Criteria andCreateTimeEqualTo(Long value) {
+            addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeNotEqualTo(Long value) {
-            addCriterion("createTime <>", value, "createtime");
+        public Criteria andCreateTimeNotEqualTo(Long value) {
+            addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeGreaterThan(Long value) {
-            addCriterion("createTime >", value, "createtime");
+        public Criteria andCreateTimeGreaterThan(Long value) {
+            addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeGreaterThanOrEqualTo(Long value) {
-            addCriterion("createTime >=", value, "createtime");
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Long value) {
+            addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeLessThan(Long value) {
-            addCriterion("createTime <", value, "createtime");
+        public Criteria andCreateTimeLessThan(Long value) {
+            addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeLessThanOrEqualTo(Long value) {
-            addCriterion("createTime <=", value, "createtime");
+        public Criteria andCreateTimeLessThanOrEqualTo(Long value) {
+            addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeIn(List<Long> values) {
-            addCriterion("createTime in", values, "createtime");
+        public Criteria andCreateTimeIn(List<Long> values) {
+            addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeNotIn(List<Long> values) {
-            addCriterion("createTime not in", values, "createtime");
+        public Criteria andCreateTimeNotIn(List<Long> values) {
+            addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeBetween(Long value1, Long value2) {
-            addCriterion("createTime between", value1, value2, "createtime");
+        public Criteria andCreateTimeBetween(Long value1, Long value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreatetimeNotBetween(Long value1, Long value2) {
-            addCriterion("createTime not between", value1, value2, "createtime");
+        public Criteria andCreateTimeNotBetween(Long value1, Long value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIsNull() {
-            addCriterion("deleteBoolean is null");
+        public Criteria andDeleteBooleanIsNull() {
+            addCriterion("delete_boolean is null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIsNotNull() {
-            addCriterion("deleteBoolean is not null");
+        public Criteria andDeleteBooleanIsNotNull() {
+            addCriterion("delete_boolean is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanEqualTo(Boolean value) {
-            addCriterion("deleteBoolean =", value, "deleteboolean");
+        public Criteria andDeleteBooleanEqualTo(Boolean value) {
+            addCriterion("delete_boolean =", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotEqualTo(Boolean value) {
-            addCriterion("deleteBoolean <>", value, "deleteboolean");
+        public Criteria andDeleteBooleanNotEqualTo(Boolean value) {
+            addCriterion("delete_boolean <>", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanGreaterThan(Boolean value) {
-            addCriterion("deleteBoolean >", value, "deleteboolean");
+        public Criteria andDeleteBooleanGreaterThan(Boolean value) {
+            addCriterion("delete_boolean >", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("deleteBoolean >=", value, "deleteboolean");
+        public Criteria andDeleteBooleanGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("delete_boolean >=", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanLessThan(Boolean value) {
-            addCriterion("deleteBoolean <", value, "deleteboolean");
+        public Criteria andDeleteBooleanLessThan(Boolean value) {
+            addCriterion("delete_boolean <", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanLessThanOrEqualTo(Boolean value) {
-            addCriterion("deleteBoolean <=", value, "deleteboolean");
+        public Criteria andDeleteBooleanLessThanOrEqualTo(Boolean value) {
+            addCriterion("delete_boolean <=", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIn(List<Boolean> values) {
-            addCriterion("deleteBoolean in", values, "deleteboolean");
+        public Criteria andDeleteBooleanIn(List<Boolean> values) {
+            addCriterion("delete_boolean in", values, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotIn(List<Boolean> values) {
-            addCriterion("deleteBoolean not in", values, "deleteboolean");
+        public Criteria andDeleteBooleanNotIn(List<Boolean> values) {
+            addCriterion("delete_boolean not in", values, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteBoolean between", value1, value2, "deleteboolean");
+        public Criteria andDeleteBooleanBetween(Boolean value1, Boolean value2) {
+            addCriterion("delete_boolean between", value1, value2, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteBoolean not between", value1, value2, "deleteboolean");
+        public Criteria andDeleteBooleanNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("delete_boolean not between", value1, value2, "deleteBoolean");
             return (Criteria) this;
         }
 

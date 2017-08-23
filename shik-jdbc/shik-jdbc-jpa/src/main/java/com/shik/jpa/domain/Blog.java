@@ -32,6 +32,9 @@ import java.io.Serializable;
  */
 @Entity(name = "`blog`")
 public class Blog implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
@@ -41,17 +44,17 @@ public class Blog implements Serializable {
     @Column(nullable = false, length = 32)
     private String title;
 
-    @Column(length = 32)
+    @Column(name = "group_id", length = 32)
     private String groupId;
 
     @Lob
     @Basic(fetch = FetchType.LAZY)
     private String content;
 
-    @Column(updatable = false)
+    @Column(name = "create_time", updatable = false)
     private Long createTime;
 
-    @Column
+    @Column(name = "delete_boolean")
     private Boolean deleteBoolean;
 
     public String getId() {

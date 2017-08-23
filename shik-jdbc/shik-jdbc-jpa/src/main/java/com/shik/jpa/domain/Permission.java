@@ -34,6 +34,8 @@ import java.util.List;
 @Entity(name = "permission")
 public class Permission implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
@@ -61,16 +63,16 @@ public class Permission implements Serializable {
     @Column(length = 32)
     private String url;
 
-    @Column(length = 32)
+    @Column(name = "admin_id",length = 32)
     private String adminId;
 
-    @Column(updatable = false)
+    @Column(name = "create_time", updatable = false)
     private Long createTime;
 
     @Column
     private Long orders;
 
-    @Column
+    @Column(name = "delete_boolean")
     private Boolean deleteBoolean;
 
     public String getId() {

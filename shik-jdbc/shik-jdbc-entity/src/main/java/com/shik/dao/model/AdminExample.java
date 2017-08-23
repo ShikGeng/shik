@@ -197,73 +197,63 @@ public class AdminExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andUsernameIsNull() {
-            addCriterion("username is null");
+        public Criteria andDeleteBooleanIsNull() {
+            addCriterion("delete_boolean is null");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameIsNotNull() {
-            addCriterion("username is not null");
+        public Criteria andDeleteBooleanIsNotNull() {
+            addCriterion("delete_boolean is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameEqualTo(String value) {
-            addCriterion("username =", value, "username");
+        public Criteria andDeleteBooleanEqualTo(Boolean value) {
+            addCriterion("delete_boolean =", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameNotEqualTo(String value) {
-            addCriterion("username <>", value, "username");
+        public Criteria andDeleteBooleanNotEqualTo(Boolean value) {
+            addCriterion("delete_boolean <>", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameGreaterThan(String value) {
-            addCriterion("username >", value, "username");
+        public Criteria andDeleteBooleanGreaterThan(Boolean value) {
+            addCriterion("delete_boolean >", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameGreaterThanOrEqualTo(String value) {
-            addCriterion("username >=", value, "username");
+        public Criteria andDeleteBooleanGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("delete_boolean >=", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameLessThan(String value) {
-            addCriterion("username <", value, "username");
+        public Criteria andDeleteBooleanLessThan(Boolean value) {
+            addCriterion("delete_boolean <", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameLessThanOrEqualTo(String value) {
-            addCriterion("username <=", value, "username");
+        public Criteria andDeleteBooleanLessThanOrEqualTo(Boolean value) {
+            addCriterion("delete_boolean <=", value, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameLike(String value) {
-            addCriterion("username like", value, "username");
+        public Criteria andDeleteBooleanIn(List<Boolean> values) {
+            addCriterion("delete_boolean in", values, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameNotLike(String value) {
-            addCriterion("username not like", value, "username");
+        public Criteria andDeleteBooleanNotIn(List<Boolean> values) {
+            addCriterion("delete_boolean not in", values, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameIn(List<String> values) {
-            addCriterion("username in", values, "username");
+        public Criteria andDeleteBooleanBetween(Boolean value1, Boolean value2) {
+            addCriterion("delete_boolean between", value1, value2, "deleteBoolean");
             return (Criteria) this;
         }
 
-        public Criteria andUsernameNotIn(List<String> values) {
-            addCriterion("username not in", values, "username");
-            return (Criteria) this;
-        }
-
-        public Criteria andUsernameBetween(String value1, String value2) {
-            addCriterion("username between", value1, value2, "username");
-            return (Criteria) this;
-        }
-
-        public Criteria andUsernameNotBetween(String value1, String value2) {
-            addCriterion("username not between", value1, value2, "username");
+        public Criteria andDeleteBooleanNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("delete_boolean not between", value1, value2, "deleteBoolean");
             return (Criteria) this;
         }
 
@@ -337,63 +327,73 @@ public class AdminExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIsNull() {
-            addCriterion("deleteBoolean is null");
+        public Criteria andUsernameIsNull() {
+            addCriterion("username is null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIsNotNull() {
-            addCriterion("deleteBoolean is not null");
+        public Criteria andUsernameIsNotNull() {
+            addCriterion("username is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanEqualTo(Boolean value) {
-            addCriterion("deleteBoolean =", value, "deleteboolean");
+        public Criteria andUsernameEqualTo(String value) {
+            addCriterion("username =", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotEqualTo(Boolean value) {
-            addCriterion("deleteBoolean <>", value, "deleteboolean");
+        public Criteria andUsernameNotEqualTo(String value) {
+            addCriterion("username <>", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanGreaterThan(Boolean value) {
-            addCriterion("deleteBoolean >", value, "deleteboolean");
+        public Criteria andUsernameGreaterThan(String value) {
+            addCriterion("username >", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("deleteBoolean >=", value, "deleteboolean");
+        public Criteria andUsernameGreaterThanOrEqualTo(String value) {
+            addCriterion("username >=", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanLessThan(Boolean value) {
-            addCriterion("deleteBoolean <", value, "deleteboolean");
+        public Criteria andUsernameLessThan(String value) {
+            addCriterion("username <", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanLessThanOrEqualTo(Boolean value) {
-            addCriterion("deleteBoolean <=", value, "deleteboolean");
+        public Criteria andUsernameLessThanOrEqualTo(String value) {
+            addCriterion("username <=", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanIn(List<Boolean> values) {
-            addCriterion("deleteBoolean in", values, "deleteboolean");
+        public Criteria andUsernameLike(String value) {
+            addCriterion("username like", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotIn(List<Boolean> values) {
-            addCriterion("deleteBoolean not in", values, "deleteboolean");
+        public Criteria andUsernameNotLike(String value) {
+            addCriterion("username not like", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteBoolean between", value1, value2, "deleteboolean");
+        public Criteria andUsernameIn(List<String> values) {
+            addCriterion("username in", values, "username");
             return (Criteria) this;
         }
 
-        public Criteria andDeletebooleanNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteBoolean not between", value1, value2, "deleteboolean");
+        public Criteria andUsernameNotIn(List<String> values) {
+            addCriterion("username not in", values, "username");
+            return (Criteria) this;
+        }
+
+        public Criteria andUsernameBetween(String value1, String value2) {
+            addCriterion("username between", value1, value2, "username");
+            return (Criteria) this;
+        }
+
+        public Criteria andUsernameNotBetween(String value1, String value2) {
+            addCriterion("username not between", value1, value2, "username");
             return (Criteria) this;
         }
     }

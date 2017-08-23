@@ -86,6 +86,7 @@ public class ShikUpmsAdminController {
      * @return
      */
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    @ResponseBody
     public Admin update(@PathVariable String id, @RequestBody Admin admin) {
         return this.adminRepository.save(admin);
     }
@@ -95,6 +96,7 @@ public class ShikUpmsAdminController {
      * @param id
      */
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    @ResponseBody
     public void delete(@PathVariable String id) {
         Admin admin = new Admin();
         admin.setId(id);

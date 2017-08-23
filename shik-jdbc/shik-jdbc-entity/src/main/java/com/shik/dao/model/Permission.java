@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class Permission implements Serializable {
     private String id;
 
-    private String adminid;
+    private String adminId;
 
-    private Long createtime;
+    private Long createTime;
 
-    private Boolean deleteboolean;
+    private Boolean deleteBoolean;
 
     private String name;
 
@@ -33,28 +33,28 @@ public class Permission implements Serializable {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getAdminid() {
-        return adminid;
+    public String getAdminId() {
+        return adminId;
     }
 
-    public void setAdminid(String adminid) {
-        this.adminid = adminid == null ? null : adminid.trim();
+    public void setAdminId(String adminId) {
+        this.adminId = adminId == null ? null : adminId.trim();
     }
 
-    public Long getCreatetime() {
-        return createtime;
+    public Long getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatetime(Long createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
-    public Boolean getDeleteboolean() {
-        return deleteboolean;
+    public Boolean getDeleteBoolean() {
+        return deleteBoolean;
     }
 
-    public void setDeleteboolean(Boolean deleteboolean) {
-        this.deleteboolean = deleteboolean;
+    public void setDeleteBoolean(Boolean deleteBoolean) {
+        this.deleteBoolean = deleteBoolean;
     }
 
     public String getName() {
@@ -112,9 +112,9 @@ public class Permission implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", adminid=").append(adminid);
-        sb.append(", createtime=").append(createtime);
-        sb.append(", deleteboolean=").append(deleteboolean);
+        sb.append(", adminId=").append(adminId);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", deleteBoolean=").append(deleteBoolean);
         sb.append(", name=").append(name);
         sb.append(", orders=").append(orders);
         sb.append(", pid=").append(pid);
@@ -138,9 +138,9 @@ public class Permission implements Serializable {
         }
         Permission other = (Permission) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getAdminid() == null ? other.getAdminid() == null : this.getAdminid().equals(other.getAdminid()))
-            && (this.getCreatetime() == null ? other.getCreatetime() == null : this.getCreatetime().equals(other.getCreatetime()))
-            && (this.getDeleteboolean() == null ? other.getDeleteboolean() == null : this.getDeleteboolean().equals(other.getDeleteboolean()))
+            && (this.getAdminId() == null ? other.getAdminId() == null : this.getAdminId().equals(other.getAdminId()))
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getDeleteBoolean() == null ? other.getDeleteBoolean() == null : this.getDeleteBoolean().equals(other.getDeleteBoolean()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
             && (this.getOrders() == null ? other.getOrders() == null : this.getOrders().equals(other.getOrders()))
             && (this.getPid() == null ? other.getPid() == null : this.getPid().equals(other.getPid()))
@@ -154,9 +154,9 @@ public class Permission implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getAdminid() == null) ? 0 : getAdminid().hashCode());
-        result = prime * result + ((getCreatetime() == null) ? 0 : getCreatetime().hashCode());
-        result = prime * result + ((getDeleteboolean() == null) ? 0 : getDeleteboolean().hashCode());
+        result = prime * result + ((getAdminId() == null) ? 0 : getAdminId().hashCode());
+        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getDeleteBoolean() == null) ? 0 : getDeleteBoolean().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         result = prime * result + ((getOrders() == null) ? 0 : getOrders().hashCode());
         result = prime * result + ((getPid() == null) ? 0 : getPid().hashCode());

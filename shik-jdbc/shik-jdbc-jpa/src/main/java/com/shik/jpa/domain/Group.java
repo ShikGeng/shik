@@ -35,6 +35,9 @@ import java.io.Serializable;
 @Table(name = "`group`")
 @Entity
 public class Group implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "uuid") //这个是hibernate的注解/生成32位UUID
     @GeneratedValue(generator = "idGenerator")
