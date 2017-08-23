@@ -44,7 +44,7 @@ public class Admin implements Serializable {
     private String id;
 
     @NotEmpty(message = "用户名不能为空")
-    @Column(length = 32)
+    @Column(length = 32, unique = true, nullable = false)
     private String username;
 
     @NotEmpty(message = "密码不能为空")
