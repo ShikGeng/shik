@@ -11,7 +11,7 @@ import com.shik.support.reader.PropertiesFileUtil;
 public class Generator {
 
 	// 根据命名规范，只修改此常量值即可
-	private static String MODULE_PREFIX_NAME = "shik-jdbc/shik-jdbc-mybatis";
+	private static String MODULE_PREFIX_NAME = "shik-jdbc/shik-jdbc-entity";
 	private static String JDBC_DRIVER = PropertiesFileUtil.getInstance("config/jdbc").get("datasource.primary.driver");
 	private static String JDBC_URL = PropertiesFileUtil.getInstance("config/jdbc").get("datasource.primary.url");
 	private static String JDBC_USERNAME = PropertiesFileUtil.getInstance("config/jdbc").get("datasource.primary.username");

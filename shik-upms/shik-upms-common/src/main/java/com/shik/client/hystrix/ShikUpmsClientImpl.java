@@ -22,8 +22,7 @@
 package com.shik.client.hystrix;
 
 import com.shik.client.ShikUpmsClient;
-import com.shik.jpa.domain.Admin;
-import com.shik.jpa.domain.User;
+import com.shik.dao.model.Admin;
 import org.springframework.stereotype.Component;
 
 /**

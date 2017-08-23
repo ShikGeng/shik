@@ -9,37 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shik-jdbc-mybatis</artifactId>
+    <artifactId>shik-jdbc-entity</artifactId>
     <packaging>jar</packaging>
 
-    <name>shik-jdbc-mybatis</name>
+    <name>shik-jdbc-entity</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
         <dependency>
-            <groupId>com.shik</groupId>
-            <artifactId>shik-jdbc-entity</artifactId>
-            <version>1.0.0</version>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.shik</groupId>
-            <artifactId>shik-jdbc-common</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-freemarker -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-core</artifactId>
-            <version>${generator.version}</version>
-        </dependency>
-
     </dependencies>
 
     <build>

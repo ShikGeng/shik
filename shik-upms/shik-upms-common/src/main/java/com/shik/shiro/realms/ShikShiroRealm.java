@@ -25,7 +25,7 @@ import java.util.Set;
 
 import com.google.common.collect.Sets;
 import com.shik.client.ShikUpmsClient;
-import com.shik.jpa.domain.Admin;
+import com.shik.dao.model.Admin;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

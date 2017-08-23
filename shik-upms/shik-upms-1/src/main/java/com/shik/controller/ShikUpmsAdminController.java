@@ -23,8 +23,7 @@ package com.shik.controller;
 
 import com.shik.client.ShikUpmsClient;
 import com.shik.constant.ShiroConstants;
-import com.shik.jpa.domain.Admin;
-import com.shik.jpa.domain.User;
+import com.shik.dao.model.Admin;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;

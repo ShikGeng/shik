@@ -23,6 +23,7 @@
         <module>shik-jdbc-common</module>
         <module>shik-jdbc-mybatis</module>
         <module>shik-jdbc-jpa</module>
+        <module>shik-jdbc-entity</module>
     </modules>
     <packaging>pom</packaging>
 

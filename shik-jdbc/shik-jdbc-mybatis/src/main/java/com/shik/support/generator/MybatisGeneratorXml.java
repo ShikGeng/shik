@@ -60,7 +60,7 @@ public class MybatisGeneratorXml {
             String jdbc_username,
             String jdbc_password,
             String module_prefix_name) {
-        String module_path = module_prefix_name + "/src/main/resources/mybatis-generator/generatorConfig.xml";
+        String module_path = "shik-jdbc/shik-jdbc-mybatis/src/main/resources/mybatis-generator/generatorConfig.xml";
         String sql = "SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" + DATABASE_NAME + "';";
         System.out.println("========== 开始生成generatorConfig.xml文件 ==========");
         try {
