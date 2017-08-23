@@ -71,6 +71,10 @@ public class ShikUpmsAdminController {
 
     @RequestMapping(value = "view/{id}", method = RequestMethod.GET)
     public String view(@PathVariable String id) {
+
+        Admin admin = this.shikUpmsClient.findOne(id);
+        System.out.println(admin);
+
         return "admin/view";
     }
 

@@ -29,10 +29,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -53,7 +50,7 @@ public class ShikUpmsAdminController {
      */
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
-    public Object administrators(@RequestBody String username) {
+    public Object administrators(@RequestParam String username) {
         if(StringUtils.isNotBlank(username)){
             // 根据username获得资源
             return this.adminRepository.findOneByUsername(username);
@@ -79,7 +76,7 @@ public class ShikUpmsAdminController {
      */
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
     @ResponseBody
-    public Admin administratorsId(@RequestBody String id) {
+    public Admin administratorsId(@PathVariable String id) {
         return this.adminRepository.findOne(id);
     }
 
@@ -89,7 +86,7 @@ public class ShikUpmsAdminController {
      * @return
      */
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    public Admin update(@RequestBody Admin admin) {
+    public Admin update(@PathVariable String id, @RequestBody Admin admin) {
         return this.adminRepository.save(admin);
     }
 
@@ -98,7 +95,7 @@ public class ShikUpmsAdminController {
      * @param id
      */
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
-    public void delete(@RequestBody String id) {
+    public void delete(@PathVariable String id) {
         Admin admin = new Admin();
         admin.setId(id);
         admin.setDeleteBoolean(Boolean.TRUE);

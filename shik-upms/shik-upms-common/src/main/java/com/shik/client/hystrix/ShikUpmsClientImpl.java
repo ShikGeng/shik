@@ -32,11 +32,16 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class ShikUpmsClientImpl implements ShikUpmsClient {
+
     public String save(Admin admin) {
         return null;
     }
 
     public Admin findOneByUsername(String username) {
+        return null;
+    }
+
+    public Admin findOne(String id) {
         return null;
     }
 }

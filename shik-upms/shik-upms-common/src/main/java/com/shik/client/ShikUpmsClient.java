@@ -25,8 +25,7 @@ import com.shik.client.hystrix.ShikUpmsClientImpl;
 import com.shik.jpa.domain.Admin;
 import com.shik.jpa.domain.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author gengshikun
@@ -35,9 +34,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "shik-zuul", fallback = ShikUpmsClientImpl.class)
 public interface ShikUpmsClient {
 
-    @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/save")
+    @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/administrators")
     String save(Admin admin);
 
-    @RequestMapping(method = RequestMethod.POST, value = "/shik-dao-upms/admin/find_one_by_username")
-    Admin findOneByUsername(String username);
+    @RequestMapping(method = RequestMethod.GET, value = "/shik-dao-upms/administrators")
+    Admin findOneByUsername(@RequestParam("username") String username);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/shik-dao-upms/administrators/{id}")
+    Admin findOne(@PathVariable("id") String id);
 }
