@@ -20,6 +20,7 @@ shik
 |    └── shik-zuul-1 -- 路由转发 [port:5551]
 ├── shik-jdbc -- util jar
 |    ├── shik-jdbc-common -- shik-jdbc 公共模块
+|    ├── shik-jdbc-entity -- 实体类
 |    ├── shik-jdbc-jpa -- 整合jpa
 |    └── shik-jdbc-mybatis -- 整合mybatis
 ├── shik-redis -- util jar
