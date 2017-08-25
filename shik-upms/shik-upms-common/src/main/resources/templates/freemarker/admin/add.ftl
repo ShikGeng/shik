@@ -5,11 +5,20 @@
     <title>管理员添加</title>
     <#include "../comm/upms-base.ftl" />
     <#include "../comm/upms-layui.ftl" />
-    <link rel="stylesheet" href="../../..${BASE_PATH}/static/css/index.css"/>
+    <link rel="stylesheet" href="../../../static/css/index.css"/>
 </head>
 <body>
-
-<form class="layui-form layui-form-pane" action="${BASE_PATH}/admin/save" method="post">
+<div>
+<#--顶部-->
+    <div></div>
+<#--左侧-->
+    <div></div>
+<#--右侧-->
+    <div></div>
+<#--底部-->
+    <div></div>
+</div>
+<form class="layui-form layui-form-pane" action="/admin/save" method="post">
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
         <legend>用户添加</legend>
     </fieldset>
@@ -36,7 +45,7 @@
 </form>
 
 </body>
-<script type="text/javascript" src="../../..${BASE_PATH}/static/js/admin.js"></script>
+<script type="text/javascript" src="../../../static/js/admin.js"></script>
 <script>
 </script>
 </html>

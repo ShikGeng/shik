@@ -164,13 +164,17 @@ public class ShikShiroConfig {
     }
 
     @Bean
-    public CookieRememberMeManager cookieRememberMeManager() {
+    public SimpleCookie simpleCookie() {
         SimpleCookie simpleCookie = new SimpleCookie();
         simpleCookie.setDomain("shik.com");
         simpleCookie.setName("rememberMe");
         simpleCookie.setHttpOnly(Boolean.TRUE);
         simpleCookie.setMaxAge(2592000); // 30 天
+        return simpleCookie;
+    }
 
+    @Bean
+    public CookieRememberMeManager cookieRememberMeManager(SimpleCookie simpleCookie) {
         CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
         cookieRememberMeManager.setCipherKey(Base64.decode("4AvVhmFLUs0KTA3Kprsdag=="));
         cookieRememberMeManager.setCookie(simpleCookie);
