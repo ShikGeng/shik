@@ -9,11 +9,6 @@
 </head>
 <body class="shik_body">
     <div class="layui-row">
-        <div class="layui-col-xs12">
-            <fieldset class="layui-elem-field layui-field-title">
-                <legend>管理员列表</legend>
-            </fieldset>
-        </div>
 
         <div class="layui-col-xs12">
             <div class="layui-col-md3">

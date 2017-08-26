@@ -33,7 +33,7 @@
         </div>
     </div>
 </body>
-<#--<script type="text/javascript" src="../../../static/js/admin.js"></script>-->
+<script type="text/javascript" src="../../../static/js/admin.js"></script>
 <script>
 </script>
 </html>

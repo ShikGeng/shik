@@ -7,7 +7,7 @@ layui.use(['form', 'layer', 'laypage', 'jquery'], function () {
     var form = layui.form;
         layer = parent.layer === undefined ? layui.layer : parent.layer;
         $ = layui.jquery;
-        laypage = layui.laypage;
+        laypage = parent.laypage === undefined ? layui.laypage : parent.laypage;
 
     //完整功能
     laypage.render({
