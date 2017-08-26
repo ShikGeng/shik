@@ -3,11 +3,13 @@
  * @author gengshikun
  * @date 2016/12/12
  */
-layui.use(['form', 'layer', 'laypage', 'jquery'], function () {
+layui.use(['form', 'layer', 'jquery', 'laypage', 'element'], function () {
+    console.log(parent.layer === undefined)
     var form = layui.form;
-        layer = parent.layer === undefined ? layui.layer : parent.layer;
+        layer = layui.layer;
         $ = layui.jquery;
-        laypage = parent.laypage === undefined ? layui.laypage : parent.laypage;
+        laypage = layui.laypage;
+        element = layui.element;
 
     //完整功能
     laypage.render({
@@ -32,7 +34,7 @@ layui.use(['form', 'layer', 'laypage', 'jquery'], function () {
         return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
     });
 
-    $('.admin_add').click(function() {
+    $('.admin_add').on('click', function() {
         layer.open({
             type: 2,
             title: '管理员添加',
@@ -41,12 +43,14 @@ layui.use(['form', 'layer', 'laypage', 'jquery'], function () {
         });
     });
 
-    $('.cancel').click(function() {
+    $('.admin_cancel').on('click', function() {
+        console.log(111)
         closeIframe();
     })
 
     function closeIframe() {
-        var index = layer.getFrameIndex(window.name); //先得到当前iframe层的索引
-        layer.close(index); //再执行关闭
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        console.log(index)
+        parent.layer.close(index); //再执行关闭
     }
 });

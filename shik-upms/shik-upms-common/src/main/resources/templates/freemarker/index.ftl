@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8"/>
     <title>管理员添加</title>
-<#include "comm/upms-base.ftl" />
-<#include "comm/upms-layui.ftl" />
+    <#include "comm/upms-base.ftl" />
+    <#include "comm/upms-layui.ftl" />
+    <link rel="stylesheet" href="../../static/css/global.css"/>
     <link rel="stylesheet" href="../../static/css/index.css"/>
 </head>
 <body>
@@ -44,45 +45,32 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="shik_left">
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item layui-this"><a href="javascript:;" shik_url="/index">首页</a></li>
+                <li class="layui-nav-item">
                     <a class="" href="javascript:;">权限管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a class="shik" href="javascript:;" shik_url="/admin/list">管理员列表</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="javascript:;">列表三</a></dd>
-                        <dd><a href="">超链接</a></dd>
+                        <dd><a href="javascript:;" shik_url="/admin/list">管理员列表</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="javascript:;">超链接</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="javascript:;">云市场</a></li>
-                <li class="layui-nav-item"><a href="javascript:;">发布商品</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="layui-body">
+    <div class="layui-body shik_content">
         <!-- 内容主体区域 -->
         <div class="layui-tab layui-tab-brief" lay-filter="shik_tab">
             <ul class="layui-tab-title">
-                <li class="layui-this">网站设置</li>
-                <li>商品管理</li>
-                <li>订单管理</li>
+                <li lay-id="/index" class="layui-this">首页</li>
             </ul>
             <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">内容1</div>
-                <div class="layui-tab-item">内容2</div>
-                <div class="layui-tab-item">内容3</div>
+                <div class="layui-tab-item layui-show">首页内容</div>
             </div>
         </div>
     </div>
 
+    <div class="layui-footer">
+        copyright @2017 Shik
+    </div>
 </div>
 <script type="text/javascript" src="../../static/js/index.js"></script>
 <script>
