@@ -11,26 +11,23 @@
 <body>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">shik-upms</div>
+        <a href="/"><div class="layui-logo">shik-upms</div></a>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="javascript:;">管理员列表</a></li>
-            <li class="layui-nav-item"><a href="javascript:;">商品管理</a></li>
-            <li class="layui-nav-item"><a href="javascript:;">用户</a></li>
+            <li class="layui-nav-item"><a href="javascript:;">Shik项目</a></li>
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">其它系统</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="">邮件管理</a></dd>
-                    <dd><a href="">消息管理</a></dd>
-                    <dd><a href="">授权管理</a></dd>
+                    <dd><a href="">CMS系统</a></dd>
+                    <dd><a href="">LOG系统</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
+                    <img src="../../static/image/test/tx.png" class="layui-nav-img">
+                    Shik
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
@@ -45,7 +42,7 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="shik_left">
-                <li class="layui-nav-item layui-this"><a href="javascript:;" shik_url="/index">首页</a></li>
+                <li class="layui-nav-item layui-this"><a href="javascript:;" shik_url="/">首页</a></li>
                 <li class="layui-nav-item">
                     <a class="" href="javascript:;">权限管理</a>
                     <dl class="layui-nav-child">
@@ -60,7 +57,7 @@
         <!-- 内容主体区域 -->
         <div class="layui-tab layui-tab-brief" lay-filter="shik_tab">
             <ul class="layui-tab-title">
-                <li lay-id="/index" class="layui-this">首页</li>
+                <li lay-id="/" class="layui-this">首页</li>
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">首页内容</div>
