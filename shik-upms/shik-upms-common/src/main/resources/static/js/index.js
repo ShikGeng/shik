@@ -3,7 +3,7 @@
  * @author gengshikun
  * @date 2016/12/12
  */
-layui.use(['layer', 'jquery', 'element', 'laypage', 'form'], function () {
+layui.use(['layer', 'jquery', 'element'], function () {
     var layer = layui.layer;
         element = layui.element;
         $ = layui.jquery;
