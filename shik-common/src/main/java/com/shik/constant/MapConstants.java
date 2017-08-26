@@ -23,6 +23,7 @@ package com.shik.constant;
 
 import org.apache.commons.collections.MapUtils;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -69,5 +70,5 @@ public class MapConstants {
     /**
      * shiro.properties
      */
-    public static Map<String, String> SHIRO_MAP = MapUtils.EMPTY_MAP;
+    public static Map<String, String> SHIRO_MAP = new LinkedHashMap<String, String>();
 }

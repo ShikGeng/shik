@@ -22,13 +22,16 @@
 package com.shik.support.reader;
 
 import com.shik.constant.MapConstants;
+import org.apache.commons.collections.MapUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Map;
-import java.util.Properties;
+import java.io.InputStreamReader;
+import java.util.*;
 
 /**
  * @author gengshikun
@@ -125,12 +128,22 @@ public class PropertiesReader {
      */
     public static void cacheShiroProperties() {
         ClassPathResource cp = new ClassPathResource("config/shiro.properties");
-        Properties properties = new Properties();
+
         try {
-            properties.load(cp.getInputStream());
+            BufferedReader br = new BufferedReader(new InputStreamReader(cp.getInputStream()));
+            String line = "";
+            while ((line = br.readLine()) != null){
+                if(StringUtils.isNotBlank(line)){
+                    String[] lineArr = line.split("=");
+                    MapConstants.SHIRO_MAP.put(lineArr[0], lineArr[1]);
+                }
+            }
         } catch (IOException e) {
             logger.error(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 【can not load shiro.properties !】>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         }
-        MapConstants.SHIRO_MAP = (Map) properties;
+
     }
+
+
+
 }
