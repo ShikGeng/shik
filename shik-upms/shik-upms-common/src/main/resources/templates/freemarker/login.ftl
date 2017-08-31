@@ -39,9 +39,9 @@
 
 
 </div>
-<div class="shadow-box">
-    <div class="login_form">
-        <span class="login_title">登录</span>
+<div class="shik-box">
+    <div class="shik-login-form">
+        <span class="shik-login-title">登录</span>
         <form class="layui-form">
             <div class="layui-form-item">
                 <input type="text" name="email" lay-verify="email" autocomplete="off" placeholder="邮箱" class="layui-input">
@@ -54,13 +54,13 @@
                 <p id="wait1" class="show">正在加载验证码......</p>
             </div>
             <div class="layui-form-item">
-                <button class="login-btn bg-blue" lay-submit="" lay-filter="submit">立即提交</button>
+                <button class="shik-login-btn" lay-submit="" lay-filter="submit">立即提交</button>
             <#--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
             </div>
         </form>
-        <div class="login-operation">
-            <a class="forget">忘记密码</a>
-            <a class="regin">立即注册</a>
+        <div class="shik-login-operation">
+            <a class="shik-forget">忘记密码</a>
+            <a class="shik-regin">立即注册</a>
         </div>
     </div>
 </div>
