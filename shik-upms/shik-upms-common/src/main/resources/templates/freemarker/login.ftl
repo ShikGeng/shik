@@ -11,30 +11,6 @@
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <a href="/"><div class="layui-logo">shik-upms</div></a>
-        <!-- 头部区域（可配合layui已有的水平导航） -->
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="javascript:;">Shik项目</a></li>
-        </ul>
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href="javascript:;">其它系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">CMS系统</a></dd>
-                    <dd><a href="">LOG系统</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="../static/image/test/tx.png" class="layui-nav-img">
-                    Shik
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
-        </ul>
     </div>
 
 
@@ -59,8 +35,8 @@
             </div>
         </form>
         <div class="shik-login-operation">
-            <a class="shik-forget">忘记密码</a>
-            <a class="shik-regin">立即注册</a>
+            <a class="shik-forget" href="javascript:void(0)">忘记密码</a>
+            <a class="shik-regin" href="javascript:void(0)">立即注册</a>
         </div>
     </div>
 </div>

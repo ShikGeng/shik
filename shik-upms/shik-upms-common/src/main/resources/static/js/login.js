@@ -81,7 +81,7 @@ layui.use(['form', 'layer', 'jquery'], function () {
                     new_captcha: data.new_captcha, // 用于宕机时表示是新验证码的宕机
                     offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
                     product: "float", // 产品形式，包括：float，popup
-                    width: "302px"
+                    width: "300px"
                     // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
                 }, handler1);
             }
