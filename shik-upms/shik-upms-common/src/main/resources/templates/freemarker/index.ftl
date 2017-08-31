@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>管理员添加</title>
+    <title>shik</title>
     <#include "comm/upms-base.ftl" />
     <#include "comm/upms-layui.ftl" />
     <link rel="stylesheet" href="../../static/css/global.css"/>

@@ -5,7 +5,7 @@ spring:
   application:
     name: shik-upms
   profiles:
-    active: dev, rabbit, redis
+    active: rabbit, redis, dev
   cloud:
     config:
       name: shik
