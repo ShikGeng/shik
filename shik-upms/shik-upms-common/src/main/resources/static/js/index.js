@@ -7,6 +7,7 @@ layui.use(['layer', 'jquery', 'element'], function () {
     var layer = layui.layer;
         element = layui.element;
         $ = layui.jquery;
+
     // 左侧导航点击
     $(".layui-nav .layui-nav-item").on("click", 'a', function(){
         var shik_url = $(this).attr('shik_url');
@@ -40,13 +41,14 @@ layui.use(['layer', 'jquery', 'element'], function () {
     $('.layui-tab .layui-tab-title').on('mousedown', 'li', function(event){
         // console.log(event.button); // 0:左键 1:滚轮 2:右键
         var index = $(this).parent().children().index($(this)); // 获取当前tab下标
-        if(index == 0) {
-            // 首页没有右键菜单
-            return ;
-        }
+        var shik_url = $(this).attr('lay-id');
+        console.log(shik_url)
         var x = event.originalEvent.x || event.originalEvent.layerX || 0; // 获得鼠标点击位置
         var y = event.originalEvent.y || event.originalEvent.layerY || 0; // 获得鼠标点击位置
         if(event.button == 2){
+            if(index == 0) {
+                return;
+            }
             // 右键添加菜单
             var menu = '<ul class="layui-nav layui-nav-tree" lay-filter="shik_right_nav" shik_index="'+index+'">'+
                 '<li class="layui-nav-item"><a href="javascript:;">刷新当前</a></li>'+
@@ -85,10 +87,13 @@ layui.use(['layer', 'jquery', 'element'], function () {
                         break; // 关闭其他
                 }
                 layer.close(shik_right_nav_index);
-
                 listenerTab();
             });
+        } else if(event.button == 0) {
+            element.tabChange('shik_tab', shik_url);
+            listenerTab();
         }
+
     });
 
     // 禁用鼠标右键
@@ -99,8 +104,19 @@ layui.use(['layer', 'jquery', 'element'], function () {
     // tab与nav关联
     function listenerTab() {
         var shik_url = $('.layui-tab .layui-tab-title .layui-this').attr('lay-id');
-        var $this_nav = $('.layui-nav-tree .layui-nav-child a[shik_url="'+shik_url+'"]').parent();
-        $this_nav.addClass('layui-this').siblings().removeClass('layui-this');
+        if(shik_url == '/') {
+            var $this_nav = $('.layui-nav-tree .layui-nav-item a[shik_url="'+shik_url+'"]').parent();
+            $this_nav.addClass('layui-this');
+            var $that_nav = $('.layui-nav-tree .layui-nav-child a').parent();
+            $that_nav.removeClass('layui-this');
+        } else {
+            var $this_nav = $('.layui-nav-tree .layui-nav-child a[shik_url="'+shik_url+'"]').parent();
+            $this_nav.addClass('layui-this').siblings().removeClass('layui-this');
+            var $this_nav = $('.layui-nav-tree .layui-nav-child a[shik_url="'+shik_url+'"]').parent();
+            $this_nav.addClass('layui-this').siblings().removeClass('layui-this');
+        }
+
+
     }
 
 });

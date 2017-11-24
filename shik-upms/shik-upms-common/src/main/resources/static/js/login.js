@@ -15,7 +15,7 @@ layui.use(['form', 'layer', 'jquery'], function () {
                 if (result) {
                     if (result.status) {
                         $.ajax({
-                            url: "/auth/login",
+                            url: "/admin/login",
                             type: 'post',
                             data: data.field,
                             dataType: "json",

@@ -1,6 +1,7 @@
 package com.shik.config;
 
 import com.shik.constant.MapConstants;
+import com.shik.interceptor.RetrunUrlInterceptor;
 import com.shik.support.reader.PropertiesReader;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
@@ -68,9 +69,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-//        PropertiesReader.cacheUrlPassProperties();  // 缓存url_pass
-//        registry.addPathPatterns("/**")
-//                .excludePathPatterns(MapConstants.URL_PASS_MAP.keySet().toString());
+        PropertiesReader.cacheUrlPassProperties();  // 缓存url_pass
+        registry.addInterceptor(new RetrunUrlInterceptor()).addPathPatterns("/admin/login");
     }
 
     /**
