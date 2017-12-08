@@ -50,6 +50,9 @@ shik
 ├── shik-web -- web网站
 |    ├── shik-web-common -- shik-web 公共模块
 |    └── shik-web-1 -- web网站 [port:3331]
+├── shik-sms -- 短信服务中心
+|    ├── shik-sms-common -- shik-sms 公共模块
+|    └── shik-sms-1 -- 短信服务中心 [port:11111]
 └── shik-admin -- 后台管理
      ├── shik-admin-common -- shik-admin 公共模块
      └── shik-admin-1 -- 后台管理 [port:6661]
@@ -96,3 +99,6 @@ shik
 
 ### shik-web
 - 网站
+
+### shik-sms
+- 短信服务中心
