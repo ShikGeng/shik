@@ -6,7 +6,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: 120.76.147.141
+    ip-address: 47.52.232.4
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:1112/eureka/
