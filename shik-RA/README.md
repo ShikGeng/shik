@@ -6,3 +6,16 @@ Netflix的每个组件都可以向该注册中心注册发现，并且能够配�
 ### shik-RA-common
 
 该模块提供了RA需要的公共jar和log4j2
+
+### 内存优化
+
+JVM 参数
+-Xms16m 
+-Xmx32m 
+-XX:MaxMetaspaceSize=48m 
+-XX:CompressedClassSpaceSize=8m 
+-Xss256k 
+-Xmn8m 
+-XX:InitialCodeCacheSize=4m 
+-XX:ReservedCodeCacheSize=8m 
+-XX:MaxDirectMemorySize=16m 
