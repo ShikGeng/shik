@@ -12,15 +12,21 @@
     <artifactId>shik-RA-common</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.shik</groupId>
-            <artifactId>shik-common</artifactId>
-            <version>${shik.common.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.shik</groupId>-->
+            <!--<artifactId>shik-common</artifactId>-->
+            <!--<version>${shik.common.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
     </dependencies>
