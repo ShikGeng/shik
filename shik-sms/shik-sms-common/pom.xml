@@ -12,7 +12,7 @@
     <artifactId>shik-sms-common</artifactId>
     <packaging>jar</packaging>
 
-    <name>shik-upms-common</name>
+    <name>shik-sms-common</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
