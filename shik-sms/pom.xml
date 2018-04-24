@@ -23,6 +23,8 @@
         <shik.common.version>1.0.0</shik.common.version>
         <spring.boot.version>1.5.3.RELEASE</spring.boot.version>
         <spring.cloud.version>Dalston.SR1</spring.cloud.version>
+
+        <maven.plugin.version>1.5.3.RELEASE</maven.plugin.version>
     </properties>
 
     <dependencyManagement>
