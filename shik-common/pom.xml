@@ -39,7 +39,7 @@
         <mysql.version>5.1.38</mysql.version>
         <pagehelper.version>3.7.6</pagehelper.version>
         <json.version>20160810</json.version>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.7.1</shiro.version>
     </properties>
 
     <dependencies>
